@@ -1,5 +1,5 @@
 {
-  "name": "dotodo",
+  "name": "letsdoit",
   "version": "0.0.1",
   "description": "frontend for project management application",
   "main": "app.js",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/deFarro/dotodo"
+    "url": "https://github.com/deFarro/letsdoit"
   },
   "author": "Nikita Svetlov",
   "license": "MIT",
