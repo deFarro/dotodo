@@ -9,7 +9,7 @@ import { PropTypes } from 'prop-types';
 import '../../scss/LoginWindow.scss'
 
 // Actions
-import { authenticate, getTodos } from '../actions/thunks';
+import { authenticate, getTodos } from '../redux/actions/thunks';
 
 //Components
 import Title from './Title';

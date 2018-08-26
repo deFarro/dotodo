@@ -15,7 +15,7 @@ import LogoutButton from './LogoutButton';
 import ListOfToDos from './ListOfToDos';
 
 // Actions
-import { dropAuthentication } from '../actions/thunks';
+import { dropAuthentication } from '../redux/actions/thunks';
 
 const Dashboard = ({dispatch, todos, user, error}) => {
   const logout = () => {

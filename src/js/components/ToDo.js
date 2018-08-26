@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 
 // Actions
-import { pushTodo, updateTodo, removeTodo } from '../actions/thunks';
+import { pushTodo, updateTodo, removeTodo } from '../redux/actions/thunks';
 
 // Components
 import ToDoShow from './ToDoShow';

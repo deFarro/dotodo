@@ -9,7 +9,7 @@ import { CSSTransitionGroup } from 'react-transition-group';
 import '../../scss/ListOfToDos.scss';
 
 // Actions
-import { updateTodo } from '../actions/thunks';
+import { updateTodo } from '../redux/actions/thunks';
 
 // Components
 import ToDo from './ToDo';

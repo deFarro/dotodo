@@ -1,17 +1,6 @@
 'use strict';
 
-// Action types
-const ADD_TODO = 'add_todo';
-const EDIT_TODO = 'edit_todo';
-const DELETE_TODO = 'delete_todo';
-
-const LOG_IN = 'log_in';
-const LOG_OUT = 'log_out';
-
-const LOAD_TODOS = 'load_todos';
-
-const ERROR = 'error';
-const RESET_ERROR = 'reset_error';
+import { ADD_TODO, EDIT_TODO, DELETE_TODO, LOG_IN, LOG_OUT, LOAD_TODOS, ERROR, RESET_ERROR } from './types';
 
 // Action creators
 const addTodo = (todo) => {
@@ -68,5 +57,4 @@ const resetError = () => {
   }
 }
 
-export { ADD_TODO, EDIT_TODO, DELETE_TODO, LOG_IN, LOG_OUT, LOAD_TODOS, ERROR, RESET_ERROR };
 export { addTodo, editTodo, deleteTodo, logIn, logOut, loadTodos, error, resetError };

@@ -5,7 +5,7 @@
 import CryptoJS from 'crypto-js';
 
 // HTTP setup
-import { URL, HEADERS } from '../http';
+import { URL, HEADERS } from '../../http';
 
 // Actions
 import { ADD_TODO, EDIT_TODO, DELETE_TODO, LOG_IN, LOG_OUT, LOAD_TODOS, ERROR, RESET_ERROR } from './actions';
