@@ -1,6 +1,6 @@
 // Text formating
-@mixin format_text($size: 1rem, $color: $primary_text_color) {
-  font-family: Helvetica;
+@mixin format_text($size: 1rem, $color: $primary_text_color, $font: Helvetica) {
+  font-family: $font;
   color: $color;
   font-size: $size;
 }

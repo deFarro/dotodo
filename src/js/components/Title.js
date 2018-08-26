@@ -9,7 +9,7 @@ import '../../scss/Title.scss'
 const Title = (props) => {
   return (
     <div className="app_title">
-      <h1>DoTODO</h1>
+      <h1>Let's do it</h1>
       {props.children}
     </div>
   )

@@ -1,14 +1,17 @@
-$primary_background_color: #E6E8E7;
+@import url(https://fonts.googleapis.com/css?family=Alex+Brush);
+
+$primary_background_color: #BDD0EE;
 $todo_background_color: white;
-$list_background_color: #F1F3F2;
+$list_background_color: #F2F5F8;
 $primary_text_color: black;
 $border_color: #AAB3C2;
-$button_color: #81CFD1;
+$button_color: #8F7EE5;
 
-$inprog_color: #DFD67B;
-$completed_color: #80D087;
+$inprog_color: #FFBC3C;
+$completed_color: #4DD87A;
 $error_color: #DA6667;
 
 $select_color: #bfd9bf;
 
 $font: Helvetica;
+$title_font: 'Alex Brush';
