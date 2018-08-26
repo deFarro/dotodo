@@ -1,0 +1,8 @@
+@import "partials/variables";
+@import "partials/mixins";
+
+.list_window {
+  @include flex-container;
+  @include center;
+  margin-top: 1.5rem;
+}

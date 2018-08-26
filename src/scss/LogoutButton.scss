@@ -1,0 +1,16 @@
+@import "partials/variables";
+@import "partials/mixins";
+
+.button_wrap {
+  @media (min-width: 700px) {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  button {
+    @include button;
+    @include format_text($size: 1.5rem, $color: white);
+    width: 200px;
+    height: 3rem;
+  }
+}

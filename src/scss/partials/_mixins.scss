@@ -1,0 +1,60 @@
+// Text formating
+@mixin format_text($size: 1rem, $color: $primary_text_color) {
+  font-family: Helvetica;
+  color: $color;
+  font-size: $size;
+}
+
+// Layout
+@mixin center {
+  width: 95%;
+  margin: 0 auto;
+}
+
+@mixin flex-container($dir: row, $just: center, $wrap: wrap, $ali: stretch) {
+  display: flex;
+  justify-content: $just;
+  flex-direction: $dir;
+  flex-wrap: $wrap;
+  align-items: $ali;
+}
+
+// Borders
+@mixin apply_border ($color: $border_color, $style: solid) {
+  border: 1px $style $color;
+  border-radius: 5px;
+}
+
+// Elements
+@mixin button($cursor: pointer) {
+  @include apply_border($color: $button_color);
+  background-color: $button_color;
+  outline: none;
+  font-weight: 600;
+  &:hover {
+    cursor: $cursor;
+    background-color: lighten($button_color, 10%);
+    border-color: lighten($button_color, 10%);
+  }
+}
+
+// Animations
+@mixin animate-active {
+  transition-duration: 0.3s;
+  transition-property: background-color, border-color, color;
+}
+
+@keyframes shake {
+  10% {right: 4px};
+  30% {right: -8px};
+  50% {right: 6px};
+  70% {right: -4px};
+  90% {right: 2px};
+}
+
+@mixin animate-button {
+  position: relative;
+  animation-name: shake;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
+}

@@ -1,0 +1,12 @@
+@import "partials/variables";
+@import "partials/mixins";
+
+.app_title {
+  @include center;
+  text-align: center;
+  position: relative;
+  h1 {
+    @include format_text(3rem);
+    margin: 1rem;
+  }
+}

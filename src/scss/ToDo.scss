@@ -1,0 +1,63 @@
+@import "partials/variables";
+@import "partials/mixins";
+
+.todo {
+  width: 95%;
+  margin: 1rem auto;
+  background-color: $todo_background_color;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px $border_color;
+  padding: 1px;
+  h4,
+  p {
+    @include format_text(1rem);
+    margin: 0;
+    padding: 1rem 1rem 0 1rem;
+  }
+  strong {
+    @include format_text($size: 1rem);
+    display: block;
+    padding: 1rem 5rem;
+    text-align: right;
+  }
+}
+
+.controls {
+  @include flex-container($just: space-between);
+  width: 3rem;
+  float: right;
+  padding: 0.5rem;
+  i {
+    font-size: 1rem;
+    &:hover {
+      cursor: pointer;
+    }
+    &:last-child:hover {
+      color: $error_color;
+    }
+    &:first-child:hover {
+      color: #80D087;
+    }
+    &.fa-plus {
+      margin-top: 1rem;
+      font-size: 3rem;
+    }
+  }
+}
+
+.todo {
+  input,
+  textarea {
+    @include format_text($size: 1rem);
+    display: block;
+    width: 80%;
+    margin: 1rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    resize: none;
+    background-color: $list_background_color;
+    box-sizing: border-box;
+  }
+}

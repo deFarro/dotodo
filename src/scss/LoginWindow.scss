@@ -1,0 +1,45 @@
+@import "partials/variables";
+@import "partials/mixins";
+
+.login_form {
+  @include center;
+  %form {
+    @include format_text($size: 1.5rem);
+    @include apply_border;
+    display: block;
+    width: 30%;
+    height: 3rem;
+    margin: 1rem auto;
+    box-sizing: border-box;
+  }
+  input {
+    @extend %form;
+    text-align: center;
+    outline: none;
+    &:focus {
+      border-color: $button_color;
+    }
+  }
+  button {
+    @extend %form;
+    @include animate-active;
+    background-color: $button_color;
+    outline: none;
+    font-weight: 600;
+    color: white;
+    background-color: lighten($button_color, 20%);
+    border: none;
+    &.active {
+      background-color: $button_color;
+    }
+    &.active:hover {
+      background-color: lighten($button_color, 10%);
+      cursor: pointer;
+    }
+    &.error {
+      @include animate-button;
+      background-color: $error_color;
+      border-color: $error_color;
+    }
+  }
+}

@@ -1,0 +1,53 @@
+@import "partials/variables";
+@import "partials/mixins";
+
+.todos_list {
+  @include apply_border;
+  width: 49%;
+  min-height: 100px;
+  box-sizing: border-box;
+  background-color: $list_background_color;
+  transition: all 0.2s ease-in-out;
+  &:first-child {
+    margin-right: 2%;
+  }
+  &.drag_over {
+    background-color: $select_color;
+  }
+}
+
+%todos_title {
+  @include format_text($size: 2rem, $color: white);
+  text-align: center;
+  height: 4rem;
+  padding-top: 1rem;
+  border-bottom: 2px solid $border_color;
+}
+
+.inProgress .headline {
+  @extend %todos_title;
+  background-color: $inprog_color;
+}
+
+.completed .headline {
+  @extend %todos_title;
+  background-color: $completed_color;
+}
+
+.appear-enter {
+  opacity: 0.01;
+}
+
+.appear-enter.appear-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.appear-leave {
+  opacity: 1;
+}
+
+.appear-leave.appear-leave-active {
+  opacity: 0.01;
+  transition: opacity 100ms ease-in;
+}
