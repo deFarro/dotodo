@@ -15,20 +15,20 @@ import MainWindow from './components/MainWindow';
 import appData from './redux/reducers/appData';
 
 // Sagas
-// import rootSaga from './redux/sagas'
-// const sagaMiddleware = createSagaMiddleware()
+import rootSaga from './redux/sagas'
+const sagaMiddleware = createSagaMiddleware()
 
 // Creating storage with applied middleware (for retch requests)
 
 const store = createStore(appData,
   compose(
-    applyMiddleware(thunk),
-    // applyMiddleware(sagaMiddleware),
+    // applyMiddleware(thunk),
+    applyMiddleware(sagaMiddleware),
     window.devToolsExtension ? window.devToolsExtension() : f => f
   )
 );
 
-// sagaMiddleware.run(rootSaga)
+sagaMiddleware.run(rootSaga)
 
 const App = () => {
   return (

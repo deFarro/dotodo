@@ -9,7 +9,7 @@ import { PropTypes } from 'prop-types';
 import '../../scss/LoginWindow.scss'
 
 // Actions
-import { authenticate, getTodos } from '../redux/actions/thunks';
+import { startSession } from '../redux/actions/actions';
 
 //Components
 import Title from './Title';
@@ -34,7 +34,7 @@ class LoginWindow extends React.Component {
     event.preventDefault();
     // Check if login and password inserted
     if (this.state.username && this.state.password) {
-      this.props.dispatch(authenticate(this.state.username, this.state.password));
+      this.props.dispatch(startSession({ username: this.state.username, password: this.state.password }));
     }
   }
   // Conditional rendering for login button - change class on error

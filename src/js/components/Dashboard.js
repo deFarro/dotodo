@@ -15,11 +15,11 @@ import LogoutButton from './LogoutButton';
 import ListOfToDos from './ListOfToDos';
 
 // Actions
-import { dropAuthentication } from '../redux/actions/thunks';
+import { dropSession } from '../redux/actions/actions';
 
 const Dashboard = ({dispatch, todos, user, error}) => {
   const logout = () => {
-    dispatch(dropAuthentication(user.sessionId));
+    dispatch(dropSession(user.sessionId));
   };
   return (
     <div>

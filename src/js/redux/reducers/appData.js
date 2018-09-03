@@ -29,7 +29,7 @@ const appData = (state = {}, action) => {
       return {todos: state.todos, user: action.user}
 
     case LOG_OUT:
-      return {todos: state.todos}
+      return {}
 
     case LOAD_TODOS:
       const newState = Object.assign({}, state);
