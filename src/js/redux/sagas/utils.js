@@ -23,6 +23,10 @@ export const fetchData = (url, options) => {
     return new Promise((resolve, reject) => resolve({ username: 'Nix', sessionId: 1234567, _id: 123 }));
   }
 
+  if (options.method === 'PUT') {
+    return new Promise((resolve, reject) => resolve({ title: 'Title', description: 'Description', author: { username: 'Nix', sessionId: 1234567, _id: 123 }, status: 'completed' }));
+  }
+
   return new Promise((resolve, reject) => resolve([{ title: 'Title', description: 'Description', author: { username: 'Nix', sessionId: 1234567, _id: 123 }, status: 'completed' }]));
 }
 

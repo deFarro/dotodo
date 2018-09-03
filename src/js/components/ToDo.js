@@ -8,6 +8,7 @@ import { PropTypes } from 'prop-types';
 
 // Actions
 import { pushTodo, updateTodo, removeTodo } from '../redux/actions/thunks';
+import { uploadTodo } from '../redux/actions/actions';
 
 // Components
 import ToDoShow from './ToDoShow';
@@ -28,7 +29,7 @@ class ToDo extends React.Component {
   }
   // Depending on current status render edit form or show todo itself
   render() {
-    const add = bindActionCreators(pushTodo, this.props.dispatch);
+    const add = bindActionCreators(uploadTodo, this.props.dispatch);
     const edit = bindActionCreators(updateTodo, this.props.dispatch);
     const remove = bindActionCreators(removeTodo, this.props.dispatch);
 

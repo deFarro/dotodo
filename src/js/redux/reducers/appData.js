@@ -4,7 +4,7 @@ import { ADD_TODO, EDIT_TODO, DELETE_TODO, LOG_IN, LOG_OUT, LOAD_TODOS, ERROR, R
 const appData = (state = {}, action) => {
   switch (action.type) {
     case ADD_TODO:
-      const todos = [...state.todos, action.todo];
+    const todos = [...state.todos, action.payload];
       return {user: state.user, todos};
 
     case EDIT_TODO:

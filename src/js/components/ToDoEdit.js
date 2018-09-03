@@ -32,7 +32,7 @@ class ToDoEdit extends React.Component {
         newTodo.author = {_id: this.props.user._id, username: this.props.user.username}
         newTodo.status = 'notCompleted';
         // Passing constructed todo with user's info to action creater
-        this.props.add(newTodo, this.props.user);
+        this.props.add(newTodo, this.props.user.sessionId);
         // Clear the form fields
         this.setState({todo: {title: '', description: ''}});
         this.title.value = '';
