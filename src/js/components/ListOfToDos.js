@@ -9,7 +9,7 @@ import { CSSTransitionGroup } from 'react-transition-group';
 import '../../scss/ListOfToDos.scss';
 
 // Actions
-import { updateTodo } from '../redux/actions/thunks';
+import { modifyTodo } from '../redux/actions/actions';
 
 // Components
 import ToDo from './ToDo';
@@ -22,7 +22,7 @@ const ListOfToDos = ({title, todos, dispatch, user}) => {
     event.currentTarget.classList.remove('drag_over');
     const updatedToDo = JSON.parse(event.dataTransfer.getData('todo'));
     updatedToDo.status = title === 'In Progress' ? 'notCompleted' : 'completed';
-    dispatch(updateTodo(updatedToDo, user));
+    dispatch(modifyTodo(updatedToDo, user.sessionId));
   };
   // Adding some event listeners to display dragging
   return (

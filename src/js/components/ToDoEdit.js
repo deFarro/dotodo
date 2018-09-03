@@ -42,7 +42,7 @@ class ToDoEdit extends React.Component {
       else {
         //Changing mode back to 'show'
         this.props.showMode();
-        this.props.edit(this.state.todo, this.props.user);
+        this.props.edit(this.state.todo, this.props.user.sessionId);
       }
     }
   }

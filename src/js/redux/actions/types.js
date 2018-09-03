@@ -4,9 +4,10 @@ export const LOAD_TODOS = 'load_todos';
 
 export const UPLOAD_TODO = 'upload_todo';
 export const FLUSH_TODO = 'flush_todo';
+export const MODIFY_TODO = 'modify_todo';
 
 export const ADD_TODO = 'add_todo';
-export const EDIT_TODO = 'edit_todo';
+export const UPDATE_TODO = 'update_todo';
 export const DELETE_TODO = 'delete_todo';
 
 export const LOG_IN = 'log_in';

@@ -1,6 +1,6 @@
 'use strict';
 
-import { START_SESSION, DROP_SESSION, UPLOAD_TODO, FLUSH_TODO, ADD_TODO, EDIT_TODO, DELETE_TODO, LOG_IN, LOG_OUT, LOAD_TODOS, ERROR, RESET_ERROR } from './types';
+import { START_SESSION, DROP_SESSION, UPLOAD_TODO, FLUSH_TODO, MODIFY_TODO, UPDATE_TODO, ADD_TODO, EDIT_TODO, DELETE_TODO, LOG_IN, LOG_OUT, LOAD_TODOS, ERROR, RESET_ERROR } from './types';
 
 // Action creators
 
@@ -45,6 +45,16 @@ const flushTodo = (id, sessionId) => {
   }
 }
 
+const modifyTodo = (todo, sessionId) => {
+  return {
+    type: MODIFY_TODO,
+    payload: {
+      todo,
+      sessionId,
+    },
+  }
+}
+
 const addTodo = todo => {
   return {
     type: ADD_TODO,
@@ -52,9 +62,9 @@ const addTodo = todo => {
   }
 }
 
-const editTodo = (todo) => {
+const updateTodo = (todo) => {
   return {
-    type: EDIT_TODO,
+    type: UPDATE_TODO,
     todo
   }
 }
@@ -92,4 +102,4 @@ const resetError = () => {
   }
 }
 
-export { startSession, dropSession, uploadTodo, flushTodo, addTodo, editTodo, deleteTodo, logIn, logOut, loadTodos, error, resetError };
+export { startSession, dropSession, uploadTodo, flushTodo, modifyTodo, addTodo, updateTodo, deleteTodo, logIn, logOut, loadTodos, error, resetError };

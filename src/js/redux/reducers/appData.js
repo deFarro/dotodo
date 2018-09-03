@@ -1,5 +1,5 @@
 // Action types
-import { ADD_TODO, EDIT_TODO, DELETE_TODO, LOG_IN, LOG_OUT, LOAD_TODOS, ERROR, RESET_ERROR } from '../actions/types';
+import { ADD_TODO, UPDATE_TODO, DELETE_TODO, LOG_IN, LOG_OUT, LOAD_TODOS, ERROR, RESET_ERROR } from '../actions/types';
 
 const appData = (state = {}, action) => {
   switch (action.type) {
@@ -7,7 +7,7 @@ const appData = (state = {}, action) => {
     const todos = [...state.todos, action.payload];
       return {user: state.user, todos};
 
-    case EDIT_TODO:
+    case UPDATE_TODO:
       // Finding index of edited todo
       let index;
       state.todos.forEach((todo, i) => {if (todo._id === action.todo._id) {index = i}});
