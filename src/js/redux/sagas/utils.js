@@ -27,7 +27,7 @@ export const fetchData = (url, options) => {
     return new Promise((resolve, reject) => resolve({ title: 'Title', description: 'Description', author: { username: 'Nix', sessionId: 1234567, _id: 123 }, status: 'completed' }));
   }
 
-  return new Promise((resolve, reject) => resolve([{ title: 'Title', description: 'Description', author: { username: 'Nix', sessionId: 1234567, _id: 123 }, status: 'completed' }]));
+  return new Promise((resolve, reject) => resolve([{ _id: 12345, title: 'Title', description: 'Description', author: { username: 'Nix', sessionId: 1234567, _id: 123 }, status: 'completed' }]));
 }
 
 export const generateFetchOptions = (method, contents) => {
