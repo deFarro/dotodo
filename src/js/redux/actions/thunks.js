@@ -13,20 +13,26 @@ import { addTodo, editTodo, deleteTodo, logIn, logOut, loadTodos, error, resetEr
 
 // Universal function to get/send any data
 const fetchData = (url, method, contents) => {
-  const options = {
-    method: method,
-    credentials: 'include',
-    body: contents,
-    headers: HEADERS
+  // const options = {
+  //   method: method,
+  //   credentials: 'include',
+  //   body: contents,
+  //   headers: HEADERS
+  // }
+  // return fetch(URL + url, options)
+  //   .then(response => {
+  //       if(response.ok) {
+  //         return response.json();
+  //       }
+  //       throw new Error('Network error occured.');
+  //     })
+  //   .catch(err => err);
+
+  if (method === 'POST') {
+    return new Promise((resolve, reject) => resolve({ status: 'success', username: 'Nix', sessionId: 1234567, _id: 123 }));
   }
-  return fetch(URL + url, options)
-    .then(response => {
-        if(response.ok) {
-          return response.json();
-        }
-        throw new Error('Network error occured.');
-      })
-    .catch(err => err);;
+
+  return new Promise((resolve, reject) => resolve({ status: 'success', data: [{ title: 'Title', description: 'Description', author: { username: 'Nix', sessionId: 1234567, _id: 123 }, status: 'completed'}]}));
 }
 
 // Thunk function to authenticate user
@@ -72,7 +78,7 @@ const dropAuthentication = (sessionId) => {
 const getTodos = (sessionId) => {
   return dispatch => {
     fetchData(`todos?sessionId=${sessionId}`, 'GET')
-      .then(response => {
+    .then(response => {
         if (response.status === 'success') {
           dispatch(loadTodos(response.data));
         }
