@@ -7,8 +7,8 @@ export const FLUSH_TODO = 'flush_todo';
 export const MODIFY_TODO = 'modify_todo';
 
 export const ADD_TODO = 'add_todo';
-export const UPDATE_TODO = 'update_todo';
 export const DELETE_TODO = 'delete_todo';
+export const UPDATE_TODO = 'update_todo';
 
 export const LOG_IN = 'log_in';
 export const LOG_OUT = 'log_out';

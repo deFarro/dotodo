@@ -1,5 +1,5 @@
 // Action types
-import { ADD_TODO, UPDATE_TODO, DELETE_TODO, LOG_IN, LOG_OUT, LOAD_TODOS, ERROR, RESET_ERROR } from '../actions/types';
+import { ADD_TODO, UPDATE_TODO, DELETE_TODO, LOG_IN, LOG_OUT, LOAD_TODOS, ERROR, RESET_ERROR } from '../types';
 
 const appData = (state = {}, action) => {
   switch (action.type) {

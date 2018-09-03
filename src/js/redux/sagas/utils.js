@@ -1,5 +1,3 @@
-
-
 // Setup for fetch requests
 const URL = 'http://localhost:3000/';
 

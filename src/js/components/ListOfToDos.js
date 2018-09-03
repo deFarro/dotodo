@@ -9,11 +9,10 @@ import { CSSTransitionGroup } from 'react-transition-group';
 import '../../scss/ListOfToDos.scss';
 
 // Actions
-import { modifyTodo } from '../redux/actions/actions';
+import { modifyTodo } from '../redux/actions';
 
 // Components
 import ToDo from './ToDo';
-import ToDoEdit from './ToDoEdit';
 
 // All drag-and-drop mechanics will be processed in this component which makes it a bit ugly. I'd rather use library like 'react-dnd'
 const ListOfToDos = ({title, todos, dispatch, user}) => {

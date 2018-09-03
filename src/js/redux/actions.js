@@ -1,8 +1,24 @@
 'use strict';
 
-import { START_SESSION, DROP_SESSION, UPLOAD_TODO, FLUSH_TODO, MODIFY_TODO, UPDATE_TODO, ADD_TODO, EDIT_TODO, DELETE_TODO, LOG_IN, LOG_OUT, LOAD_TODOS, ERROR, RESET_ERROR } from './types';
+import {
+  START_SESSION,
+  DROP_SESSION,
+  LOAD_TODOS,
 
-// Action creators
+  UPLOAD_TODO,
+  FLUSH_TODO,
+  MODIFY_TODO,
+  
+  ADD_TODO,
+  UPDATE_TODO,
+  DELETE_TODO,
+  
+  LOG_IN,
+  LOG_OUT,
+  
+  ERROR,
+  RESET_ERROR
+} from './types';
 
 const startSession = credentials => {
   return {
@@ -62,17 +78,17 @@ const addTodo = todo => {
   }
 }
 
-const updateTodo = (todo) => {
-  return {
-    type: UPDATE_TODO,
-    todo
-  }
-}
-
 const deleteTodo = (id) => {
   return {
     type: DELETE_TODO,
     id
+  }
+}
+
+const updateTodo = (todo) => {
+  return {
+    type: UPDATE_TODO,
+    todo
   }
 }
 
@@ -89,7 +105,6 @@ const logOut = sessionId => {
   }
 }
 
-// Error used only for login error handling. Can be extended to other errors later
 const error = () => {
   return {
     type: ERROR
@@ -102,4 +117,21 @@ const resetError = () => {
   }
 }
 
-export { startSession, dropSession, uploadTodo, flushTodo, modifyTodo, addTodo, updateTodo, deleteTodo, logIn, logOut, loadTodos, error, resetError };
+export {
+  startSession,
+  dropSession,
+  loadTodos,
+
+  uploadTodo,
+  flushTodo,
+  modifyTodo,
+
+  addTodo,
+  deleteTodo,
+  updateTodo,
+
+  logIn,
+  logOut,
+
+  error,
+  resetError };

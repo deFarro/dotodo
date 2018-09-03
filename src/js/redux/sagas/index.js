@@ -1,10 +1,9 @@
 import CryptoJS from 'crypto-js';
-
 import { call, put, all, takeEvery, takeLatest } from 'redux-saga/effects';
 import { delay } from 'redux-saga';
 
-import { START_SESSION, DROP_SESSION, UPLOAD_TODO, FLUSH_TODO, MODIFY_TODO, ADD_TODO, EDIT_TODO, DELETE_TODO, LOG_IN, LOG_OUT, LOAD_TODOS, ERROR, RESET_ERROR } from '../actions/types';
-import { dropSession, addTodo, updateTodo, deleteTodo, logIn, logOut, loadTodos, error, resetError } from '../actions/actions';
+import { START_SESSION, DROP_SESSION, UPLOAD_TODO, FLUSH_TODO, MODIFY_TODO } from '../types';
+import { loadTodos, addTodo, deleteTodo, updateTodo, logIn, logOut, error, resetError } from '../actions';
 
 import { fetchData, generateFetchOptions } from './utils';
 

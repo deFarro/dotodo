@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 
 // Actions
-import { uploadTodo, modifyTodo, flushTodo } from '../redux/actions/actions';
+import { uploadTodo, modifyTodo, flushTodo } from '../redux/actions';
 
 // Components
 import ToDoShow from './ToDoShow';

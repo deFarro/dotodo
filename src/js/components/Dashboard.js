@@ -2,7 +2,6 @@
 
 // Libs
 import React from 'react';
-import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 
@@ -15,7 +14,7 @@ import LogoutButton from './LogoutButton';
 import ListOfToDos from './ListOfToDos';
 
 // Actions
-import { dropSession } from '../redux/actions/actions';
+import { dropSession } from '../redux/actions';
 
 const Dashboard = ({dispatch, todos, user, error}) => {
   const logout = () => {

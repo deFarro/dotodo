@@ -9,7 +9,7 @@ import { PropTypes } from 'prop-types';
 import '../../scss/LoginWindow.scss'
 
 // Actions
-import { startSession } from '../redux/actions/actions';
+import { startSession } from '../redux/actions';
 
 //Components
 import Title from './Title';
