@@ -13,17 +13,11 @@ import Title from './Title';
 import LogoutButton from './LogoutButton';
 import ListOfToDos from './ListOfToDos';
 
-// Actions
-import { dropSession } from '../redux/actions';
-
 const Dashboard = ({dispatch, todos, user, error}) => {
-  const logout = () => {
-    dispatch(dropSession(user.sessionId));
-  };
   return (
     <div>
       <Title>
-        <LogoutButton logout={logout} />
+        <LogoutButton />
       </Title>
       {/*Filter list of todos to show in progress/complited buckets*/}
       <div className="list_window">
