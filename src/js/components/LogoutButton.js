@@ -13,10 +13,12 @@ import '../../scss/LogoutButton.scss'
 // Text and callback can be changed in order to log in user on new pages in future
 const LogoutButton = props => {
   const { user, dropSession } = props;
+  const logout = () => dropSession(user);
 
   return (
     <div className="button_wrap">
-      <button onClick={() => dropSession(user)}>LOG OUT</button>
+      {/* Keep option for testing use */}
+      <button onClick={props.logout || logout}>LOG OUT</button>
     </div>
   )
 }

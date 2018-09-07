@@ -1,6 +1,10 @@
 // Libs
 import React from 'react';
 import { mount } from 'enzyme';
+import Enzyme from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+
+Enzyme.configure({ adapter: new Adapter() });
 
 // Component
 import ToDo from '../src/js/components/ToDo';

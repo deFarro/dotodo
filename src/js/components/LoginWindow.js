@@ -2,7 +2,6 @@
 
 // Libs
 import React from 'react';
-import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 
 // Style
@@ -40,10 +39,11 @@ class LoginWindow extends React.Component {
   }
   // Method to initiate log in
   login(event) {
+    const { startSession } = this.props;
     event.preventDefault();
     // Check if login and password inserted
     if (this.state.username && this.state.password) {
-      this.props.startSession({ username: this.state.username, password: this.state.password });
+      startSession({ username: this.state.username, password: this.state.password });
     }
   }
   // Conditional rendering for login button - change class on error
@@ -55,6 +55,7 @@ class LoginWindow extends React.Component {
         <Title />
 
         <div className="login_form">
+          {/* Keep option for testing use */}
           <form onSubmit={this.props.login || this.login.bind(this)}>
             <input
               type="text"

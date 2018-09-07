@@ -5,6 +5,7 @@ import { startSession, dropSession } from '../actions';
 
 const mapStateToProps = state => ({
   user: state.user,
+  error: state.error,
 });
 
 const mapDispatchToProps = dispatch => bindActionCreators({

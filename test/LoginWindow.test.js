@@ -1,6 +1,10 @@
 // Libs
 import React from 'react';
 import { mount } from 'enzyme';
+import Enzyme from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+
+Enzyme.configure({ adapter: new Adapter() });
 
 // Component
 import LoginWindow from '../src/js/components/LoginWindow';
@@ -23,7 +27,7 @@ describe('LoginWindow Component', () => {
     errorStorage.getState = () => {
       return {user: fakeStorage.user, todos: fakeStorage.todos, error: true}
     }
-    const wrapper = mount(<LoginWindow store={errorStorage}/>);
+    const wrapper = mount(<LoginWindow store={errorStorage} />);
     expect(wrapper.find('button').prop('disabled')).toEqual(true);
     expect(wrapper.find('button').hasClass('error')).toEqual(true);
   });
