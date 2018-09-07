@@ -1,7 +1,7 @@
 // Action types
 import { ADD_TODO, UPDATE_TODO, DELETE_TODO, LOG_IN, LOG_OUT, LOAD_TODOS, ERROR, RESET_ERROR } from '../types';
 
-const appData = (state = {}, action) => {
+const rootReducer = (state = {}, action) => {
   switch (action.type) {
     case ADD_TODO:
     const todos = [...state.todos, action.payload];
@@ -33,7 +33,7 @@ const appData = (state = {}, action) => {
 
     case LOAD_TODOS:
       const newState = Object.assign({}, state);
-      newState.todos = action.todos;
+      newState.todos = action.todos.data;
       return newState;
 
     case ERROR:
@@ -47,4 +47,4 @@ const appData = (state = {}, action) => {
   }
 }
 
-export default appData;
+export default rootReducer;
