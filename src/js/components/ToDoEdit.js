@@ -10,6 +10,8 @@ import '../../scss/ToDo.scss';
 // Container
 import { default as container } from '../redux/container';
 
+import { testCall } from '../utils';
+
 class ToDoEdit extends React.Component {
   static propTypes = {
     todo: PropTypes.object.isRequired,
@@ -50,7 +52,7 @@ class ToDoEdit extends React.Component {
         newTodo.status = 'notCompleted';
 
         // Passing constructed todo with user's info to action creater
-        uploadTodo(newTodo, this.props.user.sessionId);
+        testCall(this.props.add) || uploadTodo(newTodo, this.props.user.sessionId);
 
         // Clear the form fields
         this.setState({todo: {title: '', description: ''}});
@@ -61,7 +63,7 @@ class ToDoEdit extends React.Component {
       else {
         //Changing mode back to 'show'
         showMode();
-        modifyTodo(this.state.todo, this.props.user.sessionId);
+        testCall(this.props.edit) || modifyTodo(this.state.todo, this.props.user.sessionId);
       }
     }
   }
@@ -71,7 +73,7 @@ class ToDoEdit extends React.Component {
     const { showMode, flushTodo } = this.props;
 
     showMode();
-    flushTodo(this.state.todo._id, this.props.user.sessionId);
+    testCall(this.props.remove) || flushTodo(this.state.todo._id, this.props.user.sessionId);
   }
 
   render() {

@@ -24,7 +24,7 @@ class ToDo extends React.Component {
   }
 
   // Method to toggle view between showing and editing info
-  toggleEdit() {
+  toggleEdit = () => {
     this.setState({status: this.state.status === 'show' ? 'edit' : 'show'});
   }
 
@@ -40,11 +40,11 @@ class ToDo extends React.Component {
         { this.state.status === 'show'
           ? <ToDoShow
             {...{ todo }}
-            editMode={this.toggleEdit.bind(this)}
+            editMode={this.toggleEdit}
           />
           : <ToDoEdit
             {...{ todo, mission }}
-            showMode={this.toggleEdit.bind(this)}
+            showMode={this.toggleEdit}
           />
         }
       </div>

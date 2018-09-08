@@ -1,6 +1,6 @@
 // Libs
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { mount } from 'enzyme';
 import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
@@ -22,18 +22,13 @@ describe('ToDoEdit Component', () => {
   it('should show plus button if mission is to add new todo', () => {
     const addNew = 'addNew';
     const emptyTodo = {title: '', description: ''};
-    const wrapper = shallow(<ToDoEdit store={fakeStorage} todo={emptyTodo}
-      showMode={showMode} remove={remove} add={add} edit={edit}
-      user={user} mission={addNew} />);
+    const wrapper = mount(<ToDoEdit store={fakeStorage} todo={emptyTodo} showMode={showMode} mission={addNew} />);
     expect(wrapper.find('.fa-plus').exists()).toEqual(true);
   });
 
   it('should hide delete button if mission is to add new todo', () => {
     const addNew = 'addNew';
-    const emptyTodo = {title: '', description: ''};
-    const wrapper = shallow(<ToDoEdit store={fakeStorage} todo={todo}
-      showMode={showMode} remove={remove} add={add} edit={edit}
-      user={user} mission={addNew} />);
+    const wrapper = mount(<ToDoEdit store={fakeStorage} todo={todo} showMode={showMode} mission={addNew} />);
     expect(wrapper.find('.fa-times').exists()).toEqual(false);
   });
 
@@ -44,9 +39,7 @@ describe('ToDoEdit Component', () => {
       add() {}
     };
     spyOn(mockHandle, 'add');
-    const wrapper = mount(<ToDoEdit store={fakeStorage} todo={filldeTodo}
-      showMode={showMode} remove={remove} add={mockHandle.add} edit={edit}
-      user={user} mission={addNew} />);
+    const wrapper = mount(<ToDoEdit store={fakeStorage} todo={filldeTodo} showMode={showMode} add={mockHandle.add} mission={addNew} />);
     wrapper.find('.fa-plus').simulate('click');
     expect(mockHandle.add).toHaveBeenCalled();
   });
@@ -56,9 +49,7 @@ describe('ToDoEdit Component', () => {
       edit() {}
     };
     spyOn(mockHandle, 'edit');
-    const wrapper = shallow(<ToDoEdit store={fakeStorage} todo={todo}
-      showMode={showMode} remove={remove} add={add} edit={mockHandle.edit}
-      user={user} mission={mission} />);
+    const wrapper = mount(<ToDoEdit store={fakeStorage} todo={todo} showMode={showMode} edit={mockHandle.edit} mission={mission} />);
     wrapper.find('.fa-check').simulate('click');
     expect(mockHandle.edit).toHaveBeenCalled();
   });
@@ -68,9 +59,7 @@ describe('ToDoEdit Component', () => {
       remove() {}
     };
     spyOn(mockHandle, 'remove');
-    const wrapper = shallow(<ToDoEdit store={fakeStorage} todo={todo}
-      showMode={showMode} remove={mockHandle.remove} add={add} edit={edit}
-      user={user} mission={mission} />);
+    const wrapper = mount(<ToDoEdit store={fakeStorage} todo={todo} showMode={showMode} remove={mockHandle.remove} mission={mission} />);
     wrapper.find('.fa-times').simulate('click');
     expect(mockHandle.remove).toHaveBeenCalled();
   });
@@ -80,9 +69,7 @@ describe('ToDoEdit Component', () => {
       showMode() {}
     };
     spyOn(mockHandle, 'showMode');
-    const wrapper = shallow(<ToDoEdit store={fakeStorage} todo={todo}
-      showMode={mockHandle.showMode} remove={remove} add={add} edit={edit}
-      user={user} mission={mission} />);
+    const wrapper = mount(<ToDoEdit store={fakeStorage} todo={todo} showMode={mockHandle.showMode} edit={edit} mission={mission} />);
     wrapper.find('.fa-check').simulate('click');
     expect(mockHandle.showMode).toHaveBeenCalled();
   });

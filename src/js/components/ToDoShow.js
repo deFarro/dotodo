@@ -13,6 +13,7 @@ import { default as container } from '../redux/container';
 // Passing data fo drag-and-drop from here
 const ToDoShow = props => {
   const { todo, editMode, user, flushTodo } = props;
+  const remove = () => flushTodo(todo._id, user.sessionId)
 
   // If logged in user is not an author of the todo, control buttons are hidden
   const readOnly = todo.author._id !== user._id;
@@ -22,7 +23,8 @@ const ToDoShow = props => {
       draggable
       className="todo show"
       onDragStart={event => event.dataTransfer.setData('todo', JSON.stringify(todo))}
-      onDoubleClick={readOnly ? null : editMode}>
+      // Keep option for testing use
+      onDoubleClick={readOnly ? null : props.edit || editMode}>
       { /* Disable doubleclick and hide controls if logged in user is not an author of the todo */ }
       { readOnly
         ? null
@@ -31,12 +33,13 @@ const ToDoShow = props => {
             <i
               className="fa fa-pencil"
               aria-hidden="true"
-              onClick={editMode} />
+              onClick={props.edit || editMode} />
 
             <i
               className="fa fa-times"
               aria-hidden="true"
-              onClick={() => flushTodo(todo._id, user.sessionId)} />
+              // Keep option for testing use
+              onClick={props.remove || remove } />
           </div>
         )
       }

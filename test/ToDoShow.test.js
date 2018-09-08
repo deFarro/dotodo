@@ -1,6 +1,6 @@
 // Libs
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
@@ -12,39 +12,49 @@ import fakeStorage from './fakeStorage';
 
 describe('ToDoShow Component', () => {
   const todo = fakeStorage.todos[0];
-  const user = fakeStorage.user;
   const editMode = () => {};
-  const remove = () => {};
+
+  const storageWithAuthor = Object.assign({}, fakeStorage);
+  storageWithAuthor.getState = () => {
+    return { user: todo.author, todos: fakeStorage.todos }
+  }
 
   it('should hide controls if logged user is not todos author', () => {
-    const wrapper = shallow(<ToDoShow todo={todo} editMode={editMode} remove={remove} user={user} />);
+    const wrapper = mount(<ToDoShow store={fakeStorage} todo={todo} editMode={editMode}  />);
     expect(wrapper.find('.controls').exists()).toEqual(false);
   });
 
   it('should show controls if logged user is todos author', () => {
-    const author = todo.author;
-    const wrapper = shallow(<ToDoShow todo={todo} editMode={editMode} remove={remove} user={author} />);
+    const wrapper = mount(<ToDoShow store={storageWithAuthor} todo={todo} editMode={editMode}  />);
     expect(wrapper.find('.controls').exists()).toEqual(true);
   });
 
   it('should pass click events on edit button', () => {
-    const author = todo.author;
     const mockHandle = {
-      editMode() {}
+      edit() {}
     };
-    spyOn(mockHandle, 'editMode');
-    const wrapper = shallow(<ToDoShow todo={todo} editMode={mockHandle.editMode} remove={remove} user={author} />);
+    spyOn(mockHandle, 'edit');
+    const wrapper = mount(<ToDoShow store={storageWithAuthor} todo={todo} editMode={editMode} edit={mockHandle.edit} />);
     wrapper.find('.fa-pencil').simulate('click');
-    expect(mockHandle.editMode).toHaveBeenCalled();
+    expect(mockHandle.edit).toHaveBeenCalled();
+  });
+
+  it('should pass click events on double click on todo itself', () => {
+    const mockHandle = {
+      edit() { }
+    };
+    spyOn(mockHandle, 'edit');
+    const wrapper = mount(<ToDoShow store={storageWithAuthor} todo={todo} editMode={editMode} edit={mockHandle.edit} />);
+    wrapper.find('.todo').simulate('dblclick');
+    expect(mockHandle.edit).toHaveBeenCalled();
   });
 
   it('should pass click events on delete button', () => {
-    const author = todo.author;
     const mockHandle = {
       remove() {}
     };
     spyOn(mockHandle, 'remove');
-    const wrapper = shallow(<ToDoShow todo={todo} editMode={editMode} remove={mockHandle.remove} user={author} />);
+    const wrapper = mount(<ToDoShow store={storageWithAuthor} todo={todo} editMode={editMode} remove={mockHandle.remove} />);
     wrapper.find('.fa-times').simulate('click');
     expect(mockHandle.remove).toHaveBeenCalled();
   });
