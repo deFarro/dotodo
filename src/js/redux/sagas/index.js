@@ -15,6 +15,9 @@ function* startSessionHandler({ payload }) {
 
     try {
         const user = yield call(fetchData, 'user/auth', generateFetchOptions('POST', loginData));
+        if (user.error) {
+            throw new Error(error);
+        }
         const todos = yield call(fetchData, `todos?sessionId=${user.sessionId}`, generateFetchOptions('GET'));
 
         yield put(logIn(user));
@@ -39,10 +42,10 @@ function* uploadTodoHandler({ payload }) {
     const { todo, sessionId } = payload;
 
     try {
-        const approvedTodo = yield call(fetchData, `todo?sessionId=${sessionId}`, generateFetchOptions('PUT', JSON.stringify(todo)));
-        // TODO: change to approvedTodo in production
-        todo._id = Math.random();
-        yield put(addTodo(todo));
+        const { data: approvedTodo } = yield call(fetchData, `todo?sessionId=${sessionId}`, generateFetchOptions('PUT', JSON.stringify(todo)));
+        approvedTodo.author = todo.author;
+
+        yield put(addTodo(approvedTodo));
     } catch (err) {
         yield put(error());
 

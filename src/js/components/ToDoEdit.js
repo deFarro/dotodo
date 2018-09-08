@@ -40,7 +40,13 @@ class ToDoEdit extends React.Component {
 
   // Method to send updated info to server
   confirmUpdate() {
-    const { mission, showMode, user, uploadTodo, modifyTodo } = this.props;
+    const {
+      mission,
+      showMode,
+      user: { _id, username, sessionId },
+      uploadTodo,
+      modifyTodo,
+    } = this.props;
 
     // Check if fields aren't empty
     if (this.state.todo.title && this.state.todo.description) {
@@ -48,11 +54,11 @@ class ToDoEdit extends React.Component {
       // If so, 'add' action is triggered
       if (mission === 'addNew') {
         const newTodo = Object.assign({}, this.state.todo);
-        newTodo.author = {_id: user._id, username: user.username}
+        newTodo.author = {...{ _id, username }}
         newTodo.status = 'notCompleted';
 
         // Passing constructed todo with user's info to action creater
-        testCall(this.props.add) || uploadTodo(newTodo, this.props.user.sessionId);
+        testCall(this.props.add) || uploadTodo(newTodo, sessionId);
 
         // Clear the form fields
         this.setState({todo: {title: '', description: ''}});
@@ -63,17 +69,17 @@ class ToDoEdit extends React.Component {
       else {
         //Changing mode back to 'show'
         showMode();
-        testCall(this.props.edit) || modifyTodo(this.state.todo, this.props.user.sessionId);
+        testCall(this.props.edit) || modifyTodo(this.state.todo, sessionId);
       }
     }
   }
 
   // Method to delete a todo
   deleteTodo() {
-    const { showMode, flushTodo } = this.props;
+    const { showMode, flushTodo, user: { sessionId } } = this.props;
 
     showMode();
-    testCall(this.props.remove) || flushTodo(this.state.todo._id, this.props.user.sessionId);
+    testCall(this.props.remove) || flushTodo(this.state.todo._id, sessionId);
   }
 
   render() {
