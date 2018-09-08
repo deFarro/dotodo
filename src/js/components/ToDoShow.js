@@ -7,21 +7,38 @@ import { PropTypes } from 'prop-types';
 // Style
 import '../../scss/ToDo.scss';
 
+// Container
+import { default as container } from '../redux/container';
+
 // Passing data fo drag-and-drop from here
-const ToDoShow = ({todo, editMode, remove, user}) => {
+const ToDoShow = props => {
+  const { todo, editMode, user, flushTodo } = props;
+
   // If logged in user is not an author of the todo, control buttons are hidden
   const readOnly = todo.author._id !== user._id;
+
   return (
-    <div className="todo show" draggable
+    <div
+      draggable
+      className="todo show"
       onDragStart={event => event.dataTransfer.setData('todo', JSON.stringify(todo))}
       onDoubleClick={readOnly ? null : editMode}>
       { /* Disable doubleclick and hide controls if logged in user is not an author of the todo */ }
-      { readOnly ?
-        null :
-        <div className="controls">
-          <i className="fa fa-pencil" aria-hidden="true" onClick={editMode}></i>
-          <i className="fa fa-times" aria-hidden="true" onClick={() => remove(todo._id, user.sessionId)}></i>
-        </div>
+      { readOnly
+        ? null
+        : (
+          <div className="controls">
+            <i
+              className="fa fa-pencil"
+              aria-hidden="true"
+              onClick={editMode} />
+
+            <i
+              className="fa fa-times"
+              aria-hidden="true"
+              onClick={() => flushTodo(todo._id, user.sessionId)} />
+          </div>
+        )
       }
       <h4>{todo.title}</h4>
       <p>{todo.description}</p>
@@ -33,8 +50,8 @@ const ToDoShow = ({todo, editMode, remove, user}) => {
 ToDoShow.propTypes = {
   todo: PropTypes.object.isRequired,
   editMode: PropTypes.func.isRequired,
-  remove: PropTypes.func.isRequired,
-  user: PropTypes.object.isRequired
+  user: PropTypes.object.isRequired,
+  flushTodo: PropTypes.func.isRequired,
 }
 
-export default ToDoShow;
+export default container(ToDoShow);

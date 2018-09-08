@@ -8,7 +8,7 @@ import { PropTypes } from 'prop-types';
 import '../../scss/LoginWindow.scss'
 
 // Container
-import { default as userContainer } from '../redux/containers/user';
+import { default as container } from '../redux/container';
 
 //Components
 import Title from './Title';
@@ -37,6 +37,7 @@ class LoginWindow extends React.Component {
     updatedState[event.target.id] = event.target.value;
     this.setState(updatedState);
   }
+
   // Method to initiate log in
   login(event) {
     const { startSession } = this.props;
@@ -46,7 +47,7 @@ class LoginWindow extends React.Component {
       startSession({ username: this.state.username, password: this.state.password });
     }
   }
-  // Conditional rendering for login button - change class on error
+
   render() {
     const { error } = this.props;
 
@@ -88,4 +89,4 @@ class LoginWindow extends React.Component {
   }
 }
 
-export default userContainer(LoginWindow);
+export default container(LoginWindow);

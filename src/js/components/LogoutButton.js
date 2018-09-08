@@ -5,7 +5,7 @@ import React from 'react';
 import { PropTypes } from 'prop-types';
 
 // Container
-import { default as userContainer } from '../redux/containers/user';
+import { default as container } from '../redux/container';
 
 // Style
 import '../../scss/LogoutButton.scss'
@@ -28,4 +28,4 @@ LogoutButton.propTypes = {
   user: PropTypes.objectOf(PropTypes.any).isRequired,
 };
 
-export default userContainer(LogoutButton);
+export default container(LogoutButton);
