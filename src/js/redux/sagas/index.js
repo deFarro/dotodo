@@ -14,11 +14,11 @@ function* startSessionHandler({ payload }) {
     const loginData = JSON.stringify({ username, password: encPass });
 
     try {
-        const user = yield call(fetchData, 'user/auth', generateFetchOptions('POST', loginData));
+        const user = yield call(fetchData, 'user/login', generateFetchOptions('POST', loginData));
         if (user.error) {
             throw new Error(error);
         }
-        const todos = yield call(fetchData, `todos?sessionId=${user.sessionId}`, generateFetchOptions('GET'));
+        const todos = yield call(fetchData, `todos?sessionID=${user.sessionID}`, generateFetchOptions('GET'));
 
         yield put(logIn(user));
         yield put(loadTodos(todos));
@@ -31,18 +31,18 @@ function* startSessionHandler({ payload }) {
 };
 
 function* dropSessionHandler({ payload }) {
-    const { sessionId } = payload;
+    const { sessionID } = payload;
 
-    yield call(fetchData, `user/logout?sessionId=${sessionId}`, generateFetchOptions('GET'));
+    yield call(fetchData, `user/logout?sessionID=${sessionID}`, generateFetchOptions('GET'));
 
     yield put(logOut());
 };
 
 function* uploadTodoHandler({ payload }) {
-    const { todo, sessionId } = payload;
+    const { todo, sessionID } = payload;
 
     try {
-        const { data: approvedTodo } = yield call(fetchData, `todo?sessionId=${sessionId}`, generateFetchOptions('PUT', JSON.stringify(todo)));
+        const { data: approvedTodo } = yield call(fetchData, `todo?sessionID=${sessionID}`, generateFetchOptions('PUT', JSON.stringify(todo)));
         approvedTodo.author = todo.author;
 
         yield put(addTodo(approvedTodo));
@@ -55,10 +55,10 @@ function* uploadTodoHandler({ payload }) {
 }
 
 function* flushTodoHandler({ payload }) {
-    const { id, sessionId } = payload;
+    const { id, sessionID } = payload;
 
     try {
-        yield call(fetchData, `todo?sessionId=${sessionId}`, generateFetchOptions('DELETE', JSON.stringify({ id })));
+        yield call(fetchData, `todo?sessionID=${sessionID}`, generateFetchOptions('DELETE', JSON.stringify({ id })));
 
         yield put(deleteTodo(id));
     } catch (err) {
@@ -70,10 +70,17 @@ function* flushTodoHandler({ payload }) {
 }
 
 function* modifyTodoHandler({ payload}) {
-    const { todo, sessionId } = payload;
+    const { todo, sessionID } = payload;
+
+    const newTodo = {
+        title: todo.title,
+        description: todo.description,
+        status: todo.status,
+        _id: todo._id,
+    }
 
     try {
-        yield call(fetchData, `todo?sessionId=${sessionId}`, generateFetchOptions('PUT', JSON.stringify(todo)));
+        yield call(fetchData, `todo?sessionID=${sessionID}`, generateFetchOptions('PUT', JSON.stringify(newTodo)));
 
         yield put(updateTodo(todo))
     } catch (err) {

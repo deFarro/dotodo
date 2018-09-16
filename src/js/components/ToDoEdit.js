@@ -43,7 +43,7 @@ class ToDoEdit extends React.Component {
     const {
       mission,
       showMode,
-      user: { _id, username, sessionId },
+      user: { _id, username, sessionID },
       uploadTodo,
       modifyTodo,
     } = this.props;
@@ -58,7 +58,7 @@ class ToDoEdit extends React.Component {
         newTodo.status = 'notCompleted';
 
         // Passing constructed todo with user's info to action creater
-        testCall(this.props.add) || uploadTodo(newTodo, sessionId);
+        testCall(this.props.add) || uploadTodo(newTodo, sessionID);
 
         // Clear the form fields
         this.setState({todo: {title: '', description: ''}});
@@ -69,17 +69,17 @@ class ToDoEdit extends React.Component {
       else {
         //Changing mode back to 'show'
         showMode();
-        testCall(this.props.edit) || modifyTodo(this.state.todo, sessionId);
+        testCall(this.props.edit) || modifyTodo(this.state.todo, sessionID);
       }
     }
   }
 
   // Method to delete a todo
   deleteTodo() {
-    const { showMode, flushTodo, user: { sessionId } } = this.props;
+    const { showMode, flushTodo, user: { sessionID } } = this.props;
 
     showMode();
-    testCall(this.props.remove) || flushTodo(this.state.todo._id, sessionId);
+    testCall(this.props.remove) || flushTodo(this.state.todo._id, sessionID);
   }
 
   render() {

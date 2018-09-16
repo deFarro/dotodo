@@ -1,5 +1,5 @@
 // Setup for fetch requests
-const URL = 'http://localhost:3000/';
+const URL = 'http://localhost:9090/';
 
 // Add more header (like CORS) for production here
 const HEADERS = new Headers({
@@ -16,23 +16,12 @@ export const fetchData = (url, options) => {
         throw new Error('Network error occured.');
       })
     .catch(err => err);
-  // For development without backend
-
-  // if (options.method === 'POST') {
-  //   return new Promise((resolve, reject) => resolve({ username: 'Nix', sessionId: 1234567, _id: 123 }));
-  // }
-
-  // if (options.method === 'PUT') {
-  //   return new Promise((resolve, reject) => resolve({ title: 'Title', description: 'Description', author: { username: 'Nix', sessionId: 1234567, _id: 123 }, status: 'completed' }));
-  // }
-
-  // return new Promise((resolve, reject) => resolve([{ _id: 12345, title: 'Title', description: 'Description', author: { username: 'Nix', sessionId: 1234567, _id: 123 }, status: 'completed' }]));
 }
 
 export const generateFetchOptions = (method, contents) => {
   return {
     method,
-    credentials: 'include',
+    mode: 'cors',
     body: contents,
     headers: HEADERS
   };

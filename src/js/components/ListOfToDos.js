@@ -26,7 +26,7 @@ const ListOfToDos = props => {
     event.currentTarget.classList.remove('drag_over');
     const updatedToDo = JSON.parse(event.dataTransfer.getData('todo'));
     updatedToDo.status = title === 'In Progress' ? 'notCompleted' : 'completed';
-    modifyTodo(updatedToDo, user.sessionId);
+    modifyTodo(updatedToDo, user.sessionID);
   };
   // Adding some event listeners to display dragging
   return (

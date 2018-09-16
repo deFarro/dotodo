@@ -33,7 +33,7 @@ const rootReducer = (state = {}, action) => {
 
     case LOAD_TODOS:
       const newState = Object.assign({}, state);
-      newState.todos = action.todos.data;
+      newState.todos = action.todos;
       return newState;
 
     case ERROR:
