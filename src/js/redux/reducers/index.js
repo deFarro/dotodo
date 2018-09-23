@@ -4,7 +4,8 @@ import { ADD_TODO, UPDATE_TODO, DELETE_TODO, LOG_IN, LOG_OUT, LOAD_TODOS, ERROR,
 const rootReducer = (state = {}, action) => {
   switch (action.type) {
     case ADD_TODO:
-    const todos = [...state.todos, action.payload];
+      const todos = [...state.todos, action.payload];
+
       return {user: state.user, todos};
 
     case UPDATE_TODO:
@@ -20,6 +21,7 @@ const rootReducer = (state = {}, action) => {
       else {
         newTodos[index] = action.todo;
       }
+
       return {user: state.user, todos: newTodos};
 
     case DELETE_TODO:
@@ -34,6 +36,7 @@ const rootReducer = (state = {}, action) => {
     case LOAD_TODOS:
       const newState = Object.assign({}, state);
       newState.todos = action.todos;
+
       return newState;
 
     case ERROR:

@@ -42,8 +42,7 @@ function* uploadTodoHandler({ payload }) {
     const { todo, sessionID } = payload;
 
     try {
-        const { data: approvedTodo } = yield call(fetchData, `todo?sessionID=${sessionID}`, generateFetchOptions('PUT', JSON.stringify(todo)));
-        approvedTodo.author = todo.author;
+        const approvedTodo = yield call(fetchData, `todo?sessionID=${sessionID}`, generateFetchOptions('PUT', JSON.stringify(todo)));
 
         yield put(addTodo(approvedTodo));
     } catch (err) {
