@@ -43,7 +43,7 @@ class ToDoEdit extends React.Component {
     const {
       mission,
       showMode,
-      user: { _id, username, sessionID },
+      user: { id, username, sessionID },
       uploadTodo,
       modifyTodo,
     } = this.props;
@@ -54,7 +54,7 @@ class ToDoEdit extends React.Component {
       // If so, 'add' action is triggered
       if (mission === 'addNew') {
         const newTodo = Object.assign({}, this.state.todo);
-        newTodo.author = {...{ _id, username }}
+        newTodo.author = {...{ id, username }}
         newTodo.status = 'notCompleted';
 
         // Passing constructed todo with user's info to action creater
@@ -79,7 +79,7 @@ class ToDoEdit extends React.Component {
     const { showMode, flushTodo, user: { sessionID } } = this.props;
 
     showMode();
-    testCall(this.props.remove) || flushTodo(this.state.todo._id, sessionID);
+    testCall(this.props.remove) || flushTodo(this.state.todo.id, sessionID);
   }
 
   render() {

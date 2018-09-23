@@ -10,7 +10,7 @@ const rootReducer = (state = {}, action) => {
     case UPDATE_TODO:
       // Finding index of edited todo
       let index;
-      state.todos.forEach((todo, i) => {if (todo._id === action.todo._id) {index = i}});
+      state.todos.forEach((todo, i) => {if (todo.id === action.todo.id) {index = i}});
       const newTodos = [...state.todos];
       // If status (notCompleted/Completed) changed we not replacing todo but delete it and add to the end of the array
       if (state.todos[index].status !== action.todo.status) {
@@ -23,7 +23,7 @@ const rootReducer = (state = {}, action) => {
       return {user: state.user, todos: newTodos};
 
     case DELETE_TODO:
-      return {user: state.user, todos: state.todos.filter(todo => todo._id !== action.id)}
+      return {user: state.user, todos: state.todos.filter(todo => todo.id !== action.id)}
 
     case LOG_IN:
       return {todos: state.todos, user: action.user}

@@ -76,7 +76,7 @@ function* modifyTodoHandler({ payload}) {
         title: todo.title,
         description: todo.description,
         status: todo.status,
-        _id: todo._id,
+        id: todo.id,
     }
 
     try {

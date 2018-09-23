@@ -37735,7 +37735,7 @@ var enableSchedulerTracking = true;
 
 // Only used in www builds.
 
-var DEFAULT_THREAD_ID = 0;
+var DEFAULT_THREADid = 0;
 
 // Counters used to generate unique IDs.
 var interactionIDCounter = 0;
@@ -37787,7 +37787,7 @@ function unstable_getThreadID() {
 }
 
 function unstable_track(name, timestamp, callback) {
-  var threadID = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : DEFAULT_THREAD_ID;
+  var threadID = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : DEFAULT_THREADid;
 
   if (!enableSchedulerTracking) {
     return callback();
@@ -37848,7 +37848,7 @@ function unstable_track(name, timestamp, callback) {
 }
 
 function unstable_wrap(callback) {
-  var threadID = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : DEFAULT_THREAD_ID;
+  var threadID = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : DEFAULT_THREADid;
 
   if (!enableSchedulerTracking) {
     return callback;
@@ -41800,11 +41800,11 @@ var ToDoShow = function ToDoShow(props) {
       flushTodo = props.flushTodo;
 
   var remove = function remove() {
-    return flushTodo(todo._id, user.sessionID);
+    return flushTodo(todo.id, user.sessionID);
   };
 
   // If logged in user is not an author of the todo, control buttons are hidden
-  var readOnly = todo.author._id !== user._id;
+  var readOnly = todo.author.id !== user.id;
 
   return _react2.default.createElement(
     'div',
@@ -41953,7 +41953,7 @@ var ToDoEdit = function (_React$Component) {
           mission = _props.mission,
           showMode = _props.showMode,
           _props$user = _props.user,
-          _id = _props$user._id,
+          id = _props$user.id,
           username = _props$user.username,
           sessionID = _props$user.sessionID,
           uploadTodo = _props.uploadTodo,
@@ -41966,7 +41966,7 @@ var ToDoEdit = function (_React$Component) {
         // If so, 'add' action is triggered
         if (mission === 'addNew') {
           var newTodo = Object.assign({}, this.state.todo);
-          newTodo.author = _extends({ _id: _id, username: username });
+          newTodo.author = _extends({ id: id, username: username });
           newTodo.status = 'notCompleted';
 
           // Passing constructed todo with user's info to action creater
@@ -41998,7 +41998,7 @@ var ToDoEdit = function (_React$Component) {
 
 
       showMode();
-      (0, _utils.testCall)(this.props.remove) || flushTodo(this.state.todo._id, sessionID);
+      (0, _utils.testCall)(this.props.remove) || flushTodo(this.state.todo.id, sessionID);
     }
   }, {
     key: 'render',
@@ -42107,7 +42107,7 @@ var rootReducer = function rootReducer() {
       // Finding index of edited todo
       var index = void 0;
       state.todos.forEach(function (todo, i) {
-        if (todo._id === action.todo._id) {
+        if (todo.id === action.todo.id) {
           index = i;
         }
       });
@@ -42123,7 +42123,7 @@ var rootReducer = function rootReducer() {
 
     case _types.DELETE_TODO:
       return { user: state.user, todos: state.todos.filter(function (todo) {
-          return todo._id !== action.id;
+          return todo.id !== action.id;
         }) };
 
     case _types.LOG_IN:
@@ -42374,7 +42374,7 @@ function modifyTodoHandler(_ref6) {
                         title: todo.title,
                         description: todo.description,
                         status: todo.status,
-                        _id: todo._id
+                        id: todo.id
                     };
                     _context5.prev = 2;
                     _context5.next = 5;

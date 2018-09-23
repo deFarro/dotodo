@@ -13,10 +13,10 @@ import { default as container } from '../redux/container';
 // Passing data fo drag-and-drop from here
 const ToDoShow = props => {
   const { todo, editMode, user, flushTodo } = props;
-  const remove = () => flushTodo(todo._id, user.sessionID)
+  const remove = () => flushTodo(todo.id, user.sessionID)
 
   // If logged in user is not an author of the todo, control buttons are hidden
-  const readOnly = todo.author._id !== user._id;
+  const readOnly = todo.author.id !== user.id;
 
   return (
     <div
