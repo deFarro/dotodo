@@ -71,15 +71,8 @@ function* flushTodoHandler({ payload }) {
 function* modifyTodoHandler({ payload}) {
     const { todo, sessionID } = payload;
 
-    const newTodo = {
-        title: todo.title,
-        description: todo.description,
-        status: todo.status,
-        id: todo.id,
-    }
-
     try {
-        yield call(fetchData, `todo?sessionID=${sessionID}`, generateFetchOptions('PUT', JSON.stringify(newTodo)));
+        yield call(fetchData, `todo?sessionID=${sessionID}`, generateFetchOptions('PUT', JSON.stringify(todo)));
 
         yield put(updateTodo(todo))
     } catch (err) {
