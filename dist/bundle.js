@@ -37735,7 +37735,7 @@ var enableSchedulerTracking = true;
 
 // Only used in www builds.
 
-var DEFAULT_THREADid = 0;
+var DEFAULT_THREAD_ID = 0;
 
 // Counters used to generate unique IDs.
 var interactionIDCounter = 0;
@@ -37787,7 +37787,7 @@ function unstable_getThreadID() {
 }
 
 function unstable_track(name, timestamp, callback) {
-  var threadID = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : DEFAULT_THREADid;
+  var threadID = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : DEFAULT_THREAD_ID;
 
   if (!enableSchedulerTracking) {
     return callback();
@@ -37848,7 +37848,7 @@ function unstable_track(name, timestamp, callback) {
 }
 
 function unstable_wrap(callback) {
-  var threadID = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : DEFAULT_THREADid;
+  var threadID = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : DEFAULT_THREAD_ID;
 
   if (!enableSchedulerTracking) {
     return callback;
@@ -40141,7 +40141,7 @@ var MainWindow = function MainWindow(_ref) {
 
 MainWindow.propTypes = {
   user: _propTypes.PropTypes.object,
-  todos: _propTypes.PropTypes.array
+  todos: _propTypes.PropTypes.objectOf(_propTypes.PropTypes.any)
 };
 
 var mapStateToProps = function mapStateToProps(state) {
@@ -40193,7 +40193,7 @@ exports = module.exports = __webpack_require__(49)(true);
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Alex+Brush);", ""]);
 
 // module
-exports.push([module.i, "@keyframes shake {\n  10% {\n    right: 4px; }\n  30% {\n    right: -8px; }\n  50% {\n    right: 6px; }\n  70% {\n    right: -4px; }\n  90% {\n    right: 2px; } }\n\nbody {\n  background: #BDD0EE; }\n", "", {"version":3,"sources":["/Users/Jack/Documents/Coding/Projects/letsdoit_front/src/scss/src/scss/partials/_mixins.scss","/Users/Jack/Documents/Coding/Projects/letsdoit_front/src/scss/src/scss/MainWindow.scss","/Users/Jack/Documents/Coding/Projects/letsdoit_front/src/scss/src/scss/partials/_variables.scss"],"names":[],"mappings":"AA8CA;EACE;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA,EAAA;;AChDjB;EACE,oBCFgC,EDGjC","file":"MainWindow.scss","sourcesContent":["// Text formating\n@mixin format_text($size: 1rem, $color: $primary_text_color, $font: Helvetica) {\n  font-family: $font;\n  color: $color;\n  font-size: $size;\n}\n\n// Layout\n@mixin center {\n  width: 95%;\n  margin: 0 auto;\n}\n\n@mixin flex-container($dir: row, $just: center, $wrap: wrap, $ali: stretch) {\n  display: flex;\n  justify-content: $just;\n  flex-direction: $dir;\n  flex-wrap: $wrap;\n  align-items: $ali;\n}\n\n// Borders\n@mixin apply_border ($color: $border_color, $style: solid) {\n  border: 1px $style $color;\n  border-radius: 5px;\n}\n\n// Elements\n@mixin button($cursor: pointer) {\n  @include apply_border($color: $button_color);\n  background-color: $button_color;\n  outline: none;\n  font-weight: 600;\n  &:hover {\n    cursor: $cursor;\n    background-color: lighten($button_color, 10%);\n    border-color: lighten($button_color, 10%);\n  }\n}\n\n// Animations\n@mixin animate-active {\n  transition-duration: 0.3s;\n  transition-property: background-color, border-color, color;\n}\n\n@keyframes shake {\n  10% {right: 4px};\n  30% {right: -8px};\n  50% {right: 6px};\n  70% {right: -4px};\n  90% {right: 2px};\n}\n\n@mixin animate-button {\n  position: relative;\n  animation-name: shake;\n  animation-duration: 0.5s;\n  animation-timing-function: ease-in;\n}\n","@import \"partials/variables\";\n@import \"partials/mixins\";\n\nbody {\n  background: $primary_background_color;\n}\n","@import url(https://fonts.googleapis.com/css?family=Alex+Brush);\n\n$primary_background_color: #BDD0EE;\n$todo_background_color: white;\n$list_background_color: #F2F5F8;\n$primary_text_color: black;\n$border_color: #AAB3C2;\n$button_color: #8F7EE5;\n$input_highlight: #59B7FF;\n\n$inprog_color: #FFBC3C;\n$completed_color: #4DD87A;\n$error_color: #FF5A5A;\n\n$select_color: #bfd9bf;\n\n$font: Helvetica;\n$title_font: 'Alex Brush';\n"],"sourceRoot":""}]);
+exports.push([module.i, "@keyframes shake {\n  10% {\n    right: 4px; }\n  30% {\n    right: -8px; }\n  50% {\n    right: 6px; }\n  70% {\n    right: -4px; }\n  90% {\n    right: 2px; } }\n\nbody {\n  background: #BDD0EE; }\n", "", {"version":3,"sources":["/Users/Jack/Documents/Coding/Projects/Letsdoit/src/scss/src/scss/partials/_mixins.scss","/Users/Jack/Documents/Coding/Projects/Letsdoit/src/scss/src/scss/MainWindow.scss","/Users/Jack/Documents/Coding/Projects/Letsdoit/src/scss/src/scss/partials/_variables.scss"],"names":[],"mappings":"AA8CA;EACE;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA,EAAA;;AChDjB;EACE,oBCFgC,EDGjC","file":"MainWindow.scss","sourcesContent":["// Text formating\n@mixin format_text($size: 1rem, $color: $primary_text_color, $font: Helvetica) {\n  font-family: $font;\n  color: $color;\n  font-size: $size;\n}\n\n// Layout\n@mixin center {\n  width: 95%;\n  margin: 0 auto;\n}\n\n@mixin flex-container($dir: row, $just: center, $wrap: wrap, $ali: stretch) {\n  display: flex;\n  justify-content: $just;\n  flex-direction: $dir;\n  flex-wrap: $wrap;\n  align-items: $ali;\n}\n\n// Borders\n@mixin apply_border ($color: $border_color, $style: solid) {\n  border: 1px $style $color;\n  border-radius: 5px;\n}\n\n// Elements\n@mixin button($cursor: pointer) {\n  @include apply_border($color: $button_color);\n  background-color: $button_color;\n  outline: none;\n  font-weight: 600;\n  &:hover {\n    cursor: $cursor;\n    background-color: lighten($button_color, 10%);\n    border-color: lighten($button_color, 10%);\n  }\n}\n\n// Animations\n@mixin animate-active {\n  transition-duration: 0.3s;\n  transition-property: background-color, border-color, color;\n}\n\n@keyframes shake {\n  10% {right: 4px};\n  30% {right: -8px};\n  50% {right: 6px};\n  70% {right: -4px};\n  90% {right: 2px};\n}\n\n@mixin animate-button {\n  position: relative;\n  animation-name: shake;\n  animation-duration: 0.5s;\n  animation-timing-function: ease-in;\n}\n","@import \"partials/variables\";\n@import \"partials/mixins\";\n\nbody {\n  background: $primary_background_color;\n}\n","@import url(https://fonts.googleapis.com/css?family=Alex+Brush);\n\n$primary_background_color: #BDD0EE;\n$todo_background_color: white;\n$list_background_color: #F2F5F8;\n$primary_text_color: black;\n$border_color: #AAB3C2;\n$button_color: #8F7EE5;\n$input_highlight: #59B7FF;\n\n$inprog_color: #FFBC3C;\n$completed_color: #4DD87A;\n$error_color: #FF5A5A;\n\n$select_color: #bfd9bf;\n\n$font: Helvetica;\n$title_font: 'Alex Brush';\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -40484,7 +40484,7 @@ exports = module.exports = __webpack_require__(49)(true);
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Alex+Brush);", ""]);
 
 // module
-exports.push([module.i, "@keyframes shake {\n  10% {\n    right: 4px; }\n  30% {\n    right: -8px; }\n  50% {\n    right: 6px; }\n  70% {\n    right: -4px; }\n  90% {\n    right: 2px; } }\n\n.login_form {\n  width: 95%;\n  margin: 0 auto; }\n  .login_form input, .login_form button {\n    font-family: Helvetica;\n    color: black;\n    font-size: 1.5rem;\n    border: 1px solid #AAB3C2;\n    border-radius: 5px;\n    display: block;\n    width: 30%;\n    height: 3rem;\n    margin: 1rem auto;\n    box-sizing: border-box; }\n  .login_form input {\n    text-align: center;\n    outline: none; }\n    .login_form input:focus {\n      border-color: #8F7EE5; }\n  .login_form button {\n    transition-duration: 0.3s;\n    transition-property: background-color, border-color, color;\n    background-color: #8F7EE5;\n    outline: none;\n    font-weight: 600;\n    color: white;\n    background-color: #d9d3f6;\n    border: none; }\n    .login_form button.active {\n      background-color: #8F7EE5; }\n    .login_form button.active:hover {\n      background-color: #b4a8ee;\n      cursor: pointer; }\n    .login_form button.error {\n      position: relative;\n      animation-name: shake;\n      animation-duration: 0.5s;\n      animation-timing-function: ease-in;\n      background-color: #FF5A5A;\n      border-color: #FF5A5A; }\n", "", {"version":3,"sources":["/Users/Jack/Documents/Coding/Projects/letsdoit_front/src/scss/src/scss/partials/_mixins.scss","/Users/Jack/Documents/Coding/Projects/letsdoit_front/src/scss/src/scss/LoginWindow.scss","/Users/Jack/Documents/Coding/Projects/letsdoit_front/src/scss/src/scss/partials/_variables.scss"],"names":[],"mappings":"AA8CA;EACE;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA,EAAA;;AChDjB;EDME,WAAU;EACV,eAAc,ECkCf;EAzCD;IDDE,uBAD2E;IAE3E,aEEwB;IFDxB,kBCEoC;IDiBpC,0BEjBoB;IFkBpB,mBAAkB;IChBhB,eAAc;IACd,WAAU;IACV,aAAY;IACZ,kBAAiB;IACjB,uBAAsB,EACvB;EAVH;IAaI,mBAAkB;IAClB,cAAa,EAId;IAlBH;MAgBM,sBCZgB,EDajB;EAjBL;IDuCE,0BAAyB;IACzB,2DAA0D;IClBxD,0BClBkB;IDmBlB,cAAa;IACb,iBAAgB;IAChB,aAAY;IACZ,0BAA6C;IAC7C,aAAY,EAab;IAxCH;MA6BM,0BCzBgB,ED0BjB;IA9BL;MAgCM,0BAA6C;MAC7C,gBAAe,EAChB;IAlCL;MDoDE,mBAAkB;MAClB,sBAAqB;MACrB,yBAAwB;MACxB,mCAAkC;MClB9B,0BC5Be;MD6Bf,sBC7Be,ED8BhB","file":"LoginWindow.scss","sourcesContent":["// Text formating\n@mixin format_text($size: 1rem, $color: $primary_text_color, $font: Helvetica) {\n  font-family: $font;\n  color: $color;\n  font-size: $size;\n}\n\n// Layout\n@mixin center {\n  width: 95%;\n  margin: 0 auto;\n}\n\n@mixin flex-container($dir: row, $just: center, $wrap: wrap, $ali: stretch) {\n  display: flex;\n  justify-content: $just;\n  flex-direction: $dir;\n  flex-wrap: $wrap;\n  align-items: $ali;\n}\n\n// Borders\n@mixin apply_border ($color: $border_color, $style: solid) {\n  border: 1px $style $color;\n  border-radius: 5px;\n}\n\n// Elements\n@mixin button($cursor: pointer) {\n  @include apply_border($color: $button_color);\n  background-color: $button_color;\n  outline: none;\n  font-weight: 600;\n  &:hover {\n    cursor: $cursor;\n    background-color: lighten($button_color, 10%);\n    border-color: lighten($button_color, 10%);\n  }\n}\n\n// Animations\n@mixin animate-active {\n  transition-duration: 0.3s;\n  transition-property: background-color, border-color, color;\n}\n\n@keyframes shake {\n  10% {right: 4px};\n  30% {right: -8px};\n  50% {right: 6px};\n  70% {right: -4px};\n  90% {right: 2px};\n}\n\n@mixin animate-button {\n  position: relative;\n  animation-name: shake;\n  animation-duration: 0.5s;\n  animation-timing-function: ease-in;\n}\n","@import \"partials/variables\";\n@import \"partials/mixins\";\n\n.login_form {\n  @include center;\n  %form {\n    @include format_text($size: 1.5rem);\n    @include apply_border;\n    display: block;\n    width: 30%;\n    height: 3rem;\n    margin: 1rem auto;\n    box-sizing: border-box;\n  }\n  input {\n    @extend %form;\n    text-align: center;\n    outline: none;\n    &:focus {\n      border-color: $button_color;\n    }\n  }\n  button {\n    @extend %form;\n    @include animate-active;\n    background-color: $button_color;\n    outline: none;\n    font-weight: 600;\n    color: white;\n    background-color: lighten($button_color, 20%);\n    border: none;\n    &.active {\n      background-color: $button_color;\n    }\n    &.active:hover {\n      background-color: lighten($button_color, 10%);\n      cursor: pointer;\n    }\n    &.error {\n      @include animate-button;\n      background-color: $error_color;\n      border-color: $error_color;\n    }\n  }\n}\n","@import url(https://fonts.googleapis.com/css?family=Alex+Brush);\n\n$primary_background_color: #BDD0EE;\n$todo_background_color: white;\n$list_background_color: #F2F5F8;\n$primary_text_color: black;\n$border_color: #AAB3C2;\n$button_color: #8F7EE5;\n$input_highlight: #59B7FF;\n\n$inprog_color: #FFBC3C;\n$completed_color: #4DD87A;\n$error_color: #FF5A5A;\n\n$select_color: #bfd9bf;\n\n$font: Helvetica;\n$title_font: 'Alex Brush';\n"],"sourceRoot":""}]);
+exports.push([module.i, "@keyframes shake {\n  10% {\n    right: 4px; }\n  30% {\n    right: -8px; }\n  50% {\n    right: 6px; }\n  70% {\n    right: -4px; }\n  90% {\n    right: 2px; } }\n\n.login_form {\n  width: 95%;\n  margin: 0 auto; }\n  .login_form input, .login_form button {\n    font-family: Helvetica;\n    color: black;\n    font-size: 1.5rem;\n    border: 1px solid #AAB3C2;\n    border-radius: 5px;\n    display: block;\n    width: 30%;\n    height: 3rem;\n    margin: 1rem auto;\n    box-sizing: border-box; }\n  .login_form input {\n    text-align: center;\n    outline: none; }\n    .login_form input:focus {\n      border-color: #8F7EE5; }\n  .login_form button {\n    transition-duration: 0.3s;\n    transition-property: background-color, border-color, color;\n    background-color: #8F7EE5;\n    outline: none;\n    font-weight: 600;\n    color: white;\n    background-color: #d9d3f6;\n    border: none; }\n    .login_form button.active {\n      background-color: #8F7EE5; }\n    .login_form button.active:hover {\n      background-color: #b4a8ee;\n      cursor: pointer; }\n    .login_form button.error {\n      position: relative;\n      animation-name: shake;\n      animation-duration: 0.5s;\n      animation-timing-function: ease-in;\n      background-color: #FF5A5A;\n      border-color: #FF5A5A; }\n", "", {"version":3,"sources":["/Users/Jack/Documents/Coding/Projects/Letsdoit/src/scss/src/scss/partials/_mixins.scss","/Users/Jack/Documents/Coding/Projects/Letsdoit/src/scss/src/scss/LoginWindow.scss","/Users/Jack/Documents/Coding/Projects/Letsdoit/src/scss/src/scss/partials/_variables.scss"],"names":[],"mappings":"AA8CA;EACE;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA,EAAA;;AChDjB;EDME,WAAU;EACV,eAAc,ECkCf;EAzCD;IDDE,uBAD2E;IAE3E,aEEwB;IFDxB,kBCEoC;IDiBpC,0BEjBoB;IFkBpB,mBAAkB;IChBhB,eAAc;IACd,WAAU;IACV,aAAY;IACZ,kBAAiB;IACjB,uBAAsB,EACvB;EAVH;IAaI,mBAAkB;IAClB,cAAa,EAId;IAlBH;MAgBM,sBCZgB,EDajB;EAjBL;IDuCE,0BAAyB;IACzB,2DAA0D;IClBxD,0BClBkB;IDmBlB,cAAa;IACb,iBAAgB;IAChB,aAAY;IACZ,0BAA6C;IAC7C,aAAY,EAab;IAxCH;MA6BM,0BCzBgB,ED0BjB;IA9BL;MAgCM,0BAA6C;MAC7C,gBAAe,EAChB;IAlCL;MDoDE,mBAAkB;MAClB,sBAAqB;MACrB,yBAAwB;MACxB,mCAAkC;MClB9B,0BC5Be;MD6Bf,sBC7Be,ED8BhB","file":"LoginWindow.scss","sourcesContent":["// Text formating\n@mixin format_text($size: 1rem, $color: $primary_text_color, $font: Helvetica) {\n  font-family: $font;\n  color: $color;\n  font-size: $size;\n}\n\n// Layout\n@mixin center {\n  width: 95%;\n  margin: 0 auto;\n}\n\n@mixin flex-container($dir: row, $just: center, $wrap: wrap, $ali: stretch) {\n  display: flex;\n  justify-content: $just;\n  flex-direction: $dir;\n  flex-wrap: $wrap;\n  align-items: $ali;\n}\n\n// Borders\n@mixin apply_border ($color: $border_color, $style: solid) {\n  border: 1px $style $color;\n  border-radius: 5px;\n}\n\n// Elements\n@mixin button($cursor: pointer) {\n  @include apply_border($color: $button_color);\n  background-color: $button_color;\n  outline: none;\n  font-weight: 600;\n  &:hover {\n    cursor: $cursor;\n    background-color: lighten($button_color, 10%);\n    border-color: lighten($button_color, 10%);\n  }\n}\n\n// Animations\n@mixin animate-active {\n  transition-duration: 0.3s;\n  transition-property: background-color, border-color, color;\n}\n\n@keyframes shake {\n  10% {right: 4px};\n  30% {right: -8px};\n  50% {right: 6px};\n  70% {right: -4px};\n  90% {right: 2px};\n}\n\n@mixin animate-button {\n  position: relative;\n  animation-name: shake;\n  animation-duration: 0.5s;\n  animation-timing-function: ease-in;\n}\n","@import \"partials/variables\";\n@import \"partials/mixins\";\n\n.login_form {\n  @include center;\n  %form {\n    @include format_text($size: 1.5rem);\n    @include apply_border;\n    display: block;\n    width: 30%;\n    height: 3rem;\n    margin: 1rem auto;\n    box-sizing: border-box;\n  }\n  input {\n    @extend %form;\n    text-align: center;\n    outline: none;\n    &:focus {\n      border-color: $button_color;\n    }\n  }\n  button {\n    @extend %form;\n    @include animate-active;\n    background-color: $button_color;\n    outline: none;\n    font-weight: 600;\n    color: white;\n    background-color: lighten($button_color, 20%);\n    border: none;\n    &.active {\n      background-color: $button_color;\n    }\n    &.active:hover {\n      background-color: lighten($button_color, 10%);\n      cursor: pointer;\n    }\n    &.error {\n      @include animate-button;\n      background-color: $error_color;\n      border-color: $error_color;\n    }\n  }\n}\n","@import url(https://fonts.googleapis.com/css?family=Alex+Brush);\n\n$primary_background_color: #BDD0EE;\n$todo_background_color: white;\n$list_background_color: #F2F5F8;\n$primary_text_color: black;\n$border_color: #AAB3C2;\n$button_color: #8F7EE5;\n$input_highlight: #59B7FF;\n\n$inprog_color: #FFBC3C;\n$completed_color: #4DD87A;\n$error_color: #FF5A5A;\n\n$select_color: #bfd9bf;\n\n$font: Helvetica;\n$title_font: 'Alex Brush';\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -40529,7 +40529,7 @@ exports = module.exports = __webpack_require__(49)(true);
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Alex+Brush);", ""]);
 
 // module
-exports.push([module.i, "@keyframes shake {\n  10% {\n    right: 4px; }\n  30% {\n    right: -8px; }\n  50% {\n    right: 6px; }\n  70% {\n    right: -4px; }\n  90% {\n    right: 2px; } }\n\n.app_title {\n  width: 95%;\n  margin: 0 auto;\n  text-align: center;\n  position: relative; }\n  .app_title h1 {\n    font-family: \"Alex Brush\";\n    color: white;\n    font-size: 5rem;\n    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;\n    margin: 1rem; }\n", "", {"version":3,"sources":["/Users/Jack/Documents/Coding/Projects/letsdoit_front/src/scss/src/scss/partials/_mixins.scss","/Users/Jack/Documents/Coding/Projects/letsdoit_front/src/scss/src/scss/Title.scss","/Users/Jack/Documents/Coding/Projects/letsdoit_front/src/scss/src/scss/partials/_variables.scss"],"names":[],"mappings":"AA8CA;EACE;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA,EAAA;;AChDjB;EDME,WAAU;EACV,eAAc;ECLd,mBAAkB;EAClB,mBAAkB,EAMnB;EATD;IDDE,0BEeuB;IFdvB,aCKkC;IDJlC,gBCI2B;IACzB,kEAAiE;IACjE,aAAY,EACb","file":"Title.scss","sourcesContent":["// Text formating\n@mixin format_text($size: 1rem, $color: $primary_text_color, $font: Helvetica) {\n  font-family: $font;\n  color: $color;\n  font-size: $size;\n}\n\n// Layout\n@mixin center {\n  width: 95%;\n  margin: 0 auto;\n}\n\n@mixin flex-container($dir: row, $just: center, $wrap: wrap, $ali: stretch) {\n  display: flex;\n  justify-content: $just;\n  flex-direction: $dir;\n  flex-wrap: $wrap;\n  align-items: $ali;\n}\n\n// Borders\n@mixin apply_border ($color: $border_color, $style: solid) {\n  border: 1px $style $color;\n  border-radius: 5px;\n}\n\n// Elements\n@mixin button($cursor: pointer) {\n  @include apply_border($color: $button_color);\n  background-color: $button_color;\n  outline: none;\n  font-weight: 600;\n  &:hover {\n    cursor: $cursor;\n    background-color: lighten($button_color, 10%);\n    border-color: lighten($button_color, 10%);\n  }\n}\n\n// Animations\n@mixin animate-active {\n  transition-duration: 0.3s;\n  transition-property: background-color, border-color, color;\n}\n\n@keyframes shake {\n  10% {right: 4px};\n  30% {right: -8px};\n  50% {right: 6px};\n  70% {right: -4px};\n  90% {right: 2px};\n}\n\n@mixin animate-button {\n  position: relative;\n  animation-name: shake;\n  animation-duration: 0.5s;\n  animation-timing-function: ease-in;\n}\n","@import \"partials/variables\";\n@import \"partials/mixins\";\n\n.app_title {\n  @include center;\n  text-align: center;\n  position: relative;\n  h1 {\n    @include format_text(5rem, white, $title_font);\n    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;\n    margin: 1rem;\n  }\n}\n","@import url(https://fonts.googleapis.com/css?family=Alex+Brush);\n\n$primary_background_color: #BDD0EE;\n$todo_background_color: white;\n$list_background_color: #F2F5F8;\n$primary_text_color: black;\n$border_color: #AAB3C2;\n$button_color: #8F7EE5;\n$input_highlight: #59B7FF;\n\n$inprog_color: #FFBC3C;\n$completed_color: #4DD87A;\n$error_color: #FF5A5A;\n\n$select_color: #bfd9bf;\n\n$font: Helvetica;\n$title_font: 'Alex Brush';\n"],"sourceRoot":""}]);
+exports.push([module.i, "@keyframes shake {\n  10% {\n    right: 4px; }\n  30% {\n    right: -8px; }\n  50% {\n    right: 6px; }\n  70% {\n    right: -4px; }\n  90% {\n    right: 2px; } }\n\n.app_title {\n  width: 95%;\n  margin: 0 auto;\n  text-align: center;\n  position: relative; }\n  .app_title h1 {\n    font-family: \"Alex Brush\";\n    color: white;\n    font-size: 5rem;\n    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;\n    margin: 1rem; }\n", "", {"version":3,"sources":["/Users/Jack/Documents/Coding/Projects/Letsdoit/src/scss/src/scss/partials/_mixins.scss","/Users/Jack/Documents/Coding/Projects/Letsdoit/src/scss/src/scss/Title.scss","/Users/Jack/Documents/Coding/Projects/Letsdoit/src/scss/src/scss/partials/_variables.scss"],"names":[],"mappings":"AA8CA;EACE;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA,EAAA;;AChDjB;EDME,WAAU;EACV,eAAc;ECLd,mBAAkB;EAClB,mBAAkB,EAMnB;EATD;IDDE,0BEeuB;IFdvB,aCKkC;IDJlC,gBCI2B;IACzB,kEAAiE;IACjE,aAAY,EACb","file":"Title.scss","sourcesContent":["// Text formating\n@mixin format_text($size: 1rem, $color: $primary_text_color, $font: Helvetica) {\n  font-family: $font;\n  color: $color;\n  font-size: $size;\n}\n\n// Layout\n@mixin center {\n  width: 95%;\n  margin: 0 auto;\n}\n\n@mixin flex-container($dir: row, $just: center, $wrap: wrap, $ali: stretch) {\n  display: flex;\n  justify-content: $just;\n  flex-direction: $dir;\n  flex-wrap: $wrap;\n  align-items: $ali;\n}\n\n// Borders\n@mixin apply_border ($color: $border_color, $style: solid) {\n  border: 1px $style $color;\n  border-radius: 5px;\n}\n\n// Elements\n@mixin button($cursor: pointer) {\n  @include apply_border($color: $button_color);\n  background-color: $button_color;\n  outline: none;\n  font-weight: 600;\n  &:hover {\n    cursor: $cursor;\n    background-color: lighten($button_color, 10%);\n    border-color: lighten($button_color, 10%);\n  }\n}\n\n// Animations\n@mixin animate-active {\n  transition-duration: 0.3s;\n  transition-property: background-color, border-color, color;\n}\n\n@keyframes shake {\n  10% {right: 4px};\n  30% {right: -8px};\n  50% {right: 6px};\n  70% {right: -4px};\n  90% {right: 2px};\n}\n\n@mixin animate-button {\n  position: relative;\n  animation-name: shake;\n  animation-duration: 0.5s;\n  animation-timing-function: ease-in;\n}\n","@import \"partials/variables\";\n@import \"partials/mixins\";\n\n.app_title {\n  @include center;\n  text-align: center;\n  position: relative;\n  h1 {\n    @include format_text(5rem, white, $title_font);\n    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;\n    margin: 1rem;\n  }\n}\n","@import url(https://fonts.googleapis.com/css?family=Alex+Brush);\n\n$primary_background_color: #BDD0EE;\n$todo_background_color: white;\n$list_background_color: #F2F5F8;\n$primary_text_color: black;\n$border_color: #AAB3C2;\n$button_color: #8F7EE5;\n$input_highlight: #59B7FF;\n\n$inprog_color: #FFBC3C;\n$completed_color: #4DD87A;\n$error_color: #FF5A5A;\n\n$select_color: #bfd9bf;\n\n$font: Helvetica;\n$title_font: 'Alex Brush';\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -40580,7 +40580,8 @@ var Dashboard = function Dashboard() {
     _react2.default.createElement(
       'div',
       { className: 'list_window' },
-      _react2.default.createElement(_ListOfToDos2.default, { title: "In Progress", status: 'notCompleted' }),
+      _react2.default.createElement(_ListOfToDos2.default, { title: "Upcoming", status: 'upcoming' }),
+      _react2.default.createElement(_ListOfToDos2.default, { title: "In Progress", status: 'inprogress' }),
       _react2.default.createElement(_ListOfToDos2.default, { title: "Completed", status: 'completed' })
     )
   );
@@ -40629,7 +40630,7 @@ exports = module.exports = __webpack_require__(49)(true);
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Alex+Brush);", ""]);
 
 // module
-exports.push([module.i, "@keyframes shake {\n  10% {\n    right: 4px; }\n  30% {\n    right: -8px; }\n  50% {\n    right: 6px; }\n  70% {\n    right: -4px; }\n  90% {\n    right: 2px; } }\n\n.list_window {\n  display: flex;\n  justify-content: center;\n  flex-direction: row;\n  flex-wrap: wrap;\n  align-items: stretch;\n  width: 95%;\n  margin: 0 auto;\n  margin-top: 1.5rem; }\n", "", {"version":3,"sources":["/Users/Jack/Documents/Coding/Projects/letsdoit_front/src/scss/src/scss/partials/_mixins.scss","/Users/Jack/Documents/Coding/Projects/letsdoit_front/src/scss/src/scss/Dashboard.scss"],"names":[],"mappings":"AA8CA;EACE;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA,EAAA;;AChDjB;EDWE,cAAa;EACb,wBAF4C;EAG5C,oBAH6B;EAI7B,gBAJyD;EAKzD,qBALwE;EAJxE,WAAU;EACV,eAAc;ECJd,mBAAkB,EACnB","file":"Dashboard.scss","sourcesContent":["// Text formating\n@mixin format_text($size: 1rem, $color: $primary_text_color, $font: Helvetica) {\n  font-family: $font;\n  color: $color;\n  font-size: $size;\n}\n\n// Layout\n@mixin center {\n  width: 95%;\n  margin: 0 auto;\n}\n\n@mixin flex-container($dir: row, $just: center, $wrap: wrap, $ali: stretch) {\n  display: flex;\n  justify-content: $just;\n  flex-direction: $dir;\n  flex-wrap: $wrap;\n  align-items: $ali;\n}\n\n// Borders\n@mixin apply_border ($color: $border_color, $style: solid) {\n  border: 1px $style $color;\n  border-radius: 5px;\n}\n\n// Elements\n@mixin button($cursor: pointer) {\n  @include apply_border($color: $button_color);\n  background-color: $button_color;\n  outline: none;\n  font-weight: 600;\n  &:hover {\n    cursor: $cursor;\n    background-color: lighten($button_color, 10%);\n    border-color: lighten($button_color, 10%);\n  }\n}\n\n// Animations\n@mixin animate-active {\n  transition-duration: 0.3s;\n  transition-property: background-color, border-color, color;\n}\n\n@keyframes shake {\n  10% {right: 4px};\n  30% {right: -8px};\n  50% {right: 6px};\n  70% {right: -4px};\n  90% {right: 2px};\n}\n\n@mixin animate-button {\n  position: relative;\n  animation-name: shake;\n  animation-duration: 0.5s;\n  animation-timing-function: ease-in;\n}\n","@import \"partials/variables\";\n@import \"partials/mixins\";\n\n.list_window {\n  @include flex-container;\n  @include center;\n  margin-top: 1.5rem;\n}\n"],"sourceRoot":""}]);
+exports.push([module.i, "@keyframes shake {\n  10% {\n    right: 4px; }\n  30% {\n    right: -8px; }\n  50% {\n    right: 6px; }\n  70% {\n    right: -4px; }\n  90% {\n    right: 2px; } }\n\n.list_window {\n  display: flex;\n  justify-content: center;\n  flex-direction: row;\n  flex-wrap: wrap;\n  align-items: stretch;\n  width: 95%;\n  margin: 0 auto;\n  margin-top: 1.5rem; }\n", "", {"version":3,"sources":["/Users/Jack/Documents/Coding/Projects/Letsdoit/src/scss/src/scss/partials/_mixins.scss","/Users/Jack/Documents/Coding/Projects/Letsdoit/src/scss/src/scss/Dashboard.scss"],"names":[],"mappings":"AA8CA;EACE;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA,EAAA;;AChDjB;EDWE,cAAa;EACb,wBAF4C;EAG5C,oBAH6B;EAI7B,gBAJyD;EAKzD,qBALwE;EAJxE,WAAU;EACV,eAAc;ECJd,mBAAkB,EACnB","file":"Dashboard.scss","sourcesContent":["// Text formating\n@mixin format_text($size: 1rem, $color: $primary_text_color, $font: Helvetica) {\n  font-family: $font;\n  color: $color;\n  font-size: $size;\n}\n\n// Layout\n@mixin center {\n  width: 95%;\n  margin: 0 auto;\n}\n\n@mixin flex-container($dir: row, $just: center, $wrap: wrap, $ali: stretch) {\n  display: flex;\n  justify-content: $just;\n  flex-direction: $dir;\n  flex-wrap: $wrap;\n  align-items: $ali;\n}\n\n// Borders\n@mixin apply_border ($color: $border_color, $style: solid) {\n  border: 1px $style $color;\n  border-radius: 5px;\n}\n\n// Elements\n@mixin button($cursor: pointer) {\n  @include apply_border($color: $button_color);\n  background-color: $button_color;\n  outline: none;\n  font-weight: 600;\n  &:hover {\n    cursor: $cursor;\n    background-color: lighten($button_color, 10%);\n    border-color: lighten($button_color, 10%);\n  }\n}\n\n// Animations\n@mixin animate-active {\n  transition-duration: 0.3s;\n  transition-property: background-color, border-color, color;\n}\n\n@keyframes shake {\n  10% {right: 4px};\n  30% {right: -8px};\n  50% {right: 6px};\n  70% {right: -4px};\n  90% {right: 2px};\n}\n\n@mixin animate-button {\n  position: relative;\n  animation-name: shake;\n  animation-duration: 0.5s;\n  animation-timing-function: ease-in;\n}\n","@import \"partials/variables\";\n@import \"partials/mixins\";\n\n.list_window {\n  @include flex-container;\n  @include center;\n  margin-top: 1.5rem;\n}\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -40734,7 +40735,7 @@ exports = module.exports = __webpack_require__(49)(true);
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Alex+Brush);", ""]);
 
 // module
-exports.push([module.i, "@keyframes shake {\n  10% {\n    right: 4px; }\n  30% {\n    right: -8px; }\n  50% {\n    right: 6px; }\n  70% {\n    right: -4px; }\n  90% {\n    right: 2px; } }\n\n@media (min-width: 700px) {\n  .button_wrap {\n    position: absolute;\n    top: 0;\n    right: 0; } }\n\n.button_wrap button {\n  border: 1px solid #8F7EE5;\n  border-radius: 5px;\n  background-color: #8F7EE5;\n  outline: none;\n  font-weight: 600;\n  font-family: Helvetica;\n  color: white;\n  font-size: 1rem;\n  width: 100px;\n  height: 2rem; }\n  .button_wrap button:hover {\n    cursor: pointer;\n    background-color: #b4a8ee;\n    border-color: #b4a8ee; }\n", "", {"version":3,"sources":["/Users/Jack/Documents/Coding/Projects/letsdoit_front/src/scss/src/scss/partials/_mixins.scss","/Users/Jack/Documents/Coding/Projects/letsdoit_front/src/scss/src/scss/LogoutButton.scss","/Users/Jack/Documents/Coding/Projects/letsdoit_front/src/scss/src/scss/partials/_variables.scss"],"names":[],"mappings":"AA8CA;EACE;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA,EAAA;;AC/Cf;EADF;IAEI,mBAAkB;IAClB,OAAM;IACN,SAAQ,EAQX,EAAA;;AAZD;EDoBE,0BEhBoB;EFiBpB,mBAAkB;EAMlB,0BEvBoB;EFwBpB,cAAa;EACb,iBAAgB;EA9BhB,uBAD2E;EAE3E,aCQiD;EDPjD,gBCOkC;EAChC,aAAY;EACZ,aAAY,EACb;EAXH;ID+BI,gBAN0B;IAO1B,0BAA6C;IAC7C,sBAAyC,EAC1C","file":"LogoutButton.scss","sourcesContent":["// Text formating\n@mixin format_text($size: 1rem, $color: $primary_text_color, $font: Helvetica) {\n  font-family: $font;\n  color: $color;\n  font-size: $size;\n}\n\n// Layout\n@mixin center {\n  width: 95%;\n  margin: 0 auto;\n}\n\n@mixin flex-container($dir: row, $just: center, $wrap: wrap, $ali: stretch) {\n  display: flex;\n  justify-content: $just;\n  flex-direction: $dir;\n  flex-wrap: $wrap;\n  align-items: $ali;\n}\n\n// Borders\n@mixin apply_border ($color: $border_color, $style: solid) {\n  border: 1px $style $color;\n  border-radius: 5px;\n}\n\n// Elements\n@mixin button($cursor: pointer) {\n  @include apply_border($color: $button_color);\n  background-color: $button_color;\n  outline: none;\n  font-weight: 600;\n  &:hover {\n    cursor: $cursor;\n    background-color: lighten($button_color, 10%);\n    border-color: lighten($button_color, 10%);\n  }\n}\n\n// Animations\n@mixin animate-active {\n  transition-duration: 0.3s;\n  transition-property: background-color, border-color, color;\n}\n\n@keyframes shake {\n  10% {right: 4px};\n  30% {right: -8px};\n  50% {right: 6px};\n  70% {right: -4px};\n  90% {right: 2px};\n}\n\n@mixin animate-button {\n  position: relative;\n  animation-name: shake;\n  animation-duration: 0.5s;\n  animation-timing-function: ease-in;\n}\n","@import \"partials/variables\";\n@import \"partials/mixins\";\n\n.button_wrap {\n  @media (min-width: 700px) {\n    position: absolute;\n    top: 0;\n    right: 0;\n  }\n  button {\n    @include button;\n    @include format_text($size: 1rem, $color: white);\n    width: 100px;\n    height: 2rem;\n  }\n}\n","@import url(https://fonts.googleapis.com/css?family=Alex+Brush);\n\n$primary_background_color: #BDD0EE;\n$todo_background_color: white;\n$list_background_color: #F2F5F8;\n$primary_text_color: black;\n$border_color: #AAB3C2;\n$button_color: #8F7EE5;\n$input_highlight: #59B7FF;\n\n$inprog_color: #FFBC3C;\n$completed_color: #4DD87A;\n$error_color: #FF5A5A;\n\n$select_color: #bfd9bf;\n\n$font: Helvetica;\n$title_font: 'Alex Brush';\n"],"sourceRoot":""}]);
+exports.push([module.i, "@keyframes shake {\n  10% {\n    right: 4px; }\n  30% {\n    right: -8px; }\n  50% {\n    right: 6px; }\n  70% {\n    right: -4px; }\n  90% {\n    right: 2px; } }\n\n@media (min-width: 700px) {\n  .button_wrap {\n    position: absolute;\n    top: 0;\n    right: 0; } }\n\n.button_wrap button {\n  border: 1px solid #8F7EE5;\n  border-radius: 5px;\n  background-color: #8F7EE5;\n  outline: none;\n  font-weight: 600;\n  font-family: Helvetica;\n  color: white;\n  font-size: 1rem;\n  width: 100px;\n  height: 2rem; }\n  .button_wrap button:hover {\n    cursor: pointer;\n    background-color: #b4a8ee;\n    border-color: #b4a8ee; }\n", "", {"version":3,"sources":["/Users/Jack/Documents/Coding/Projects/Letsdoit/src/scss/src/scss/partials/_mixins.scss","/Users/Jack/Documents/Coding/Projects/Letsdoit/src/scss/src/scss/LogoutButton.scss","/Users/Jack/Documents/Coding/Projects/Letsdoit/src/scss/src/scss/partials/_variables.scss"],"names":[],"mappings":"AA8CA;EACE;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA,EAAA;;AC/Cf;EADF;IAEI,mBAAkB;IAClB,OAAM;IACN,SAAQ,EAQX,EAAA;;AAZD;EDoBE,0BEhBoB;EFiBpB,mBAAkB;EAMlB,0BEvBoB;EFwBpB,cAAa;EACb,iBAAgB;EA9BhB,uBAD2E;EAE3E,aCQiD;EDPjD,gBCOkC;EAChC,aAAY;EACZ,aAAY,EACb;EAXH;ID+BI,gBAN0B;IAO1B,0BAA6C;IAC7C,sBAAyC,EAC1C","file":"LogoutButton.scss","sourcesContent":["// Text formating\n@mixin format_text($size: 1rem, $color: $primary_text_color, $font: Helvetica) {\n  font-family: $font;\n  color: $color;\n  font-size: $size;\n}\n\n// Layout\n@mixin center {\n  width: 95%;\n  margin: 0 auto;\n}\n\n@mixin flex-container($dir: row, $just: center, $wrap: wrap, $ali: stretch) {\n  display: flex;\n  justify-content: $just;\n  flex-direction: $dir;\n  flex-wrap: $wrap;\n  align-items: $ali;\n}\n\n// Borders\n@mixin apply_border ($color: $border_color, $style: solid) {\n  border: 1px $style $color;\n  border-radius: 5px;\n}\n\n// Elements\n@mixin button($cursor: pointer) {\n  @include apply_border($color: $button_color);\n  background-color: $button_color;\n  outline: none;\n  font-weight: 600;\n  &:hover {\n    cursor: $cursor;\n    background-color: lighten($button_color, 10%);\n    border-color: lighten($button_color, 10%);\n  }\n}\n\n// Animations\n@mixin animate-active {\n  transition-duration: 0.3s;\n  transition-property: background-color, border-color, color;\n}\n\n@keyframes shake {\n  10% {right: 4px};\n  30% {right: -8px};\n  50% {right: 6px};\n  70% {right: -4px};\n  90% {right: 2px};\n}\n\n@mixin animate-button {\n  position: relative;\n  animation-name: shake;\n  animation-duration: 0.5s;\n  animation-timing-function: ease-in;\n}\n","@import \"partials/variables\";\n@import \"partials/mixins\";\n\n.button_wrap {\n  @media (min-width: 700px) {\n    position: absolute;\n    top: 0;\n    right: 0;\n  }\n  button {\n    @include button;\n    @include format_text($size: 1rem, $color: white);\n    width: 100px;\n    height: 2rem;\n  }\n}\n","@import url(https://fonts.googleapis.com/css?family=Alex+Brush);\n\n$primary_background_color: #BDD0EE;\n$todo_background_color: white;\n$list_background_color: #F2F5F8;\n$primary_text_color: black;\n$border_color: #AAB3C2;\n$button_color: #8F7EE5;\n$input_highlight: #59B7FF;\n\n$inprog_color: #FFBC3C;\n$completed_color: #4DD87A;\n$error_color: #FF5A5A;\n\n$select_color: #bfd9bf;\n\n$font: Helvetica;\n$title_font: 'Alex Brush';\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -40791,25 +40792,22 @@ var ListOfToDos = function ListOfToDos(props) {
       user = props.user,
       modifyTodo = props.modifyTodo;
 
-  // Filter todos based on status
-
-  var filteredTodos = todos.filter(function (x) {
-    return x.status === status;
-  });
-
   // Function to change todo's status on drag-and-drop
+
   var handleDrop = function handleDrop(event) {
     event.currentTarget.classList.remove('drag_over');
     var updatedToDo = JSON.parse(event.dataTransfer.getData('todo'));
-    updatedToDo.status = title === 'In Progress' ? 'notCompleted' : 'completed';
+    updatedToDo.status = title === 'In Progress' ? 'upcomig' : 'completed';
     modifyTodo(updatedToDo, user.sessionID);
   };
+
   // Adding some event listeners to display dragging
   return _react2.default.createElement(
     'div',
     { className: title === 'In Progress' ? 'inProgress todos_list' : 'todos_list completed',
       onDragOver: function onDragOver(event) {
-        event.preventDefault();event.currentTarget.classList.add('drag_over');
+        event.preventDefault();
+        event.currentTarget.classList.add('drag_over');
       },
       onDragLeave: function onDragLeave(event) {
         return event.currentTarget.classList.remove('drag_over');
@@ -40822,9 +40820,15 @@ var ListOfToDos = function ListOfToDos(props) {
     ),
     _react2.default.createElement(
       _reactTransitionGroup.CSSTransitionGroup,
-      { transitionName: 'appear', transitionEnterTimeout: 300, transitionLeaveTimeout: 0 },
-      filteredTodos.map(function (todo, i) {
-        return _react2.default.createElement(_ToDo2.default, _extends({ key: i }, { todo: todo, user: user }));
+      {
+        transitionName: 'appear',
+        transitionEnterTimeout: 300,
+        transitionLeaveTimeout: 0
+      },
+      todos[status].map(function (todo, i) {
+        return _react2.default.createElement(_ToDo2.default, _extends({
+          key: i
+        }, { todo: todo, user: user }));
       })
     ),
     title === 'In Progress' ? _react2.default.createElement(_ToDo2.default, { todo: { title: '', description: '' }, mission: 'addNew' }) : null
@@ -40834,7 +40838,7 @@ var ListOfToDos = function ListOfToDos(props) {
 ListOfToDos.propTypes = {
   status: _propTypes.PropTypes.string.isRequired,
   title: _propTypes.PropTypes.string.isRequired,
-  todos: _propTypes.PropTypes.array.isRequired,
+  todos: _propTypes.PropTypes.objectOf(_propTypes.PropTypes.any),
   user: _propTypes.PropTypes.object.isRequired,
   modifyTodo: _propTypes.PropTypes.func.isRequired
 };
@@ -41660,7 +41664,7 @@ exports = module.exports = __webpack_require__(49)(true);
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Alex+Brush);", ""]);
 
 // module
-exports.push([module.i, "@keyframes shake {\n  10% {\n    right: 4px; }\n  30% {\n    right: -8px; }\n  50% {\n    right: 6px; }\n  70% {\n    right: -4px; }\n  90% {\n    right: 2px; } }\n\n.todos_list {\n  border: 1px solid #AAB3C2;\n  border-radius: 5px;\n  width: 49%;\n  min-height: 100px;\n  box-sizing: border-box;\n  background-color: #F2F5F8;\n  transition: all 0.2s ease-in-out; }\n  .todos_list:first-child {\n    margin-right: 2%; }\n  .todos_list.drag_over {\n    background-color: #bfd9bf; }\n\n.inProgress .headline, .completed .headline {\n  font-family: Helvetica;\n  color: white;\n  font-size: 2rem;\n  text-align: center;\n  height: 4rem;\n  padding-top: 1rem;\n  border-bottom: 1px solid #AAB3C2;\n  border-radius: 4px 4px 0 0; }\n\n.inProgress .headline {\n  background-color: #FFBC3C; }\n\n.completed .headline {\n  background-color: #4DD87A; }\n\n.appear-enter {\n  opacity: 0.01; }\n\n.appear-enter.appear-enter-active {\n  opacity: 1;\n  transition: opacity 500ms ease-in; }\n\n.appear-leave {\n  opacity: 1; }\n\n.appear-leave.appear-leave-active {\n  opacity: 0.01;\n  transition: opacity 100ms ease-in; }\n", "", {"version":3,"sources":["/Users/Jack/Documents/Coding/Projects/letsdoit_front/src/scss/src/scss/partials/_mixins.scss","/Users/Jack/Documents/Coding/Projects/letsdoit_front/src/scss/src/scss/ListOfToDos.scss","/Users/Jack/Documents/Coding/Projects/letsdoit_front/src/scss/src/scss/partials/_variables.scss"],"names":[],"mappings":"AA8CA;EACE;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA,EAAA;;AChDjB;EDoBE,0BEjBoB;EFkBpB,mBAAkB;ECnBlB,WAAU;EACV,kBAAiB;EACjB,uBAAsB;EACtB,0BCJ6B;EDK7B,iCAAgC,EAOjC;EAbD;IAQI,iBAAgB,EACjB;EATH;IAWI,0BCAkB,EDCnB;;AAGH;EDhBE,uBAD2E;EAE3E,aCgB+C;EDf/C,gBCegC;EAChC,mBAAkB;EAClB,aAAY;EACZ,kBAAiB;EACjB,iCCjBoB;EDkBpB,2BAA0B,EAC3B;;AAED;EAEE,0BCnBoB,EDoBrB;;AAED;EAEE,0BCvBuB,EDwBxB;;AAED;EACE,cAAa,EACd;;AAED;EACE,WAAU;EACV,kCAAiC,EAClC;;AAED;EACE,WAAU,EACX;;AAED;EACE,cAAa;EACb,kCAAiC,EAClC","file":"ListOfToDos.scss","sourcesContent":["// Text formating\n@mixin format_text($size: 1rem, $color: $primary_text_color, $font: Helvetica) {\n  font-family: $font;\n  color: $color;\n  font-size: $size;\n}\n\n// Layout\n@mixin center {\n  width: 95%;\n  margin: 0 auto;\n}\n\n@mixin flex-container($dir: row, $just: center, $wrap: wrap, $ali: stretch) {\n  display: flex;\n  justify-content: $just;\n  flex-direction: $dir;\n  flex-wrap: $wrap;\n  align-items: $ali;\n}\n\n// Borders\n@mixin apply_border ($color: $border_color, $style: solid) {\n  border: 1px $style $color;\n  border-radius: 5px;\n}\n\n// Elements\n@mixin button($cursor: pointer) {\n  @include apply_border($color: $button_color);\n  background-color: $button_color;\n  outline: none;\n  font-weight: 600;\n  &:hover {\n    cursor: $cursor;\n    background-color: lighten($button_color, 10%);\n    border-color: lighten($button_color, 10%);\n  }\n}\n\n// Animations\n@mixin animate-active {\n  transition-duration: 0.3s;\n  transition-property: background-color, border-color, color;\n}\n\n@keyframes shake {\n  10% {right: 4px};\n  30% {right: -8px};\n  50% {right: 6px};\n  70% {right: -4px};\n  90% {right: 2px};\n}\n\n@mixin animate-button {\n  position: relative;\n  animation-name: shake;\n  animation-duration: 0.5s;\n  animation-timing-function: ease-in;\n}\n","@import \"partials/variables\";\n@import \"partials/mixins\";\n\n.todos_list {\n  @include apply_border;\n  width: 49%;\n  min-height: 100px;\n  box-sizing: border-box;\n  background-color: $list_background_color;\n  transition: all 0.2s ease-in-out;\n  &:first-child {\n    margin-right: 2%;\n  }\n  &.drag_over {\n    background-color: $select_color;\n  }\n}\n\n%todos_title {\n  @include format_text($size: 2rem, $color: white);\n  text-align: center;\n  height: 4rem;\n  padding-top: 1rem;\n  border-bottom: 1px solid $border_color;\n  border-radius: 4px 4px 0 0;\n}\n\n.inProgress .headline {\n  @extend %todos_title;\n  background-color: $inprog_color;\n}\n\n.completed .headline {\n  @extend %todos_title;\n  background-color: $completed_color;\n}\n\n.appear-enter {\n  opacity: 0.01;\n}\n\n.appear-enter.appear-enter-active {\n  opacity: 1;\n  transition: opacity 500ms ease-in;\n}\n\n.appear-leave {\n  opacity: 1;\n}\n\n.appear-leave.appear-leave-active {\n  opacity: 0.01;\n  transition: opacity 100ms ease-in;\n}\n","@import url(https://fonts.googleapis.com/css?family=Alex+Brush);\n\n$primary_background_color: #BDD0EE;\n$todo_background_color: white;\n$list_background_color: #F2F5F8;\n$primary_text_color: black;\n$border_color: #AAB3C2;\n$button_color: #8F7EE5;\n$input_highlight: #59B7FF;\n\n$inprog_color: #FFBC3C;\n$completed_color: #4DD87A;\n$error_color: #FF5A5A;\n\n$select_color: #bfd9bf;\n\n$font: Helvetica;\n$title_font: 'Alex Brush';\n"],"sourceRoot":""}]);
+exports.push([module.i, "@keyframes shake {\n  10% {\n    right: 4px; }\n  30% {\n    right: -8px; }\n  50% {\n    right: 6px; }\n  70% {\n    right: -4px; }\n  90% {\n    right: 2px; } }\n\n.todos_list {\n  border: 1px solid #AAB3C2;\n  border-radius: 5px;\n  width: 32%;\n  min-height: 100px;\n  box-sizing: border-box;\n  background-color: #F2F5F8;\n  transition: all 0.2s ease-in-out; }\n  .todos_list:first-child {\n    margin-right: 2%; }\n  .todos_list.drag_over {\n    background-color: #bfd9bf; }\n\n.inProgress .headline, .completed .headline {\n  font-family: Helvetica;\n  color: white;\n  font-size: 2rem;\n  text-align: center;\n  height: 4rem;\n  padding-top: 1rem;\n  border-bottom: 1px solid #AAB3C2;\n  border-radius: 4px 4px 0 0; }\n\n.inProgress .headline {\n  background-color: #FFBC3C; }\n\n.completed .headline {\n  background-color: #4DD87A; }\n\n.appear-enter {\n  opacity: 0.01; }\n\n.appear-enter.appear-enter-active {\n  opacity: 1;\n  transition: opacity 500ms ease-in; }\n\n.appear-leave {\n  opacity: 1; }\n\n.appear-leave.appear-leave-active {\n  opacity: 0.01;\n  transition: opacity 100ms ease-in; }\n", "", {"version":3,"sources":["/Users/Jack/Documents/Coding/Projects/Letsdoit/src/scss/src/scss/partials/_mixins.scss","/Users/Jack/Documents/Coding/Projects/Letsdoit/src/scss/src/scss/ListOfToDos.scss","/Users/Jack/Documents/Coding/Projects/Letsdoit/src/scss/src/scss/partials/_variables.scss"],"names":[],"mappings":"AA8CA;EACE;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA,EAAA;;AChDjB;EDoBE,0BEjBoB;EFkBpB,mBAAkB;ECnBlB,WAAU;EACV,kBAAiB;EACjB,uBAAsB;EACtB,0BCJ6B;EDK7B,iCAAgC,EAOjC;EAbD;IAQI,iBAAgB,EACjB;EATH;IAWI,0BCAkB,EDCnB;;AAGH;EDhBE,uBAD2E;EAE3E,aCgB+C;EDf/C,gBCegC;EAChC,mBAAkB;EAClB,aAAY;EACZ,kBAAiB;EACjB,iCCjBoB;EDkBpB,2BAA0B,EAC3B;;AAED;EAEE,0BCnBoB,EDoBrB;;AAED;EAEE,0BCvBuB,EDwBxB;;AAED;EACE,cAAa,EACd;;AAED;EACE,WAAU;EACV,kCAAiC,EAClC;;AAED;EACE,WAAU,EACX;;AAED;EACE,cAAa;EACb,kCAAiC,EAClC","file":"ListOfToDos.scss","sourcesContent":["// Text formating\n@mixin format_text($size: 1rem, $color: $primary_text_color, $font: Helvetica) {\n  font-family: $font;\n  color: $color;\n  font-size: $size;\n}\n\n// Layout\n@mixin center {\n  width: 95%;\n  margin: 0 auto;\n}\n\n@mixin flex-container($dir: row, $just: center, $wrap: wrap, $ali: stretch) {\n  display: flex;\n  justify-content: $just;\n  flex-direction: $dir;\n  flex-wrap: $wrap;\n  align-items: $ali;\n}\n\n// Borders\n@mixin apply_border ($color: $border_color, $style: solid) {\n  border: 1px $style $color;\n  border-radius: 5px;\n}\n\n// Elements\n@mixin button($cursor: pointer) {\n  @include apply_border($color: $button_color);\n  background-color: $button_color;\n  outline: none;\n  font-weight: 600;\n  &:hover {\n    cursor: $cursor;\n    background-color: lighten($button_color, 10%);\n    border-color: lighten($button_color, 10%);\n  }\n}\n\n// Animations\n@mixin animate-active {\n  transition-duration: 0.3s;\n  transition-property: background-color, border-color, color;\n}\n\n@keyframes shake {\n  10% {right: 4px};\n  30% {right: -8px};\n  50% {right: 6px};\n  70% {right: -4px};\n  90% {right: 2px};\n}\n\n@mixin animate-button {\n  position: relative;\n  animation-name: shake;\n  animation-duration: 0.5s;\n  animation-timing-function: ease-in;\n}\n","@import \"partials/variables\";\n@import \"partials/mixins\";\n\n.todos_list {\n  @include apply_border;\n  width: 32%;\n  min-height: 100px;\n  box-sizing: border-box;\n  background-color: $list_background_color;\n  transition: all 0.2s ease-in-out;\n  &:first-child {\n    margin-right: 2%;\n  }\n  &.drag_over {\n    background-color: $select_color;\n  }\n}\n\n%todos_title {\n  @include format_text($size: 2rem, $color: white);\n  text-align: center;\n  height: 4rem;\n  padding-top: 1rem;\n  border-bottom: 1px solid $border_color;\n  border-radius: 4px 4px 0 0;\n}\n\n.inProgress .headline {\n  @extend %todos_title;\n  background-color: $inprog_color;\n}\n\n.completed .headline {\n  @extend %todos_title;\n  background-color: $completed_color;\n}\n\n.appear-enter {\n  opacity: 0.01;\n}\n\n.appear-enter.appear-enter-active {\n  opacity: 1;\n  transition: opacity 500ms ease-in;\n}\n\n.appear-leave {\n  opacity: 1;\n}\n\n.appear-leave.appear-leave-active {\n  opacity: 0.01;\n  transition: opacity 100ms ease-in;\n}\n","@import url(https://fonts.googleapis.com/css?family=Alex+Brush);\n\n$primary_background_color: #BDD0EE;\n$todo_background_color: white;\n$list_background_color: #F2F5F8;\n$primary_text_color: black;\n$border_color: #AAB3C2;\n$button_color: #8F7EE5;\n$input_highlight: #59B7FF;\n\n$inprog_color: #FFBC3C;\n$completed_color: #4DD87A;\n$error_color: #FF5A5A;\n\n$select_color: #bfd9bf;\n\n$font: Helvetica;\n$title_font: 'Alex Brush';\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -41868,7 +41872,7 @@ exports = module.exports = __webpack_require__(49)(true);
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Alex+Brush);", ""]);
 
 // module
-exports.push([module.i, "@keyframes shake {\n  10% {\n    right: 4px; }\n  30% {\n    right: -8px; }\n  50% {\n    right: 6px; }\n  70% {\n    right: -4px; }\n  90% {\n    right: 2px; } }\n\n.todo {\n  width: 95%;\n  margin: 1rem auto;\n  background-color: white;\n  border-radius: 5px;\n  box-shadow: 2px 2px 2px #AAB3C2;\n  padding: 1px; }\n  .todo h4,\n  .todo p {\n    font-family: Helvetica;\n    color: black;\n    font-size: 1rem;\n    margin: 0;\n    padding: 1rem 1rem 0 1rem; }\n  .todo strong {\n    font-family: Helvetica;\n    color: black;\n    font-size: 1rem;\n    display: block;\n    padding: 1rem 5rem;\n    text-align: right; }\n\n.controls {\n  display: flex;\n  justify-content: space-between;\n  flex-direction: row;\n  flex-wrap: wrap;\n  align-items: stretch;\n  width: 3rem;\n  float: right;\n  padding: 0.5rem; }\n  .controls i {\n    font-size: 1rem; }\n    .controls i:hover {\n      cursor: pointer; }\n    .controls i:last-child:hover {\n      color: #FF5A5A; }\n    .controls i:first-child:hover {\n      color: #4DD87A; }\n    .controls i.fa-plus {\n      margin-top: 1rem;\n      font-size: 3rem; }\n\n.todo input,\n.todo textarea {\n  font-family: Helvetica;\n  color: black;\n  font-size: 1rem;\n  display: block;\n  width: 80%;\n  margin: 1rem;\n  padding: 0.5rem;\n  border-radius: 5px;\n  border: none;\n  outline: none;\n  resize: none;\n  background-color: #F2F5F8;\n  box-sizing: border-box; }\n  .todo input:focus,\n  .todo textarea:focus {\n    box-shadow: -1px 0 2px #59B7FF, 0 1px 2px #59B7FF, 1px 0 2px #59B7FF, 0 -1px 2px #59B7FF; }\n", "", {"version":3,"sources":["/Users/Jack/Documents/Coding/Projects/letsdoit_front/src/scss/src/scss/partials/_mixins.scss","/Users/Jack/Documents/Coding/Projects/letsdoit_front/src/scss/src/scss/ToDo.scss","/Users/Jack/Documents/Coding/Projects/letsdoit_front/src/scss/src/scss/partials/_variables.scss"],"names":[],"mappings":"AA8CA;EACE;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA,EAAA;;AChDjB;EACE,WAAU;EACV,kBAAiB;EACjB,wBCH2B;EDI3B,mBAAkB;EAClB,gCCFoB;EDGpB,aAAY,EAab;EAnBD;;IDDE,uBAD2E;IAE3E,aEEwB;IFDxB,gBCQ2B;IACzB,UAAS;IACT,0BAAyB,EAC1B;EAZH;IDDE,uBAD2E;IAE3E,aEEwB;IFDxB,gBCakC;IAChC,eAAc;IACd,mBAAkB;IAClB,kBAAiB,EAClB;;AAGH;EDVE,cAAa;EACb,+BCU4C;EDT5C,oBAH6B;EAI7B,gBAJyD;EAKzD,qBALwE;ECaxE,YAAW;EACX,aAAY;EACZ,gBAAe,EAiBhB;EArBD;IAMI,gBAAe,EAchB;IApBH;MAQM,gBAAe,EAChB;IATL;MAWM,eCvBe,EDwBhB;IAZL;MAcM,eC3BmB,ED4BpB;IAfL;MAiBM,iBAAgB;MAChB,gBAAe,EAChB;;AAIL;;ED7CE,uBAD2E;EAE3E,aEEwB;EFDxB,gBC8CkC;EAChC,eAAc;EACd,WAAU;EACV,aAAY;EACZ,gBAAe;EACf,mBAAkB;EAClB,aAAY;EACZ,cAAa;EACb,aAAY;EACZ,0BCvD2B;EDwD3B,uBAAsB,EAKvB;EAlBH;;IAgBM,yFCvDmB,EDwDpB","file":"ToDo.scss","sourcesContent":["// Text formating\n@mixin format_text($size: 1rem, $color: $primary_text_color, $font: Helvetica) {\n  font-family: $font;\n  color: $color;\n  font-size: $size;\n}\n\n// Layout\n@mixin center {\n  width: 95%;\n  margin: 0 auto;\n}\n\n@mixin flex-container($dir: row, $just: center, $wrap: wrap, $ali: stretch) {\n  display: flex;\n  justify-content: $just;\n  flex-direction: $dir;\n  flex-wrap: $wrap;\n  align-items: $ali;\n}\n\n// Borders\n@mixin apply_border ($color: $border_color, $style: solid) {\n  border: 1px $style $color;\n  border-radius: 5px;\n}\n\n// Elements\n@mixin button($cursor: pointer) {\n  @include apply_border($color: $button_color);\n  background-color: $button_color;\n  outline: none;\n  font-weight: 600;\n  &:hover {\n    cursor: $cursor;\n    background-color: lighten($button_color, 10%);\n    border-color: lighten($button_color, 10%);\n  }\n}\n\n// Animations\n@mixin animate-active {\n  transition-duration: 0.3s;\n  transition-property: background-color, border-color, color;\n}\n\n@keyframes shake {\n  10% {right: 4px};\n  30% {right: -8px};\n  50% {right: 6px};\n  70% {right: -4px};\n  90% {right: 2px};\n}\n\n@mixin animate-button {\n  position: relative;\n  animation-name: shake;\n  animation-duration: 0.5s;\n  animation-timing-function: ease-in;\n}\n","@import \"partials/variables\";\n@import \"partials/mixins\";\n\n.todo {\n  width: 95%;\n  margin: 1rem auto;\n  background-color: $todo_background_color;\n  border-radius: 5px;\n  box-shadow: 2px 2px 2px $border_color;\n  padding: 1px;\n  h4,\n  p {\n    @include format_text(1rem);\n    margin: 0;\n    padding: 1rem 1rem 0 1rem;\n  }\n  strong {\n    @include format_text($size: 1rem);\n    display: block;\n    padding: 1rem 5rem;\n    text-align: right;\n  }\n}\n\n.controls {\n  @include flex-container($just: space-between);\n  width: 3rem;\n  float: right;\n  padding: 0.5rem;\n  i {\n    font-size: 1rem;\n    &:hover {\n      cursor: pointer;\n    }\n    &:last-child:hover {\n      color: $error_color;\n    }\n    &:first-child:hover {\n      color: $completed_color;\n    }\n    &.fa-plus {\n      margin-top: 1rem;\n      font-size: 3rem;\n    }\n  }\n}\n\n.todo {\n  input,\n  textarea {\n    @include format_text($size: 1rem);\n    display: block;\n    width: 80%;\n    margin: 1rem;\n    padding: 0.5rem;\n    border-radius: 5px;\n    border: none;\n    outline: none;\n    resize: none;\n    background-color: $list_background_color;\n    box-sizing: border-box;\n\n    &:focus {\n      box-shadow: -1px 0 2px $input_highlight, 0 1px 2px $input_highlight, 1px 0 2px $input_highlight, 0 -1px 2px $input_highlight;\n    }\n  }\n  \n}\n","@import url(https://fonts.googleapis.com/css?family=Alex+Brush);\n\n$primary_background_color: #BDD0EE;\n$todo_background_color: white;\n$list_background_color: #F2F5F8;\n$primary_text_color: black;\n$border_color: #AAB3C2;\n$button_color: #8F7EE5;\n$input_highlight: #59B7FF;\n\n$inprog_color: #FFBC3C;\n$completed_color: #4DD87A;\n$error_color: #FF5A5A;\n\n$select_color: #bfd9bf;\n\n$font: Helvetica;\n$title_font: 'Alex Brush';\n"],"sourceRoot":""}]);
+exports.push([module.i, "@keyframes shake {\n  10% {\n    right: 4px; }\n  30% {\n    right: -8px; }\n  50% {\n    right: 6px; }\n  70% {\n    right: -4px; }\n  90% {\n    right: 2px; } }\n\n.todo {\n  width: 95%;\n  margin: 1rem auto;\n  background-color: white;\n  border-radius: 5px;\n  box-shadow: 2px 2px 2px #AAB3C2;\n  padding: 1px; }\n  .todo h4,\n  .todo p {\n    font-family: Helvetica;\n    color: black;\n    font-size: 1rem;\n    margin: 0;\n    padding: 1rem 1rem 0 1rem; }\n  .todo strong {\n    font-family: Helvetica;\n    color: black;\n    font-size: 1rem;\n    display: block;\n    padding: 1rem 5rem;\n    text-align: right; }\n\n.controls {\n  display: flex;\n  justify-content: space-between;\n  flex-direction: row;\n  flex-wrap: wrap;\n  align-items: stretch;\n  width: 3rem;\n  float: right;\n  padding: 0.5rem; }\n  .controls i {\n    font-size: 1rem; }\n    .controls i:hover {\n      cursor: pointer; }\n    .controls i:last-child:hover {\n      color: #FF5A5A; }\n    .controls i:first-child:hover {\n      color: #4DD87A; }\n    .controls i.fa-plus {\n      margin-top: 1rem;\n      font-size: 3rem; }\n\n.todo input,\n.todo textarea {\n  font-family: Helvetica;\n  color: black;\n  font-size: 1rem;\n  display: block;\n  width: 80%;\n  margin: 1rem;\n  padding: 0.5rem;\n  border-radius: 5px;\n  border: none;\n  outline: none;\n  resize: none;\n  background-color: #F2F5F8;\n  box-sizing: border-box; }\n  .todo input:focus,\n  .todo textarea:focus {\n    box-shadow: -1px 0 2px #59B7FF, 0 1px 2px #59B7FF, 1px 0 2px #59B7FF, 0 -1px 2px #59B7FF; }\n", "", {"version":3,"sources":["/Users/Jack/Documents/Coding/Projects/Letsdoit/src/scss/src/scss/partials/_mixins.scss","/Users/Jack/Documents/Coding/Projects/Letsdoit/src/scss/src/scss/ToDo.scss","/Users/Jack/Documents/Coding/Projects/Letsdoit/src/scss/src/scss/partials/_variables.scss"],"names":[],"mappings":"AA8CA;EACE;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA,EAAA;;AChDjB;EACE,WAAU;EACV,kBAAiB;EACjB,wBCH2B;EDI3B,mBAAkB;EAClB,gCCFoB;EDGpB,aAAY,EAab;EAnBD;;IDDE,uBAD2E;IAE3E,aEEwB;IFDxB,gBCQ2B;IACzB,UAAS;IACT,0BAAyB,EAC1B;EAZH;IDDE,uBAD2E;IAE3E,aEEwB;IFDxB,gBCakC;IAChC,eAAc;IACd,mBAAkB;IAClB,kBAAiB,EAClB;;AAGH;EDVE,cAAa;EACb,+BCU4C;EDT5C,oBAH6B;EAI7B,gBAJyD;EAKzD,qBALwE;ECaxE,YAAW;EACX,aAAY;EACZ,gBAAe,EAiBhB;EArBD;IAMI,gBAAe,EAchB;IApBH;MAQM,gBAAe,EAChB;IATL;MAWM,eCvBe,EDwBhB;IAZL;MAcM,eC3BmB,ED4BpB;IAfL;MAiBM,iBAAgB;MAChB,gBAAe,EAChB;;AAIL;;ED7CE,uBAD2E;EAE3E,aEEwB;EFDxB,gBC8CkC;EAChC,eAAc;EACd,WAAU;EACV,aAAY;EACZ,gBAAe;EACf,mBAAkB;EAClB,aAAY;EACZ,cAAa;EACb,aAAY;EACZ,0BCvD2B;EDwD3B,uBAAsB,EAKvB;EAlBH;;IAgBM,yFCvDmB,EDwDpB","file":"ToDo.scss","sourcesContent":["// Text formating\n@mixin format_text($size: 1rem, $color: $primary_text_color, $font: Helvetica) {\n  font-family: $font;\n  color: $color;\n  font-size: $size;\n}\n\n// Layout\n@mixin center {\n  width: 95%;\n  margin: 0 auto;\n}\n\n@mixin flex-container($dir: row, $just: center, $wrap: wrap, $ali: stretch) {\n  display: flex;\n  justify-content: $just;\n  flex-direction: $dir;\n  flex-wrap: $wrap;\n  align-items: $ali;\n}\n\n// Borders\n@mixin apply_border ($color: $border_color, $style: solid) {\n  border: 1px $style $color;\n  border-radius: 5px;\n}\n\n// Elements\n@mixin button($cursor: pointer) {\n  @include apply_border($color: $button_color);\n  background-color: $button_color;\n  outline: none;\n  font-weight: 600;\n  &:hover {\n    cursor: $cursor;\n    background-color: lighten($button_color, 10%);\n    border-color: lighten($button_color, 10%);\n  }\n}\n\n// Animations\n@mixin animate-active {\n  transition-duration: 0.3s;\n  transition-property: background-color, border-color, color;\n}\n\n@keyframes shake {\n  10% {right: 4px};\n  30% {right: -8px};\n  50% {right: 6px};\n  70% {right: -4px};\n  90% {right: 2px};\n}\n\n@mixin animate-button {\n  position: relative;\n  animation-name: shake;\n  animation-duration: 0.5s;\n  animation-timing-function: ease-in;\n}\n","@import \"partials/variables\";\n@import \"partials/mixins\";\n\n.todo {\n  width: 95%;\n  margin: 1rem auto;\n  background-color: $todo_background_color;\n  border-radius: 5px;\n  box-shadow: 2px 2px 2px $border_color;\n  padding: 1px;\n  h4,\n  p {\n    @include format_text(1rem);\n    margin: 0;\n    padding: 1rem 1rem 0 1rem;\n  }\n  strong {\n    @include format_text($size: 1rem);\n    display: block;\n    padding: 1rem 5rem;\n    text-align: right;\n  }\n}\n\n.controls {\n  @include flex-container($just: space-between);\n  width: 3rem;\n  float: right;\n  padding: 0.5rem;\n  i {\n    font-size: 1rem;\n    &:hover {\n      cursor: pointer;\n    }\n    &:last-child:hover {\n      color: $error_color;\n    }\n    &:first-child:hover {\n      color: $completed_color;\n    }\n    &.fa-plus {\n      margin-top: 1rem;\n      font-size: 3rem;\n    }\n  }\n}\n\n.todo {\n  input,\n  textarea {\n    @include format_text($size: 1rem);\n    display: block;\n    width: 80%;\n    margin: 1rem;\n    padding: 0.5rem;\n    border-radius: 5px;\n    border: none;\n    outline: none;\n    resize: none;\n    background-color: $list_background_color;\n    box-sizing: border-box;\n\n    &:focus {\n      box-shadow: -1px 0 2px $input_highlight, 0 1px 2px $input_highlight, 1px 0 2px $input_highlight, 0 -1px 2px $input_highlight;\n    }\n  }\n  \n}\n","@import url(https://fonts.googleapis.com/css?family=Alex+Brush);\n\n$primary_background_color: #BDD0EE;\n$todo_background_color: white;\n$list_background_color: #F2F5F8;\n$primary_text_color: black;\n$border_color: #AAB3C2;\n$button_color: #8F7EE5;\n$input_highlight: #59B7FF;\n\n$inprog_color: #FFBC3C;\n$completed_color: #4DD87A;\n$error_color: #FF5A5A;\n\n$select_color: #bfd9bf;\n\n$font: Helvetica;\n$title_font: 'Alex Brush';\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -41967,7 +41971,7 @@ var ToDoEdit = function (_React$Component) {
         if (mission === 'addNew') {
           var newTodo = Object.assign({}, this.state.todo);
           newTodo.author = _extends({ id: id, username: username });
-          newTodo.status = 'notCompleted';
+          newTodo.status = 'upcoming';
 
           // Passing constructed todo with user's info to action creater
           (0, _utils.testCall)(this.props.add) || uploadTodo(newTodo, sessionID);
@@ -42101,6 +42105,7 @@ var rootReducer = function rootReducer() {
   switch (action.type) {
     case _types.ADD_TODO:
       var todos = [].concat(_toConsumableArray(state.todos), [action.payload]);
+
       return { user: state.user, todos: todos };
 
     case _types.UPDATE_TODO:
@@ -42112,13 +42117,14 @@ var rootReducer = function rootReducer() {
         }
       });
       var newTodos = [].concat(_toConsumableArray(state.todos));
-      // If status (notCompleted/Completed) changed we not replacing todo but delete it and add to the end of the array
+      // If status (upcomig/inprogress/completed) changed we not replacing todo but delete it and add to the end of the array
       if (state.todos[index].status !== action.todo.status) {
         newTodos.splice(index, 1);
         newTodos.push(action.todo);
       } else {
         newTodos[index] = action.todo;
       }
+
       return { user: state.user, todos: newTodos };
 
     case _types.DELETE_TODO:
@@ -42135,6 +42141,7 @@ var rootReducer = function rootReducer() {
     case _types.LOAD_TODOS:
       var newState = Object.assign({}, state);
       newState.todos = action.todos;
+
       return newState;
 
     case _types.ERROR:
@@ -42273,9 +42280,7 @@ function dropSessionHandler(_ref2) {
 
 function uploadTodoHandler(_ref3) {
     var payload = _ref3.payload;
-
-    var todo, sessionID, _ref4, approvedTodo;
-
+    var todo, sessionID, approvedTodo;
     return regeneratorRuntime.wrap(function uploadTodoHandler$(_context3) {
         while (1) {
             switch (_context3.prev = _context3.next) {
@@ -42286,42 +42291,38 @@ function uploadTodoHandler(_ref3) {
                     return (0, _effects.call)(_utils.fetchData, 'todo?sessionID=' + sessionID, (0, _utils.generateFetchOptions)('PUT', JSON.stringify(todo)));
 
                 case 4:
-                    _ref4 = _context3.sent;
-                    approvedTodo = _ref4.data;
-
-                    approvedTodo.author = todo.author;
-
-                    _context3.next = 9;
+                    approvedTodo = _context3.sent;
+                    _context3.next = 7;
                     return (0, _effects.put)((0, _actions.addTodo)(approvedTodo));
 
-                case 9:
-                    _context3.next = 19;
+                case 7:
+                    _context3.next = 17;
                     break;
 
-                case 11:
-                    _context3.prev = 11;
+                case 9:
+                    _context3.prev = 9;
                     _context3.t0 = _context3['catch'](1);
-                    _context3.next = 15;
+                    _context3.next = 13;
                     return (0, _effects.put)((0, _actions.error)());
+
+                case 13:
+                    _context3.next = 15;
+                    return (0, _reduxSaga.delay)(1500);
 
                 case 15:
                     _context3.next = 17;
-                    return (0, _reduxSaga.delay)(1500);
-
-                case 17:
-                    _context3.next = 19;
                     return (0, _effects.put)((0, _actions.resetError)());
 
-                case 19:
+                case 17:
                 case 'end':
                     return _context3.stop();
             }
         }
-    }, _marked3, this, [[1, 11]]);
+    }, _marked3, this, [[1, 9]]);
 }
 
-function flushTodoHandler(_ref5) {
-    var payload = _ref5.payload;
+function flushTodoHandler(_ref4) {
+    var payload = _ref4.payload;
     var id, sessionID;
     return regeneratorRuntime.wrap(function flushTodoHandler$(_context4) {
         while (1) {
@@ -42362,52 +42363,46 @@ function flushTodoHandler(_ref5) {
     }, _marked4, this, [[1, 8]]);
 }
 
-function modifyTodoHandler(_ref6) {
-    var payload = _ref6.payload;
-    var todo, sessionID, newTodo;
+function modifyTodoHandler(_ref5) {
+    var payload = _ref5.payload;
+    var todo, sessionID;
     return regeneratorRuntime.wrap(function modifyTodoHandler$(_context5) {
         while (1) {
             switch (_context5.prev = _context5.next) {
                 case 0:
                     todo = payload.todo, sessionID = payload.sessionID;
-                    newTodo = {
-                        title: todo.title,
-                        description: todo.description,
-                        status: todo.status,
-                        id: todo.id
-                    };
-                    _context5.prev = 2;
-                    _context5.next = 5;
-                    return (0, _effects.call)(_utils.fetchData, 'todo?sessionID=' + sessionID, (0, _utils.generateFetchOptions)('PUT', JSON.stringify(newTodo)));
+                    _context5.prev = 1;
+                    _context5.next = 4;
+                    return (0, _effects.call)(_utils.fetchData, 'todo?sessionID=' + sessionID, (0, _utils.generateFetchOptions)('PUT', JSON.stringify(todo)));
 
-                case 5:
-                    _context5.next = 7;
+                case 4:
+                    _context5.next = 6;
                     return (0, _effects.put)((0, _actions.updateTodo)(todo));
 
-                case 7:
-                    _context5.next = 17;
+                case 6:
+                    _context5.next = 16;
                     break;
 
-                case 9:
-                    _context5.prev = 9;
-                    _context5.t0 = _context5['catch'](2);
-                    _context5.next = 13;
+                case 8:
+                    _context5.prev = 8;
+                    _context5.t0 = _context5['catch'](1);
+                    _context5.next = 12;
                     return (0, _effects.put)((0, _actions.error)());
 
-                case 13:
-                    _context5.next = 15;
+                case 12:
+                    _context5.next = 14;
                     return (0, _reduxSaga.delay)(1500);
 
-                case 15:
-                    _context5.next = 17;
+                case 14:
+                    _context5.next = 16;
                     return (0, _effects.put)((0, _actions.resetError)());
 
-                case 17:
+                case 16:
                 case 'end':
                     return _context5.stop();
             }
         }
-    }, _marked5, this, [[2, 9]]);
+    }, _marked5, this, [[1, 8]]);
 }
 
 function rootSaga() {

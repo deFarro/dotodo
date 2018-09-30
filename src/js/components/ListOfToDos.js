@@ -16,22 +16,29 @@ import ToDo from './ToDo';
 
 // All drag-and-drop mechanics will be processed in this component which makes it a bit ugly. I'd rather use library like 'react-dnd'
 const ListOfToDos = props => {
-  const { status, title, todos, user, modifyTodo } = props;
-
-  // Filter todos based on status
-  const filteredTodos = todos.filter(x => x.status === status);
+  const {
+    status,
+    title,
+    todos,
+    user,
+    modifyTodo
+  } = props;
 
   // Function to change todo's status on drag-and-drop
-  const handleDrop = (event) => {
+  const handleDrop = event => {
     event.currentTarget.classList.remove('drag_over');
     const updatedToDo = JSON.parse(event.dataTransfer.getData('todo'));
-    updatedToDo.status = title === 'In Progress' ? 'notCompleted' : 'completed';
+    updatedToDo.status = title === 'In Progress' ? 'upcomig' : 'completed';
     modifyTodo(updatedToDo, user.sessionID);
   };
+
   // Adding some event listeners to display dragging
   return (
     <div className={title === 'In Progress' ? 'inProgress todos_list' : 'todos_list completed'}
-      onDragOver={event => {event.preventDefault(); event.currentTarget.classList.add('drag_over');}}
+      onDragOver={event => {
+        event.preventDefault();
+        event.currentTarget.classList.add('drag_over');
+      }}
       onDragLeave={event => event.currentTarget.classList.remove('drag_over')}
       onDrop={handleDrop}>
 
@@ -40,8 +47,17 @@ const ListOfToDos = props => {
       </div>
 
       { /* Adding appearing and leaving animation */ }
-      <CSSTransitionGroup transitionName="appear" transitionEnterTimeout={300} transitionLeaveTimeout={0}>
-        {filteredTodos.map((todo, i) => <ToDo key={i} {...{ todo, user }} />) }
+      <CSSTransitionGroup
+        transitionName="appear"
+        transitionEnterTimeout={300}
+        transitionLeaveTimeout={0}
+      >
+        {todos[status].map((todo, i) =>
+          <ToDo
+            key={i}
+            {...{ todo, user }}
+          />
+        )}
       </CSSTransitionGroup>
 
       { /* Render emty todo as a from */ }
@@ -56,7 +72,7 @@ const ListOfToDos = props => {
 ListOfToDos.propTypes = {
   status: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  todos: PropTypes.array.isRequired,
+  todos: PropTypes.objectOf(PropTypes.any),
   user: PropTypes.object.isRequired,
   modifyTodo: PropTypes.func.isRequired,
 }

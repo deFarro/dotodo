@@ -55,7 +55,7 @@ class ToDoEdit extends React.Component {
       if (mission === 'addNew') {
         const newTodo = Object.assign({}, this.state.todo);
         newTodo.author = {...{ id, username }}
-        newTodo.status = 'notCompleted';
+        newTodo.status = 'upcoming';
 
         // Passing constructed todo with user's info to action creater
         testCall(this.props.add) || uploadTodo(newTodo, sessionID);

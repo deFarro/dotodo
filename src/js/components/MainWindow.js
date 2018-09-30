@@ -23,7 +23,7 @@ const MainWindow = ({user, todos}) => {
 
 MainWindow.propTypes = {
   user: PropTypes.object,
-  todos: PropTypes.array
+  todos: PropTypes.objectOf(PropTypes.any),
 }
 
 const mapStateToProps = state => {

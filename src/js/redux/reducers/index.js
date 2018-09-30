@@ -11,9 +11,13 @@ const rootReducer = (state = {}, action) => {
     case UPDATE_TODO:
       // Finding index of edited todo
       let index;
-      state.todos.forEach((todo, i) => {if (todo.id === action.todo.id) {index = i}});
+      state.todos.forEach((todo, i) => {
+        if (todo.id === action.todo.id) {
+          index = i
+        }
+      });
       const newTodos = [...state.todos];
-      // If status (notCompleted/Completed) changed we not replacing todo but delete it and add to the end of the array
+      // If status (upcomig/inprogress/completed) changed we not replacing todo but delete it and add to the end of the array
       if (state.todos[index].status !== action.todo.status) {
         newTodos.splice(index, 1);
         newTodos.push(action.todo);

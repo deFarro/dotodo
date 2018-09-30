@@ -3,7 +3,7 @@
 
 .todos_list {
   @include apply_border;
-  width: 49%;
+  width: 32%;
   min-height: 100px;
   box-sizing: border-box;
   background-color: $list_background_color;
