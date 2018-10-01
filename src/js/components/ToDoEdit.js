@@ -32,14 +32,14 @@ class ToDoEdit extends React.Component {
   }
 
   // Method to update contents of todo's fields 'title' and 'description'
-  updateTodo(event) {
+  updateTodo = event => {
     const updatedTodo = Object.assign({}, this.state.todo);
     updatedTodo[event.target.id] = event.target.value;
     this.setState({todo: updatedTodo});
   }
 
   // Method to send updated info to server
-  confirmUpdate() {
+  confirmUpdate = () => {
     const {
       mission,
       showMode,
@@ -48,12 +48,14 @@ class ToDoEdit extends React.Component {
       modifyTodo,
     } = this.props;
 
+    const { todo } = this.state;
+
     // Check if fields aren't empty
-    if (this.state.todo.title && this.state.todo.description) {
+    if (todo.title && todo.description) {
       // Check if this is a form submition, not editing an existing todo
       // If so, 'add' action is triggered
       if (mission === 'addNew') {
-        const newTodo = Object.assign({}, this.state.todo);
+        const newTodo = Object.assign({}, todo);
         newTodo.author = {...{ id, username }}
         newTodo.status = 'upcoming';
 
@@ -69,21 +71,23 @@ class ToDoEdit extends React.Component {
       else {
         //Changing mode back to 'show'
         showMode();
-        testCall(this.props.edit) || modifyTodo(this.state.todo, sessionID);
+        testCall(this.props.edit) || modifyTodo(todo, sessionID);
       }
     }
   }
 
   // Method to delete a todo
-  deleteTodo() {
+  deleteTodo = () => {
     const {
       showMode,
       flushTodo,
       user: { sessionID },
     } = this.props;
 
+    const { todo } = this.state;
+
     showMode();
-    testCall(this.props.remove) || flushTodo(this.state.todo, sessionID);
+    testCall(this.props.remove) || flushTodo(todo, sessionID);
   }
 
   render() {
@@ -96,7 +100,7 @@ class ToDoEdit extends React.Component {
           <i
             className={this.props.mission === 'addNew' ? "fa fa-plus" : "fa fa-check"}
             aria-hidden="true"
-            onClick={this.confirmUpdate.bind(this)} />
+            onClick={this.confirmUpdate} />
 
           { /* Hiding delete button for a new todo element */ }
           { mission === 'addNew'
@@ -104,7 +108,7 @@ class ToDoEdit extends React.Component {
             : <i
                 className="fa fa-times"
                 aria-hidden="true"
-                onClick={this.deleteTodo.bind(this)}
+                onClick={this.deleteTodo}
               />
           }
         </div>
@@ -113,7 +117,7 @@ class ToDoEdit extends React.Component {
           type="text"
           id="title"
           placeholder="title"
-          onChange={this.updateTodo.bind(this)}
+          onChange={this.updateTodo}
           defaultValue={this.state.todo.title}
           ref={el => this.title = el}>
         </input>
@@ -121,7 +125,7 @@ class ToDoEdit extends React.Component {
         <textarea
           id="description"
           placeholder="description"
-          onChange={this.updateTodo.bind(this)}
+          onChange={this.updateTodo}
           defaultValue={this.state.todo.description}
           ref={el => this.description = el}>
         </textarea>
