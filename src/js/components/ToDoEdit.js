@@ -76,10 +76,14 @@ class ToDoEdit extends React.Component {
 
   // Method to delete a todo
   deleteTodo() {
-    const { showMode, flushTodo, user: { sessionID } } = this.props;
+    const {
+      showMode,
+      flushTodo,
+      user: { sessionID },
+    } = this.props;
 
     showMode();
-    testCall(this.props.remove) || flushTodo(this.state.todo.id, sessionID);
+    testCall(this.props.remove) || flushTodo(this.state.todo, sessionID);
   }
 
   render() {

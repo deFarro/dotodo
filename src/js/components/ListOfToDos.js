@@ -28,13 +28,13 @@ const ListOfToDos = props => {
   const handleDrop = event => {
     event.currentTarget.classList.remove('drag_over');
     const updatedToDo = JSON.parse(event.dataTransfer.getData('todo'));
-    updatedToDo.status = title === 'In Progress' ? 'upcomig' : 'completed';
+    updatedToDo.status = status;
     modifyTodo(updatedToDo, user.sessionID);
   };
 
   // Adding some event listeners to display dragging
   return (
-    <div className={title === 'In Progress' ? 'inProgress todos_list' : 'todos_list completed'}
+    <div className={`todos_list ${status}`}
       onDragOver={event => {
         event.preventDefault();
         event.currentTarget.classList.add('drag_over');
@@ -61,7 +61,7 @@ const ListOfToDos = props => {
       </CSSTransitionGroup>
 
       { /* Render emty todo as a from */ }
-      { title === 'In Progress'
+      { status === 'upcoming'
         ? <ToDo todo={{title: '', description: ''}} mission="addNew" />
         : null
       }

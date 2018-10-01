@@ -1,53 +1,94 @@
 // Action types
 import { ADD_TODO, UPDATE_TODO, DELETE_TODO, LOG_IN, LOG_OUT, LOAD_TODOS, ERROR, RESET_ERROR } from '../types';
 
-const rootReducer = (state = {}, action) => {
-  switch (action.type) {
-    case ADD_TODO:
-      const todos = [...state.todos, action.payload];
+import { findNestedTodo } from '../../utils';
 
-      return {user: state.user, todos};
+const rootReducer = (state = {}, action) => {
+  const { type, payload } = action;
+
+  switch (type) {
+    case ADD_TODO:
+      const todosToExtend = [...state.todos[payload.status]];
+      todosToExtend.push(action.payload);
+      
+      return {
+        user: state.user,
+        todos: Object.assign(
+          {},
+          state.todos,
+          { [payload.status]: todosToExtend }
+        ),
+      };
 
     case UPDATE_TODO:
-      // Finding index of edited todo
-      let index;
-      state.todos.forEach((todo, i) => {
-        if (todo.id === action.todo.id) {
-          index = i
-        }
-      });
-      const newTodos = [...state.todos];
-      // If status (upcomig/inprogress/completed) changed we not replacing todo but delete it and add to the end of the array
-      if (state.todos[index].status !== action.todo.status) {
-        newTodos.splice(index, 1);
-        newTodos.push(action.todo);
-      }
-      else {
-        newTodos[index] = action.todo;
+      const todosToUpdate = [...state.todos[payload.status]];
+      const [currentStatus, index] = findNestedTodo(payload, state.todos);
+
+      if (currentStatus === null) {
+        return state;
       }
 
-      return {user: state.user, todos: newTodos};
+      // If status changed we delete it in one list and add to another
+      if (currentStatus !== payload.status) {
+        const todosToClear = [...state.todos[currentStatus]];
+        todosToClear.splice(index, 1);
+        todosToUpdate.push(payload);
+
+        return {
+          user: state.user,
+          todos: Object.assign(
+            {},
+            state.todos,
+            {
+              [currentStatus]: todosToClear,
+              [payload.status]: todosToUpdate
+            }
+          ),
+        };
+      }
+      // If status didn't change, we update it
+      else {
+        todosToUpdate[index] = payload;
+
+        return {
+          user: state.user,
+          todos: Object.assign(
+            {},
+            state.todos,
+            {
+              [payload.status]: todosToUpdate
+            }
+          ),
+        };
+      }
 
     case DELETE_TODO:
-      return {user: state.user, todos: state.todos.filter(todo => todo.id !== action.id)}
+      return {
+        user: state.user,
+        todos: Object.assign(
+          {},
+          state.todos,
+          { [payload.status]: state.todos[payload.status].filter(todo => todo.id !== payload.id) }
+        ),
+      };
 
     case LOG_IN:
-      return {todos: state.todos, user: action.user}
+      return { todos: state.todos, user: payload };
 
     case LOG_OUT:
-      return {}
+      return {};
 
     case LOAD_TODOS:
       const newState = Object.assign({}, state);
-      newState.todos = action.todos;
+      newState.todos = payload;
 
       return newState;
 
     case ERROR:
-      return {todos: state.todos, user: state.user, error: true}
+      return { ...state, error: true };
 
     case RESET_ERROR:
-      return {todos: state.todos, user: state.user}
+      return { todos: state.todos, user: state.user };
 
     default:
       return state;

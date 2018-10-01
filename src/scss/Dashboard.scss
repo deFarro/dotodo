@@ -2,7 +2,7 @@
 @import "partials/mixins";
 
 .list_window {
-  @include flex-container;
+  @include flex-container($just: space-between);
   @include center;
   margin-top: 1.5rem;
 }

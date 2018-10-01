@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "dist/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 172);
+/******/ 	return __webpack_require__(__webpack_require__.s = 173);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -1181,9 +1181,9 @@ module.exports = function (it) {
 /* WEBPACK VAR INJECTION */(function(process) {
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(376);
-} else {
   module.exports = __webpack_require__(377);
+} else {
+  module.exports = __webpack_require__(378);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
@@ -2196,11 +2196,11 @@ if (process.env.NODE_ENV !== 'production') {
   // By explicitly using `prop-types` you are opting into new development behavior.
   // http://fb.me/prop-types-in-prod
   var throwOnDirectAccess = true;
-  module.exports = __webpack_require__(389)(isValidElement, throwOnDirectAccess);
+  module.exports = __webpack_require__(390)(isValidElement, throwOnDirectAccess);
 } else {
   // By explicitly using `prop-types` you are opting into new production behavior.
   // http://fb.me/prop-types-in-prod
-  module.exports = __webpack_require__(390)();
+  module.exports = __webpack_require__(391)();
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
@@ -3995,7 +3995,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(418);
+var	fixUrls = __webpack_require__(419);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -6510,7 +6510,7 @@ module.exports = __webpack_require__(24).getIteratorMethod = function (it) {
 /***/ (function(module, exports, __webpack_require__) {
 
 // 9.4.2.3 ArraySpeciesCreate(originalArray, length)
-var speciesConstructor = __webpack_require__(265);
+var speciesConstructor = __webpack_require__(266);
 
 module.exports = function (original, length) {
   return new (speciesConstructor(original))(length);
@@ -7183,7 +7183,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "applyMiddleware", function() { return applyMiddleware; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "compose", function() { return compose; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__DO_NOT_USE__ActionTypes", function() { return ActionTypes; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_symbol_observable__ = __webpack_require__(385);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_symbol_observable__ = __webpack_require__(386);
 
 
 /**
@@ -7781,9 +7781,9 @@ if (process.env.NODE_ENV !== 'production' && typeof isCrushed.name === 'string' 
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Provider__ = __webpack_require__(388);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Provider__ = __webpack_require__(389);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_connectAdvanced__ = __webpack_require__(154);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__connect_connect__ = __webpack_require__(394);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__connect_connect__ = __webpack_require__(395);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Provider", function() { return __WEBPACK_IMPORTED_MODULE_0__components_Provider__["b"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "createProvider", function() { return __WEBPACK_IMPORTED_MODULE_0__components_Provider__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "connectAdvanced", function() { return __WEBPACK_IMPORTED_MODULE_1__components_connectAdvanced__["a"]; });
@@ -9186,9 +9186,9 @@ if (process.env.NODE_ENV === 'production') {
   // DCE check should happen before ReactDOM bundle executes so that
   // DevTools can report bad minification during injection.
   checkDCE();
-  module.exports = __webpack_require__(378);
+  module.exports = __webpack_require__(379);
 } else {
-  module.exports = __webpack_require__(381);
+  module.exports = __webpack_require__(382);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
@@ -9201,9 +9201,9 @@ if (process.env.NODE_ENV === 'production') {
 /* WEBPACK VAR INJECTION */(function(process) {
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(379);
-} else {
   module.exports = __webpack_require__(380);
+} else {
+  module.exports = __webpack_require__(381);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
@@ -9238,13 +9238,13 @@ var storeShape = __WEBPACK_IMPORTED_MODULE_0_prop_types___default.a.shape({
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/* harmony export (immutable) */ __webpack_exports__["a"] = connectAdvanced;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_hoist_non_react_statics__ = __webpack_require__(391);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_hoist_non_react_statics__ = __webpack_require__(392);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_hoist_non_react_statics___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_hoist_non_react_statics__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant__ = __webpack_require__(392);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant__ = __webpack_require__(393);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_invariant__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_Subscription__ = __webpack_require__(393);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_Subscription__ = __webpack_require__(394);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__utils_PropTypes__ = __webpack_require__(153);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -9621,7 +9621,7 @@ function wrapMapToPropsFunc(mapToProps, methodName) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = verifyPlainObject;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_es_isPlainObject__ = __webpack_require__(397);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_es_isPlainObject__ = __webpack_require__(398);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__warning__ = __webpack_require__(112);
 
 
@@ -9637,7 +9637,7 @@ function verifyPlainObject(value, displayName, methodName) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__root_js__ = __webpack_require__(399);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__root_js__ = __webpack_require__(400);
 
 
 /** Built-in value references. */
@@ -9652,7 +9652,7 @@ var Symbol = __WEBPACK_IMPORTED_MODULE_0__root_js__["a" /* default */].Symbol;
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__internal_middleware__ = __webpack_require__(410);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__internal_middleware__ = __webpack_require__(411);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__internal_runSaga__ = __webpack_require__(160);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "runSaga", function() { return __WEBPACK_IMPORTED_MODULE_1__internal_runSaga__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__internal_channel__ = __webpack_require__(56);
@@ -9671,7 +9671,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__internal_io__ = __webpack_require__(48);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "detach", function() { return __WEBPACK_IMPORTED_MODULE_6__internal_io__["i"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__effects__ = __webpack_require__(163);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__utils__ = __webpack_require__(414);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__utils__ = __webpack_require__(415);
 /* harmony reexport (module object) */ __webpack_require__.d(__webpack_exports__, "effects", function() { return __WEBPACK_IMPORTED_MODULE_7__effects__; });
 /* harmony reexport (module object) */ __webpack_require__.d(__webpack_exports__, "utils", function() { return __WEBPACK_IMPORTED_MODULE_8__utils__; });
 
@@ -10610,9 +10610,9 @@ function proc(iterator) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return takeEvery; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return takeLatest; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return throttle; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__takeEvery__ = __webpack_require__(411);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__takeLatest__ = __webpack_require__(412);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__throttle__ = __webpack_require__(413);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__takeEvery__ = __webpack_require__(412);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__takeLatest__ = __webpack_require__(413);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__throttle__ = __webpack_require__(414);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils__ = __webpack_require__(23);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__takeEvery__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_1__takeLatest__["a"]; });
@@ -10694,7 +10694,7 @@ var dropSession = function dropSession(sessionID) {
 var loadTodos = function loadTodos(todos) {
   return {
     type: _types.LOAD_TODOS,
-    todos: todos
+    payload: todos
   };
 };
 
@@ -10708,11 +10708,11 @@ var uploadTodo = function uploadTodo(todo, sessionID) {
   };
 };
 
-var flushTodo = function flushTodo(id, sessionID) {
+var flushTodo = function flushTodo(todo, sessionID) {
   return {
     type: _types.FLUSH_TODO,
     payload: {
-      id: id,
+      todo: todo,
       sessionID: sessionID
     }
   };
@@ -10735,24 +10735,24 @@ var addTodo = function addTodo(todo) {
   };
 };
 
-var deleteTodo = function deleteTodo(id) {
+var deleteTodo = function deleteTodo(todo) {
   return {
     type: _types.DELETE_TODO,
-    id: id
+    payload: todo
   };
 };
 
 var updateTodo = function updateTodo(todo) {
   return {
     type: _types.UPDATE_TODO,
-    todo: todo
+    payload: todo
   };
 };
 
 var logIn = function logIn(user) {
   return {
     type: _types.LOG_IN,
-    user: user
+    payload: user
   };
 };
 
@@ -10805,7 +10805,7 @@ var _react = __webpack_require__(11);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(422);
+__webpack_require__(423);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10836,7 +10836,7 @@ exports.__esModule = true;
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _chainFunction = __webpack_require__(433);
+var _chainFunction = __webpack_require__(434);
 
 var _chainFunction2 = _interopRequireDefault(_chainFunction);
 
@@ -10848,11 +10848,11 @@ var _propTypes = __webpack_require__(18);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _warning = __webpack_require__(434);
+var _warning = __webpack_require__(435);
 
 var _warning2 = _interopRequireDefault(_warning);
 
-var _ChildMapping = __webpack_require__(435);
+var _ChildMapping = __webpack_require__(436);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11176,7 +11176,7 @@ var nameShape = exports.nameShape = _propTypes2.default.oneOfType([_propTypes2.d
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(446);
+var content = __webpack_require__(447);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -11202,6 +11202,41 @@ if(false) {
 
 /***/ }),
 /* 170 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+// Function to test methods with Karma
+var testCall = exports.testCall = function testCall(func) {
+    if (!func) {
+        return false;
+    }
+    func();
+
+    return true;
+};
+
+// Function to find todos in nested object structures
+var findNestedTodo = exports.findNestedTodo = function findNestedTodo(todo, todos) {
+    for (var key in todos) {
+        var index = todos[key].findIndex(function (item) {
+            return item.id === todo.id;
+        });
+
+        if (index !== -1) {
+            return [key, index];
+        }
+    }
+
+    return [null, -1];
+};
+
+/***/ }),
+/* 171 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory) {
@@ -11405,7 +11440,7 @@ if(false) {
 }));
 
 /***/ }),
-/* 171 */
+/* 172 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -11733,25 +11768,25 @@ if(false) {
 }));
 
 /***/ }),
-/* 172 */
+/* 173 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(173);
-module.exports = __webpack_require__(375);
+__webpack_require__(174);
+module.exports = __webpack_require__(376);
 
 
 /***/ }),
-/* 173 */
+/* 174 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(global) {
 
-__webpack_require__(174);
-
-__webpack_require__(371);
+__webpack_require__(175);
 
 __webpack_require__(372);
+
+__webpack_require__(373);
 
 if (global._babelPolyfill) {
   throw new Error("only one instance of babel-polyfill is allowed");
@@ -11776,11 +11811,10 @@ define(String.prototype, "padRight", "".padEnd);
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(64)))
 
 /***/ }),
-/* 174 */
+/* 175 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(175);
-__webpack_require__(177);
+__webpack_require__(176);
 __webpack_require__(178);
 __webpack_require__(179);
 __webpack_require__(180);
@@ -11795,7 +11829,7 @@ __webpack_require__(188);
 __webpack_require__(189);
 __webpack_require__(190);
 __webpack_require__(191);
-__webpack_require__(193);
+__webpack_require__(192);
 __webpack_require__(194);
 __webpack_require__(195);
 __webpack_require__(196);
@@ -11856,16 +11890,16 @@ __webpack_require__(250);
 __webpack_require__(251);
 __webpack_require__(252);
 __webpack_require__(253);
-__webpack_require__(255);
+__webpack_require__(254);
 __webpack_require__(256);
-__webpack_require__(258);
+__webpack_require__(257);
 __webpack_require__(259);
 __webpack_require__(260);
 __webpack_require__(261);
 __webpack_require__(262);
 __webpack_require__(263);
 __webpack_require__(264);
-__webpack_require__(266);
+__webpack_require__(265);
 __webpack_require__(267);
 __webpack_require__(268);
 __webpack_require__(269);
@@ -11878,19 +11912,19 @@ __webpack_require__(275);
 __webpack_require__(276);
 __webpack_require__(277);
 __webpack_require__(278);
-__webpack_require__(103);
 __webpack_require__(279);
+__webpack_require__(103);
 __webpack_require__(280);
-__webpack_require__(135);
 __webpack_require__(281);
+__webpack_require__(135);
 __webpack_require__(282);
 __webpack_require__(283);
 __webpack_require__(284);
 __webpack_require__(285);
+__webpack_require__(286);
 __webpack_require__(138);
 __webpack_require__(140);
 __webpack_require__(141);
-__webpack_require__(286);
 __webpack_require__(287);
 __webpack_require__(288);
 __webpack_require__(289);
@@ -11975,11 +12009,12 @@ __webpack_require__(367);
 __webpack_require__(368);
 __webpack_require__(369);
 __webpack_require__(370);
+__webpack_require__(371);
 module.exports = __webpack_require__(24);
 
 
 /***/ }),
-/* 175 */
+/* 176 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11998,7 +12033,7 @@ var uid = __webpack_require__(39);
 var wks = __webpack_require__(7);
 var wksExt = __webpack_require__(118);
 var wksDefine = __webpack_require__(83);
-var enumKeys = __webpack_require__(176);
+var enumKeys = __webpack_require__(177);
 var isArray = __webpack_require__(68);
 var anObject = __webpack_require__(1);
 var isObject = __webpack_require__(5);
@@ -12220,7 +12255,7 @@ setToStringTag(global.JSON, 'JSON', true);
 
 
 /***/ }),
-/* 176 */
+/* 177 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // all enumerable object keys, includes symbols
@@ -12241,7 +12276,7 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 177 */
+/* 178 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(0);
@@ -12250,7 +12285,7 @@ $export($export.S, 'Object', { create: __webpack_require__(42) });
 
 
 /***/ }),
-/* 178 */
+/* 179 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(0);
@@ -12259,7 +12294,7 @@ $export($export.S + $export.F * !__webpack_require__(8), 'Object', { definePrope
 
 
 /***/ }),
-/* 179 */
+/* 180 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(0);
@@ -12268,7 +12303,7 @@ $export($export.S + $export.F * !__webpack_require__(8), 'Object', { definePrope
 
 
 /***/ }),
-/* 180 */
+/* 181 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.6 Object.getOwnPropertyDescriptor(O, P)
@@ -12283,7 +12318,7 @@ __webpack_require__(31)('getOwnPropertyDescriptor', function () {
 
 
 /***/ }),
-/* 181 */
+/* 182 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.9 Object.getPrototypeOf(O)
@@ -12298,7 +12333,7 @@ __webpack_require__(31)('getPrototypeOf', function () {
 
 
 /***/ }),
-/* 182 */
+/* 183 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.14 Object.keys(O)
@@ -12313,7 +12348,7 @@ __webpack_require__(31)('keys', function () {
 
 
 /***/ }),
-/* 183 */
+/* 184 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.7 Object.getOwnPropertyNames(O)
@@ -12323,7 +12358,7 @@ __webpack_require__(31)('getOwnPropertyNames', function () {
 
 
 /***/ }),
-/* 184 */
+/* 185 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.5 Object.freeze(O)
@@ -12338,7 +12373,7 @@ __webpack_require__(31)('freeze', function ($freeze) {
 
 
 /***/ }),
-/* 185 */
+/* 186 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.17 Object.seal(O)
@@ -12353,7 +12388,7 @@ __webpack_require__(31)('seal', function ($seal) {
 
 
 /***/ }),
-/* 186 */
+/* 187 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.15 Object.preventExtensions(O)
@@ -12368,7 +12403,7 @@ __webpack_require__(31)('preventExtensions', function ($preventExtensions) {
 
 
 /***/ }),
-/* 187 */
+/* 188 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.12 Object.isFrozen(O)
@@ -12382,7 +12417,7 @@ __webpack_require__(31)('isFrozen', function ($isFrozen) {
 
 
 /***/ }),
-/* 188 */
+/* 189 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.13 Object.isSealed(O)
@@ -12396,7 +12431,7 @@ __webpack_require__(31)('isSealed', function ($isSealed) {
 
 
 /***/ }),
-/* 189 */
+/* 190 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.11 Object.isExtensible(O)
@@ -12410,7 +12445,7 @@ __webpack_require__(31)('isExtensible', function ($isExtensible) {
 
 
 /***/ }),
-/* 190 */
+/* 191 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.3.1 Object.assign(target, source)
@@ -12420,16 +12455,16 @@ $export($export.S + $export.F, 'Object', { assign: __webpack_require__(122) });
 
 
 /***/ }),
-/* 191 */
+/* 192 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.3.10 Object.is(value1, value2)
 var $export = __webpack_require__(0);
-$export($export.S, 'Object', { is: __webpack_require__(192) });
+$export($export.S, 'Object', { is: __webpack_require__(193) });
 
 
 /***/ }),
-/* 192 */
+/* 193 */
 /***/ (function(module, exports) {
 
 // 7.2.9 SameValue(x, y)
@@ -12440,7 +12475,7 @@ module.exports = Object.is || function is(x, y) {
 
 
 /***/ }),
-/* 193 */
+/* 194 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.3.19 Object.setPrototypeOf(O, proto)
@@ -12449,7 +12484,7 @@ $export($export.S, 'Object', { setPrototypeOf: __webpack_require__(87).set });
 
 
 /***/ }),
-/* 194 */
+/* 195 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12466,7 +12501,7 @@ if (test + '' != '[object z]') {
 
 
 /***/ }),
-/* 195 */
+/* 196 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.2.3.2 / 15.3.4.5 Function.prototype.bind(thisArg, args...)
@@ -12476,7 +12511,7 @@ $export($export.P, 'Function', { bind: __webpack_require__(123) });
 
 
 /***/ }),
-/* 196 */
+/* 197 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var dP = __webpack_require__(9).f;
@@ -12498,7 +12533,7 @@ NAME in FProto || __webpack_require__(8) && dP(FProto, NAME, {
 
 
 /***/ }),
-/* 197 */
+/* 198 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12518,7 +12553,7 @@ if (!(HAS_INSTANCE in FunctionProto)) __webpack_require__(9).f(FunctionProto, HA
 
 
 /***/ }),
-/* 198 */
+/* 199 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(0);
@@ -12528,7 +12563,7 @@ $export($export.G + $export.F * (parseInt != $parseInt), { parseInt: $parseInt }
 
 
 /***/ }),
-/* 199 */
+/* 200 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(0);
@@ -12538,7 +12573,7 @@ $export($export.G + $export.F * (parseFloat != $parseFloat), { parseFloat: $pars
 
 
 /***/ }),
-/* 200 */
+/* 201 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12614,7 +12649,7 @@ if (!$Number(' 0o1') || !$Number('0b1') || $Number('+0x1')) {
 
 
 /***/ }),
-/* 201 */
+/* 202 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12735,7 +12770,7 @@ $export($export.P + $export.F * (!!$toFixed && (
 
 
 /***/ }),
-/* 202 */
+/* 203 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12760,7 +12795,7 @@ $export($export.P + $export.F * ($fails(function () {
 
 
 /***/ }),
-/* 203 */
+/* 204 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.1.2.1 Number.EPSILON
@@ -12770,7 +12805,7 @@ $export($export.S, 'Number', { EPSILON: Math.pow(2, -52) });
 
 
 /***/ }),
-/* 204 */
+/* 205 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.1.2.2 Number.isFinite(number)
@@ -12785,7 +12820,7 @@ $export($export.S, 'Number', {
 
 
 /***/ }),
-/* 205 */
+/* 206 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.1.2.3 Number.isInteger(number)
@@ -12795,7 +12830,7 @@ $export($export.S, 'Number', { isInteger: __webpack_require__(128) });
 
 
 /***/ }),
-/* 206 */
+/* 207 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.1.2.4 Number.isNaN(number)
@@ -12810,7 +12845,7 @@ $export($export.S, 'Number', {
 
 
 /***/ }),
-/* 207 */
+/* 208 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.1.2.5 Number.isSafeInteger(number)
@@ -12826,7 +12861,7 @@ $export($export.S, 'Number', {
 
 
 /***/ }),
-/* 208 */
+/* 209 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.1.2.6 Number.MAX_SAFE_INTEGER
@@ -12836,7 +12871,7 @@ $export($export.S, 'Number', { MAX_SAFE_INTEGER: 0x1fffffffffffff });
 
 
 /***/ }),
-/* 209 */
+/* 210 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.1.2.10 Number.MIN_SAFE_INTEGER
@@ -12846,7 +12881,7 @@ $export($export.S, 'Number', { MIN_SAFE_INTEGER: -0x1fffffffffffff });
 
 
 /***/ }),
-/* 210 */
+/* 211 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(0);
@@ -12856,7 +12891,7 @@ $export($export.S + $export.F * (Number.parseFloat != $parseFloat), 'Number', { 
 
 
 /***/ }),
-/* 211 */
+/* 212 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(0);
@@ -12866,7 +12901,7 @@ $export($export.S + $export.F * (Number.parseInt != $parseInt), 'Number', { pars
 
 
 /***/ }),
-/* 212 */
+/* 213 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.2.2.3 Math.acosh(x)
@@ -12890,7 +12925,7 @@ $export($export.S + $export.F * !($acosh
 
 
 /***/ }),
-/* 213 */
+/* 214 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.2.2.5 Math.asinh(x)
@@ -12906,7 +12941,7 @@ $export($export.S + $export.F * !($asinh && 1 / $asinh(0) > 0), 'Math', { asinh:
 
 
 /***/ }),
-/* 214 */
+/* 215 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.2.2.7 Math.atanh(x)
@@ -12922,7 +12957,7 @@ $export($export.S + $export.F * !($atanh && 1 / $atanh(-0) < 0), 'Math', {
 
 
 /***/ }),
-/* 215 */
+/* 216 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.2.2.9 Math.cbrt(x)
@@ -12937,7 +12972,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 216 */
+/* 217 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.2.2.11 Math.clz32(x)
@@ -12951,7 +12986,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 217 */
+/* 218 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.2.2.12 Math.cosh(x)
@@ -12966,7 +13001,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 218 */
+/* 219 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.2.2.14 Math.expm1(x)
@@ -12977,7 +13012,7 @@ $export($export.S + $export.F * ($expm1 != Math.expm1), 'Math', { expm1: $expm1 
 
 
 /***/ }),
-/* 219 */
+/* 220 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.2.2.16 Math.fround(x)
@@ -12987,7 +13022,7 @@ $export($export.S, 'Math', { fround: __webpack_require__(130) });
 
 
 /***/ }),
-/* 220 */
+/* 221 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.2.2.17 Math.hypot([value1[, value2[, … ]]])
@@ -13018,7 +13053,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 221 */
+/* 222 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.2.2.18 Math.imul(x, y)
@@ -13041,7 +13076,7 @@ $export($export.S + $export.F * __webpack_require__(4)(function () {
 
 
 /***/ }),
-/* 222 */
+/* 223 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.2.2.21 Math.log10(x)
@@ -13055,7 +13090,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 223 */
+/* 224 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.2.2.20 Math.log1p(x)
@@ -13065,7 +13100,7 @@ $export($export.S, 'Math', { log1p: __webpack_require__(129) });
 
 
 /***/ }),
-/* 224 */
+/* 225 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.2.2.22 Math.log2(x)
@@ -13079,7 +13114,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 225 */
+/* 226 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.2.2.28 Math.sign(x)
@@ -13089,7 +13124,7 @@ $export($export.S, 'Math', { sign: __webpack_require__(91) });
 
 
 /***/ }),
-/* 226 */
+/* 227 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.2.2.30 Math.sinh(x)
@@ -13110,7 +13145,7 @@ $export($export.S + $export.F * __webpack_require__(4)(function () {
 
 
 /***/ }),
-/* 227 */
+/* 228 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.2.2.33 Math.tanh(x)
@@ -13128,7 +13163,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 228 */
+/* 229 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.2.2.34 Math.trunc(x)
@@ -13142,7 +13177,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 229 */
+/* 230 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(0);
@@ -13171,7 +13206,7 @@ $export($export.S + $export.F * (!!$fromCodePoint && $fromCodePoint.length != 1)
 
 
 /***/ }),
-/* 230 */
+/* 231 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(0);
@@ -13195,7 +13230,7 @@ $export($export.S, 'String', {
 
 
 /***/ }),
-/* 231 */
+/* 232 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13209,7 +13244,7 @@ __webpack_require__(53)('trim', function ($trim) {
 
 
 /***/ }),
-/* 232 */
+/* 233 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13233,7 +13268,7 @@ __webpack_require__(94)(String, 'String', function (iterated) {
 
 
 /***/ }),
-/* 233 */
+/* 234 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13249,7 +13284,7 @@ $export($export.P, 'String', {
 
 
 /***/ }),
-/* 234 */
+/* 235 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13276,7 +13311,7 @@ $export($export.P + $export.F * __webpack_require__(97)(ENDS_WITH), 'String', {
 
 
 /***/ }),
-/* 235 */
+/* 236 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13295,7 +13330,7 @@ $export($export.P + $export.F * __webpack_require__(97)(INCLUDES), 'String', {
 
 
 /***/ }),
-/* 236 */
+/* 237 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(0);
@@ -13307,7 +13342,7 @@ $export($export.P, 'String', {
 
 
 /***/ }),
-/* 237 */
+/* 238 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13332,7 +13367,7 @@ $export($export.P + $export.F * __webpack_require__(97)(STARTS_WITH), 'String', 
 
 
 /***/ }),
-/* 238 */
+/* 239 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13346,7 +13381,7 @@ __webpack_require__(17)('anchor', function (createHTML) {
 
 
 /***/ }),
-/* 239 */
+/* 240 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13360,7 +13395,7 @@ __webpack_require__(17)('big', function (createHTML) {
 
 
 /***/ }),
-/* 240 */
+/* 241 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13374,7 +13409,7 @@ __webpack_require__(17)('blink', function (createHTML) {
 
 
 /***/ }),
-/* 241 */
+/* 242 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13388,7 +13423,7 @@ __webpack_require__(17)('bold', function (createHTML) {
 
 
 /***/ }),
-/* 242 */
+/* 243 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13402,7 +13437,7 @@ __webpack_require__(17)('fixed', function (createHTML) {
 
 
 /***/ }),
-/* 243 */
+/* 244 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13416,7 +13451,7 @@ __webpack_require__(17)('fontcolor', function (createHTML) {
 
 
 /***/ }),
-/* 244 */
+/* 245 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13430,7 +13465,7 @@ __webpack_require__(17)('fontsize', function (createHTML) {
 
 
 /***/ }),
-/* 245 */
+/* 246 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13444,7 +13479,7 @@ __webpack_require__(17)('italics', function (createHTML) {
 
 
 /***/ }),
-/* 246 */
+/* 247 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13458,7 +13493,7 @@ __webpack_require__(17)('link', function (createHTML) {
 
 
 /***/ }),
-/* 247 */
+/* 248 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13472,7 +13507,7 @@ __webpack_require__(17)('small', function (createHTML) {
 
 
 /***/ }),
-/* 248 */
+/* 249 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13486,7 +13521,7 @@ __webpack_require__(17)('strike', function (createHTML) {
 
 
 /***/ }),
-/* 249 */
+/* 250 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13500,7 +13535,7 @@ __webpack_require__(17)('sub', function (createHTML) {
 
 
 /***/ }),
-/* 250 */
+/* 251 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13514,7 +13549,7 @@ __webpack_require__(17)('sup', function (createHTML) {
 
 
 /***/ }),
-/* 251 */
+/* 252 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.3.3.1 / 15.9.4.4 Date.now()
@@ -13524,7 +13559,7 @@ $export($export.S, 'Date', { now: function () { return new Date().getTime(); } }
 
 
 /***/ }),
-/* 252 */
+/* 253 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13547,12 +13582,12 @@ $export($export.P + $export.F * __webpack_require__(4)(function () {
 
 
 /***/ }),
-/* 253 */
+/* 254 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.3.4.36 / 15.9.5.43 Date.prototype.toISOString()
 var $export = __webpack_require__(0);
-var toISOString = __webpack_require__(254);
+var toISOString = __webpack_require__(255);
 
 // PhantomJS / old WebKit has a broken implementations
 $export($export.P + $export.F * (Date.prototype.toISOString !== toISOString), 'Date', {
@@ -13561,7 +13596,7 @@ $export($export.P + $export.F * (Date.prototype.toISOString !== toISOString), 'D
 
 
 /***/ }),
-/* 254 */
+/* 255 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13594,7 +13629,7 @@ module.exports = (fails(function () {
 
 
 /***/ }),
-/* 255 */
+/* 256 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var DateProto = Date.prototype;
@@ -13612,17 +13647,17 @@ if (new Date(NaN) + '' != INVALID_DATE) {
 
 
 /***/ }),
-/* 256 */
+/* 257 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var TO_PRIMITIVE = __webpack_require__(7)('toPrimitive');
 var proto = Date.prototype;
 
-if (!(TO_PRIMITIVE in proto)) __webpack_require__(15)(proto, TO_PRIMITIVE, __webpack_require__(257));
+if (!(TO_PRIMITIVE in proto)) __webpack_require__(15)(proto, TO_PRIMITIVE, __webpack_require__(258));
 
 
 /***/ }),
-/* 257 */
+/* 258 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13638,7 +13673,7 @@ module.exports = function (hint) {
 
 
 /***/ }),
-/* 258 */
+/* 259 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 22.1.2.2 / 15.4.3.2 Array.isArray(arg)
@@ -13648,7 +13683,7 @@ $export($export.S, 'Array', { isArray: __webpack_require__(68) });
 
 
 /***/ }),
-/* 259 */
+/* 260 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13692,7 +13727,7 @@ $export($export.S + $export.F * !__webpack_require__(70)(function (iter) { Array
 
 
 /***/ }),
-/* 260 */
+/* 261 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13718,7 +13753,7 @@ $export($export.S + $export.F * __webpack_require__(4)(function () {
 
 
 /***/ }),
-/* 261 */
+/* 262 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13737,7 +13772,7 @@ $export($export.P + $export.F * (__webpack_require__(59) != Object || !__webpack
 
 
 /***/ }),
-/* 262 */
+/* 263 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13772,7 +13807,7 @@ $export($export.P + $export.F * __webpack_require__(4)(function () {
 
 
 /***/ }),
-/* 263 */
+/* 264 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13802,7 +13837,7 @@ $export($export.P + $export.F * (fails(function () {
 
 
 /***/ }),
-/* 264 */
+/* 265 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13820,7 +13855,7 @@ $export($export.P + $export.F * !STRICT, 'Array', {
 
 
 /***/ }),
-/* 265 */
+/* 266 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var isObject = __webpack_require__(5);
@@ -13842,7 +13877,7 @@ module.exports = function (original) {
 
 
 /***/ }),
-/* 266 */
+/* 267 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13859,7 +13894,7 @@ $export($export.P + $export.F * !__webpack_require__(27)([].map, true), 'Array',
 
 
 /***/ }),
-/* 267 */
+/* 268 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13876,7 +13911,7 @@ $export($export.P + $export.F * !__webpack_require__(27)([].filter, true), 'Arra
 
 
 /***/ }),
-/* 268 */
+/* 269 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13893,7 +13928,7 @@ $export($export.P + $export.F * !__webpack_require__(27)([].some, true), 'Array'
 
 
 /***/ }),
-/* 269 */
+/* 270 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13910,7 +13945,7 @@ $export($export.P + $export.F * !__webpack_require__(27)([].every, true), 'Array
 
 
 /***/ }),
-/* 270 */
+/* 271 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13927,7 +13962,7 @@ $export($export.P + $export.F * !__webpack_require__(27)([].reduce, true), 'Arra
 
 
 /***/ }),
-/* 271 */
+/* 272 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13944,7 +13979,7 @@ $export($export.P + $export.F * !__webpack_require__(27)([].reduceRight, true), 
 
 
 /***/ }),
-/* 272 */
+/* 273 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13966,7 +14001,7 @@ $export($export.P + $export.F * (NEGATIVE_ZERO || !__webpack_require__(27)($nati
 
 
 /***/ }),
-/* 273 */
+/* 274 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13995,7 +14030,7 @@ $export($export.P + $export.F * (NEGATIVE_ZERO || !__webpack_require__(27)($nati
 
 
 /***/ }),
-/* 274 */
+/* 275 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 22.1.3.3 Array.prototype.copyWithin(target, start, end = this.length)
@@ -14007,7 +14042,7 @@ __webpack_require__(37)('copyWithin');
 
 
 /***/ }),
-/* 275 */
+/* 276 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 22.1.3.6 Array.prototype.fill(value, start = 0, end = this.length)
@@ -14019,7 +14054,7 @@ __webpack_require__(37)('fill');
 
 
 /***/ }),
-/* 276 */
+/* 277 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14040,7 +14075,7 @@ __webpack_require__(37)(KEY);
 
 
 /***/ }),
-/* 277 */
+/* 278 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14061,14 +14096,14 @@ __webpack_require__(37)(KEY);
 
 
 /***/ }),
-/* 278 */
+/* 279 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(44)('Array');
 
 
 /***/ }),
-/* 279 */
+/* 280 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var global = __webpack_require__(2);
@@ -14117,7 +14152,7 @@ __webpack_require__(44)('RegExp');
 
 
 /***/ }),
-/* 280 */
+/* 281 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14149,7 +14184,7 @@ if (__webpack_require__(4)(function () { return $toString.call({ source: 'a', fl
 
 
 /***/ }),
-/* 281 */
+/* 282 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // @@match logic
@@ -14165,7 +14200,7 @@ __webpack_require__(72)('match', 1, function (defined, MATCH, $match) {
 
 
 /***/ }),
-/* 282 */
+/* 283 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // @@replace logic
@@ -14183,7 +14218,7 @@ __webpack_require__(72)('replace', 2, function (defined, REPLACE, $replace) {
 
 
 /***/ }),
-/* 283 */
+/* 284 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // @@search logic
@@ -14199,7 +14234,7 @@ __webpack_require__(72)('search', 1, function (defined, SEARCH, $search) {
 
 
 /***/ }),
-/* 284 */
+/* 285 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // @@split logic
@@ -14276,7 +14311,7 @@ __webpack_require__(72)('split', 2, function (defined, SPLIT, $split) {
 
 
 /***/ }),
-/* 285 */
+/* 286 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14569,7 +14604,7 @@ $export($export.S + $export.F * !(USE_NATIVE && __webpack_require__(70)(function
 
 
 /***/ }),
-/* 286 */
+/* 287 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14590,7 +14625,7 @@ __webpack_require__(75)(WEAK_SET, function (get) {
 
 
 /***/ }),
-/* 287 */
+/* 288 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14643,7 +14678,7 @@ __webpack_require__(44)(ARRAY_BUFFER);
 
 
 /***/ }),
-/* 288 */
+/* 289 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(0);
@@ -14653,7 +14688,7 @@ $export($export.G + $export.W + $export.F * !__webpack_require__(76).ABV, {
 
 
 /***/ }),
-/* 289 */
+/* 290 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(33)('Int8', 1, function (init) {
@@ -14664,7 +14699,7 @@ __webpack_require__(33)('Int8', 1, function (init) {
 
 
 /***/ }),
-/* 290 */
+/* 291 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(33)('Uint8', 1, function (init) {
@@ -14675,7 +14710,7 @@ __webpack_require__(33)('Uint8', 1, function (init) {
 
 
 /***/ }),
-/* 291 */
+/* 292 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(33)('Uint8', 1, function (init) {
@@ -14686,7 +14721,7 @@ __webpack_require__(33)('Uint8', 1, function (init) {
 
 
 /***/ }),
-/* 292 */
+/* 293 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(33)('Int16', 2, function (init) {
@@ -14697,7 +14732,7 @@ __webpack_require__(33)('Int16', 2, function (init) {
 
 
 /***/ }),
-/* 293 */
+/* 294 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(33)('Uint16', 2, function (init) {
@@ -14708,7 +14743,7 @@ __webpack_require__(33)('Uint16', 2, function (init) {
 
 
 /***/ }),
-/* 294 */
+/* 295 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(33)('Int32', 4, function (init) {
@@ -14719,7 +14754,7 @@ __webpack_require__(33)('Int32', 4, function (init) {
 
 
 /***/ }),
-/* 295 */
+/* 296 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(33)('Uint32', 4, function (init) {
@@ -14730,7 +14765,7 @@ __webpack_require__(33)('Uint32', 4, function (init) {
 
 
 /***/ }),
-/* 296 */
+/* 297 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(33)('Float32', 4, function (init) {
@@ -14741,7 +14776,7 @@ __webpack_require__(33)('Float32', 4, function (init) {
 
 
 /***/ }),
-/* 297 */
+/* 298 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(33)('Float64', 8, function (init) {
@@ -14752,7 +14787,7 @@ __webpack_require__(33)('Float64', 8, function (init) {
 
 
 /***/ }),
-/* 298 */
+/* 299 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 26.1.1 Reflect.apply(target, thisArgument, argumentsList)
@@ -14774,7 +14809,7 @@ $export($export.S + $export.F * !__webpack_require__(4)(function () {
 
 
 /***/ }),
-/* 299 */
+/* 300 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 26.1.2 Reflect.construct(target, argumentsList [, newTarget])
@@ -14827,7 +14862,7 @@ $export($export.S + $export.F * (NEW_TARGET_BUG || ARGS_BUG), 'Reflect', {
 
 
 /***/ }),
-/* 300 */
+/* 301 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 26.1.3 Reflect.defineProperty(target, propertyKey, attributes)
@@ -14856,7 +14891,7 @@ $export($export.S + $export.F * __webpack_require__(4)(function () {
 
 
 /***/ }),
-/* 301 */
+/* 302 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 26.1.4 Reflect.deleteProperty(target, propertyKey)
@@ -14873,7 +14908,7 @@ $export($export.S, 'Reflect', {
 
 
 /***/ }),
-/* 302 */
+/* 303 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14906,7 +14941,7 @@ $export($export.S, 'Reflect', {
 
 
 /***/ }),
-/* 303 */
+/* 304 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 26.1.6 Reflect.get(target, propertyKey [, receiver])
@@ -14933,7 +14968,7 @@ $export($export.S, 'Reflect', { get: get });
 
 
 /***/ }),
-/* 304 */
+/* 305 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 26.1.7 Reflect.getOwnPropertyDescriptor(target, propertyKey)
@@ -14949,7 +14984,7 @@ $export($export.S, 'Reflect', {
 
 
 /***/ }),
-/* 305 */
+/* 306 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 26.1.8 Reflect.getPrototypeOf(target)
@@ -14965,7 +15000,7 @@ $export($export.S, 'Reflect', {
 
 
 /***/ }),
-/* 306 */
+/* 307 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 26.1.9 Reflect.has(target, propertyKey)
@@ -14979,7 +15014,7 @@ $export($export.S, 'Reflect', {
 
 
 /***/ }),
-/* 307 */
+/* 308 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 26.1.10 Reflect.isExtensible(target)
@@ -14996,7 +15031,7 @@ $export($export.S, 'Reflect', {
 
 
 /***/ }),
-/* 308 */
+/* 309 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 26.1.11 Reflect.ownKeys(target)
@@ -15006,7 +15041,7 @@ $export($export.S, 'Reflect', { ownKeys: __webpack_require__(144) });
 
 
 /***/ }),
-/* 309 */
+/* 310 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 26.1.12 Reflect.preventExtensions(target)
@@ -15028,7 +15063,7 @@ $export($export.S, 'Reflect', {
 
 
 /***/ }),
-/* 310 */
+/* 311 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 26.1.13 Reflect.set(target, propertyKey, V [, receiver])
@@ -15067,7 +15102,7 @@ $export($export.S, 'Reflect', { set: set });
 
 
 /***/ }),
-/* 311 */
+/* 312 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 26.1.14 Reflect.setPrototypeOf(target, proto)
@@ -15088,7 +15123,7 @@ if (setProto) $export($export.S, 'Reflect', {
 
 
 /***/ }),
-/* 312 */
+/* 313 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15107,7 +15142,7 @@ __webpack_require__(37)('includes');
 
 
 /***/ }),
-/* 313 */
+/* 314 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15136,7 +15171,7 @@ __webpack_require__(37)('flatMap');
 
 
 /***/ }),
-/* 314 */
+/* 315 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15164,7 +15199,7 @@ __webpack_require__(37)('flatten');
 
 
 /***/ }),
-/* 315 */
+/* 316 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15181,7 +15216,7 @@ $export($export.P, 'String', {
 
 
 /***/ }),
-/* 316 */
+/* 317 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15200,7 +15235,7 @@ $export($export.P + $export.F * /Version\/10\.\d+(\.\d+)? Safari\//.test(userAge
 
 
 /***/ }),
-/* 317 */
+/* 318 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15219,7 +15254,7 @@ $export($export.P + $export.F * /Version\/10\.\d+(\.\d+)? Safari\//.test(userAge
 
 
 /***/ }),
-/* 318 */
+/* 319 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15233,7 +15268,7 @@ __webpack_require__(53)('trimLeft', function ($trim) {
 
 
 /***/ }),
-/* 319 */
+/* 320 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15247,7 +15282,7 @@ __webpack_require__(53)('trimRight', function ($trim) {
 
 
 /***/ }),
-/* 320 */
+/* 321 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15284,21 +15319,21 @@ $export($export.P, 'String', {
 
 
 /***/ }),
-/* 321 */
+/* 322 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(83)('asyncIterator');
 
 
 /***/ }),
-/* 322 */
+/* 323 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(83)('observable');
 
 
 /***/ }),
-/* 323 */
+/* 324 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://github.com/tc39/proposal-object-getownpropertydescriptors
@@ -15326,7 +15361,7 @@ $export($export.S, 'Object', {
 
 
 /***/ }),
-/* 324 */
+/* 325 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://github.com/tc39/proposal-object-values-entries
@@ -15341,7 +15376,7 @@ $export($export.S, 'Object', {
 
 
 /***/ }),
-/* 325 */
+/* 326 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://github.com/tc39/proposal-object-values-entries
@@ -15356,7 +15391,7 @@ $export($export.S, 'Object', {
 
 
 /***/ }),
-/* 326 */
+/* 327 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15375,7 +15410,7 @@ __webpack_require__(8) && $export($export.P + __webpack_require__(77), 'Object',
 
 
 /***/ }),
-/* 327 */
+/* 328 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15394,7 +15429,7 @@ __webpack_require__(8) && $export($export.P + __webpack_require__(77), 'Object',
 
 
 /***/ }),
-/* 328 */
+/* 329 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15419,7 +15454,7 @@ __webpack_require__(8) && $export($export.P + __webpack_require__(77), 'Object',
 
 
 /***/ }),
-/* 329 */
+/* 330 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15444,7 +15479,7 @@ __webpack_require__(8) && $export($export.P + __webpack_require__(77), 'Object',
 
 
 /***/ }),
-/* 330 */
+/* 331 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://github.com/DavidBruant/Map-Set.prototype.toJSON
@@ -15454,7 +15489,7 @@ $export($export.P + $export.R, 'Map', { toJSON: __webpack_require__(148)('Map') 
 
 
 /***/ }),
-/* 331 */
+/* 332 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://github.com/DavidBruant/Map-Set.prototype.toJSON
@@ -15464,7 +15499,7 @@ $export($export.P + $export.R, 'Set', { toJSON: __webpack_require__(148)('Set') 
 
 
 /***/ }),
-/* 332 */
+/* 333 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://tc39.github.io/proposal-setmap-offrom/#sec-map.of
@@ -15472,7 +15507,7 @@ __webpack_require__(78)('Map');
 
 
 /***/ }),
-/* 333 */
+/* 334 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://tc39.github.io/proposal-setmap-offrom/#sec-set.of
@@ -15480,7 +15515,7 @@ __webpack_require__(78)('Set');
 
 
 /***/ }),
-/* 334 */
+/* 335 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://tc39.github.io/proposal-setmap-offrom/#sec-weakmap.of
@@ -15488,7 +15523,7 @@ __webpack_require__(78)('WeakMap');
 
 
 /***/ }),
-/* 335 */
+/* 336 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://tc39.github.io/proposal-setmap-offrom/#sec-weakset.of
@@ -15496,7 +15531,7 @@ __webpack_require__(78)('WeakSet');
 
 
 /***/ }),
-/* 336 */
+/* 337 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://tc39.github.io/proposal-setmap-offrom/#sec-map.from
@@ -15504,7 +15539,7 @@ __webpack_require__(79)('Map');
 
 
 /***/ }),
-/* 337 */
+/* 338 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://tc39.github.io/proposal-setmap-offrom/#sec-set.from
@@ -15512,7 +15547,7 @@ __webpack_require__(79)('Set');
 
 
 /***/ }),
-/* 338 */
+/* 339 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://tc39.github.io/proposal-setmap-offrom/#sec-weakmap.from
@@ -15520,21 +15555,11 @@ __webpack_require__(79)('WeakMap');
 
 
 /***/ }),
-/* 339 */
+/* 340 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://tc39.github.io/proposal-setmap-offrom/#sec-weakset.from
 __webpack_require__(79)('WeakSet');
-
-
-/***/ }),
-/* 340 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// https://github.com/tc39/proposal-global
-var $export = __webpack_require__(0);
-
-$export($export.G, { global: __webpack_require__(2) });
 
 
 /***/ }),
@@ -15544,11 +15569,21 @@ $export($export.G, { global: __webpack_require__(2) });
 // https://github.com/tc39/proposal-global
 var $export = __webpack_require__(0);
 
-$export($export.S, 'System', { global: __webpack_require__(2) });
+$export($export.G, { global: __webpack_require__(2) });
 
 
 /***/ }),
 /* 342 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// https://github.com/tc39/proposal-global
+var $export = __webpack_require__(0);
+
+$export($export.S, 'System', { global: __webpack_require__(2) });
+
+
+/***/ }),
+/* 343 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://github.com/ljharb/proposal-is-error
@@ -15563,7 +15598,7 @@ $export($export.S, 'Error', {
 
 
 /***/ }),
-/* 343 */
+/* 344 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://rwaldron.github.io/proposal-math-extensions/
@@ -15577,7 +15612,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 344 */
+/* 345 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://rwaldron.github.io/proposal-math-extensions/
@@ -15587,7 +15622,7 @@ $export($export.S, 'Math', { DEG_PER_RAD: Math.PI / 180 });
 
 
 /***/ }),
-/* 345 */
+/* 346 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://rwaldron.github.io/proposal-math-extensions/
@@ -15602,7 +15637,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 346 */
+/* 347 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://rwaldron.github.io/proposal-math-extensions/
@@ -15618,7 +15653,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 347 */
+/* 348 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://gist.github.com/BrendanEich/4294d5c212a6d2254703
@@ -15635,7 +15670,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 348 */
+/* 349 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://gist.github.com/BrendanEich/4294d5c212a6d2254703
@@ -15652,7 +15687,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 349 */
+/* 350 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://gist.github.com/BrendanEich/4294d5c212a6d2254703
@@ -15674,7 +15709,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 350 */
+/* 351 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://rwaldron.github.io/proposal-math-extensions/
@@ -15684,7 +15719,7 @@ $export($export.S, 'Math', { RAD_PER_DEG: 180 / Math.PI });
 
 
 /***/ }),
-/* 351 */
+/* 352 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://rwaldron.github.io/proposal-math-extensions/
@@ -15699,7 +15734,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 352 */
+/* 353 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://rwaldron.github.io/proposal-math-extensions/
@@ -15709,7 +15744,7 @@ $export($export.S, 'Math', { scale: __webpack_require__(150) });
 
 
 /***/ }),
-/* 353 */
+/* 354 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://gist.github.com/BrendanEich/4294d5c212a6d2254703
@@ -15731,7 +15766,7 @@ $export($export.S, 'Math', {
 
 
 /***/ }),
-/* 354 */
+/* 355 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // http://jfbastien.github.io/papers/Math.signbit.html
@@ -15744,7 +15779,7 @@ $export($export.S, 'Math', { signbit: function signbit(x) {
 
 
 /***/ }),
-/* 355 */
+/* 356 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15771,7 +15806,7 @@ $export($export.P + $export.R, 'Promise', { 'finally': function (onFinally) {
 
 
 /***/ }),
-/* 356 */
+/* 357 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15790,7 +15825,7 @@ $export($export.S, 'Promise', { 'try': function (callbackfn) {
 
 
 /***/ }),
-/* 357 */
+/* 358 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var metadata = __webpack_require__(34);
@@ -15804,7 +15839,7 @@ metadata.exp({ defineMetadata: function defineMetadata(metadataKey, metadataValu
 
 
 /***/ }),
-/* 358 */
+/* 359 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var metadata = __webpack_require__(34);
@@ -15825,7 +15860,7 @@ metadata.exp({ deleteMetadata: function deleteMetadata(metadataKey, target /* , 
 
 
 /***/ }),
-/* 359 */
+/* 360 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var metadata = __webpack_require__(34);
@@ -15848,7 +15883,7 @@ metadata.exp({ getMetadata: function getMetadata(metadataKey, target /* , target
 
 
 /***/ }),
-/* 360 */
+/* 361 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Set = __webpack_require__(140);
@@ -15873,7 +15908,7 @@ metadata.exp({ getMetadataKeys: function getMetadataKeys(target /* , targetKey *
 
 
 /***/ }),
-/* 361 */
+/* 362 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var metadata = __webpack_require__(34);
@@ -15888,7 +15923,7 @@ metadata.exp({ getOwnMetadata: function getOwnMetadata(metadataKey, target /* , 
 
 
 /***/ }),
-/* 362 */
+/* 363 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var metadata = __webpack_require__(34);
@@ -15902,7 +15937,7 @@ metadata.exp({ getOwnMetadataKeys: function getOwnMetadataKeys(target /* , targe
 
 
 /***/ }),
-/* 363 */
+/* 364 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var metadata = __webpack_require__(34);
@@ -15924,7 +15959,7 @@ metadata.exp({ hasMetadata: function hasMetadata(metadataKey, target /* , target
 
 
 /***/ }),
-/* 364 */
+/* 365 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var metadata = __webpack_require__(34);
@@ -15939,7 +15974,7 @@ metadata.exp({ hasOwnMetadata: function hasOwnMetadata(metadataKey, target /* , 
 
 
 /***/ }),
-/* 365 */
+/* 366 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var $metadata = __webpack_require__(34);
@@ -15960,7 +15995,7 @@ $metadata.exp({ metadata: function metadata(metadataKey, metadataValue) {
 
 
 /***/ }),
-/* 366 */
+/* 367 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://github.com/rwaldron/tc39-notes/blob/master/es6/2014-09/sept-25.md#510-globalasap-for-enqueuing-a-microtask
@@ -15978,7 +16013,7 @@ $export($export.G, {
 
 
 /***/ }),
-/* 367 */
+/* 368 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16184,7 +16219,7 @@ __webpack_require__(44)('Observable');
 
 
 /***/ }),
-/* 368 */
+/* 369 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // ie9- setTimeout & setInterval additional parameters fix
@@ -16210,7 +16245,7 @@ $export($export.G + $export.B + $export.F * MSIE, {
 
 
 /***/ }),
-/* 369 */
+/* 370 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(0);
@@ -16222,7 +16257,7 @@ $export($export.G + $export.B, {
 
 
 /***/ }),
-/* 370 */
+/* 371 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var $iterators = __webpack_require__(103);
@@ -16286,7 +16321,7 @@ for (var collections = getKeys(DOMIterables), i = 0; i < collections.length; i++
 
 
 /***/ }),
-/* 371 */
+/* 372 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {/**
@@ -17029,26 +17064,26 @@ for (var collections = getKeys(DOMIterables), i = 0; i < collections.length; i++
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(64)))
 
 /***/ }),
-/* 372 */
+/* 373 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(373);
+__webpack_require__(374);
 module.exports = __webpack_require__(24).RegExp.escape;
 
 
 /***/ }),
-/* 373 */
+/* 374 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://github.com/benjamingr/RexExp.escape
 var $export = __webpack_require__(0);
-var $re = __webpack_require__(374)(/[\\^$*+?.()|[\]{}]/g, '\\$&');
+var $re = __webpack_require__(375)(/[\\^$*+?.()|[\]{}]/g, '\\$&');
 
 $export($export.S, 'RegExp', { escape: function escape(it) { return $re(it); } });
 
 
 /***/ }),
-/* 374 */
+/* 375 */
 /***/ (function(module, exports) {
 
 module.exports = function (regExp, replace) {
@@ -17062,7 +17097,7 @@ module.exports = function (regExp, replace) {
 
 
 /***/ }),
-/* 375 */
+/* 376 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17086,7 +17121,7 @@ var _reduxSaga = __webpack_require__(158);
 
 var _reduxSaga2 = _interopRequireDefault(_reduxSaga);
 
-var _MainWindow = __webpack_require__(415);
+var _MainWindow = __webpack_require__(416);
 
 var _MainWindow2 = _interopRequireDefault(_MainWindow);
 
@@ -17126,7 +17161,7 @@ var App = function App() {
 _reactDom2.default.render(_react2.default.createElement(App, null), document.getElementById('root'));
 
 /***/ }),
-/* 376 */
+/* 377 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17157,7 +17192,7 @@ assign:m}},Y={default:X},Z=Y&&X||Y;module.exports=Z.default||Z;
 
 
 /***/ }),
-/* 377 */
+/* 378 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18840,7 +18875,7 @@ module.exports = react;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
 
 /***/ }),
-/* 378 */
+/* 379 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19083,7 +19118,7 @@ module.exports=Oh.default||Oh;
 
 
 /***/ }),
-/* 379 */
+/* 380 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19105,7 +19140,7 @@ q=null}}}else{var G=new Map;exports.unstable_scheduleWork=function(a){var b={sch
 
 
 /***/ }),
-/* 380 */
+/* 381 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19528,7 +19563,7 @@ if (!canUseDOM) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
 
 /***/ }),
-/* 381 */
+/* 382 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19553,7 +19588,7 @@ var React = __webpack_require__(11);
 var _assign = __webpack_require__(62);
 var checkPropTypes = __webpack_require__(108);
 var schedule = __webpack_require__(152);
-var tracking = __webpack_require__(382);
+var tracking = __webpack_require__(383);
 
 /**
  * Use invariant() to assert state which your program assumes to be true.
@@ -37624,22 +37659,22 @@ module.exports = reactDom;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
 
 /***/ }),
-/* 382 */
+/* 383 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(383);
-} else {
   module.exports = __webpack_require__(384);
+} else {
+  module.exports = __webpack_require__(385);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
 
 /***/ }),
-/* 383 */
+/* 384 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37656,7 +37691,7 @@ Object.defineProperty(exports,"__esModule",{value:!0});var b=0;exports.__interac
 
 
 /***/ }),
-/* 384 */
+/* 385 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38105,11 +38140,11 @@ exports.unstable_unsubscribe = unstable_unsubscribe;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
 
 /***/ }),
-/* 385 */
+/* 386 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(global, module) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ponyfill_js__ = __webpack_require__(387);
+/* WEBPACK VAR INJECTION */(function(global, module) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ponyfill_js__ = __webpack_require__(388);
 /* global window */
 
 
@@ -38130,10 +38165,10 @@ if (typeof self !== 'undefined') {
 var result = Object(__WEBPACK_IMPORTED_MODULE_0__ponyfill_js__["a" /* default */])(root);
 /* harmony default export */ __webpack_exports__["a"] = (result);
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(64), __webpack_require__(386)(module)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(64), __webpack_require__(387)(module)))
 
 /***/ }),
-/* 386 */
+/* 387 */
 /***/ (function(module, exports) {
 
 module.exports = function(originalModule) {
@@ -38163,7 +38198,7 @@ module.exports = function(originalModule) {
 
 
 /***/ }),
-/* 387 */
+/* 388 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -38188,7 +38223,7 @@ function symbolObservablePonyfill(root) {
 
 
 /***/ }),
-/* 388 */
+/* 389 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -38274,7 +38309,7 @@ function createProvider() {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(6)))
 
 /***/ }),
-/* 389 */
+/* 390 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38837,7 +38872,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
 
 /***/ }),
-/* 390 */
+/* 391 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38903,7 +38938,7 @@ module.exports = function() {
 
 
 /***/ }),
-/* 391 */
+/* 392 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38978,7 +39013,7 @@ module.exports = hoistNonReactStatics;
 
 
 /***/ }),
-/* 392 */
+/* 393 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39035,7 +39070,7 @@ module.exports = invariant;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
 
 /***/ }),
-/* 393 */
+/* 394 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -39134,17 +39169,17 @@ var Subscription = function () {
 
 
 /***/ }),
-/* 394 */
+/* 395 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* unused harmony export createConnect */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_connectAdvanced__ = __webpack_require__(154);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils_shallowEqual__ = __webpack_require__(395);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mapDispatchToProps__ = __webpack_require__(396);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__mapStateToProps__ = __webpack_require__(406);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__mergeProps__ = __webpack_require__(407);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__selectorFactory__ = __webpack_require__(408);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils_shallowEqual__ = __webpack_require__(396);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mapDispatchToProps__ = __webpack_require__(397);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__mapStateToProps__ = __webpack_require__(407);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__mergeProps__ = __webpack_require__(408);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__selectorFactory__ = __webpack_require__(409);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
@@ -39250,7 +39285,7 @@ function createConnect() {
 /* harmony default export */ __webpack_exports__["a"] = (createConnect());
 
 /***/ }),
-/* 395 */
+/* 396 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -39287,7 +39322,7 @@ function shallowEqual(objA, objB) {
 }
 
 /***/ }),
-/* 396 */
+/* 397 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -39318,13 +39353,13 @@ function whenMapDispatchToPropsIsObject(mapDispatchToProps) {
 /* harmony default export */ __webpack_exports__["a"] = ([whenMapDispatchToPropsIsFunction, whenMapDispatchToPropsIsMissing, whenMapDispatchToPropsIsObject]);
 
 /***/ }),
-/* 397 */
+/* 398 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__baseGetTag_js__ = __webpack_require__(398);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getPrototype_js__ = __webpack_require__(403);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__isObjectLike_js__ = __webpack_require__(405);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__baseGetTag_js__ = __webpack_require__(399);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getPrototype_js__ = __webpack_require__(404);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__isObjectLike_js__ = __webpack_require__(406);
 
 
 
@@ -39390,13 +39425,13 @@ function isPlainObject(value) {
 
 
 /***/ }),
-/* 398 */
+/* 399 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Symbol_js__ = __webpack_require__(157);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getRawTag_js__ = __webpack_require__(401);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__objectToString_js__ = __webpack_require__(402);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getRawTag_js__ = __webpack_require__(402);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__objectToString_js__ = __webpack_require__(403);
 
 
 
@@ -39428,11 +39463,11 @@ function baseGetTag(value) {
 
 
 /***/ }),
-/* 399 */
+/* 400 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__freeGlobal_js__ = __webpack_require__(400);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__freeGlobal_js__ = __webpack_require__(401);
 
 
 /** Detect free variable `self`. */
@@ -39445,7 +39480,7 @@ var root = __WEBPACK_IMPORTED_MODULE_0__freeGlobal_js__["a" /* default */] || fr
 
 
 /***/ }),
-/* 400 */
+/* 401 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -39457,7 +39492,7 @@ var freeGlobal = typeof global == 'object' && global && global.Object === Object
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(64)))
 
 /***/ }),
-/* 401 */
+/* 402 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -39511,7 +39546,7 @@ function getRawTag(value) {
 
 
 /***/ }),
-/* 402 */
+/* 403 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -39540,11 +39575,11 @@ function objectToString(value) {
 
 
 /***/ }),
-/* 403 */
+/* 404 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__overArg_js__ = __webpack_require__(404);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__overArg_js__ = __webpack_require__(405);
 
 
 /** Built-in value references. */
@@ -39554,7 +39589,7 @@ var getPrototype = Object(__WEBPACK_IMPORTED_MODULE_0__overArg_js__["a" /* defau
 
 
 /***/ }),
-/* 404 */
+/* 405 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -39576,7 +39611,7 @@ function overArg(func, transform) {
 
 
 /***/ }),
-/* 405 */
+/* 406 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -39612,7 +39647,7 @@ function isObjectLike(value) {
 
 
 /***/ }),
-/* 406 */
+/* 407 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -39634,7 +39669,7 @@ function whenMapStateToPropsIsMissing(mapStateToProps) {
 /* harmony default export */ __webpack_exports__["a"] = ([whenMapStateToPropsIsFunction, whenMapStateToPropsIsMissing]);
 
 /***/ }),
-/* 407 */
+/* 408 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -39691,14 +39726,14 @@ function whenMergePropsIsOmitted(mergeProps) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(6)))
 
 /***/ }),
-/* 408 */
+/* 409 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/* unused harmony export impureFinalPropsSelectorFactory */
 /* unused harmony export pureFinalPropsSelectorFactory */
 /* harmony export (immutable) */ __webpack_exports__["a"] = finalPropsSelectorFactory;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__verifySubselectors__ = __webpack_require__(409);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__verifySubselectors__ = __webpack_require__(410);
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 
@@ -39804,7 +39839,7 @@ function finalPropsSelectorFactory(dispatch, _ref2) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(6)))
 
 /***/ }),
-/* 409 */
+/* 410 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -39829,7 +39864,7 @@ function verifySubselectors(mapStateToProps, mapDispatchToProps, mergeProps, dis
 }
 
 /***/ }),
-/* 410 */
+/* 411 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -39923,7 +39958,7 @@ function sagaMiddlewareFactory() {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(6)))
 
 /***/ }),
-/* 411 */
+/* 412 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -39961,7 +39996,7 @@ function takeEvery(patternOrChannel, worker) {
 }
 
 /***/ }),
-/* 412 */
+/* 413 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -40009,7 +40044,7 @@ function takeLatest(patternOrChannel, worker) {
 }
 
 /***/ }),
-/* 413 */
+/* 414 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -40066,7 +40101,7 @@ function throttle(delayLength, pattern, worker) {
 }
 
 /***/ }),
-/* 414 */
+/* 415 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -40089,7 +40124,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /***/ }),
-/* 415 */
+/* 416 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40109,13 +40144,13 @@ var _reactRedux = __webpack_require__(111);
 
 var _propTypes = __webpack_require__(18);
 
-__webpack_require__(416);
+__webpack_require__(417);
 
-var _LoginWindow = __webpack_require__(419);
+var _LoginWindow = __webpack_require__(420);
 
 var _LoginWindow2 = _interopRequireDefault(_LoginWindow);
 
-var _Dashboard = __webpack_require__(424);
+var _Dashboard = __webpack_require__(425);
 
 var _Dashboard2 = _interopRequireDefault(_Dashboard);
 
@@ -40154,13 +40189,13 @@ var mapStateToProps = function mapStateToProps(state) {
 exports.default = (0, _reactRedux.connect)(mapStateToProps)(MainWindow);
 
 /***/ }),
-/* 416 */
+/* 417 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(417);
+var content = __webpack_require__(418);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -40185,7 +40220,7 @@ if(false) {
 }
 
 /***/ }),
-/* 417 */
+/* 418 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(49)(true);
@@ -40193,13 +40228,13 @@ exports = module.exports = __webpack_require__(49)(true);
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Alex+Brush);", ""]);
 
 // module
-exports.push([module.i, "@keyframes shake {\n  10% {\n    right: 4px; }\n  30% {\n    right: -8px; }\n  50% {\n    right: 6px; }\n  70% {\n    right: -4px; }\n  90% {\n    right: 2px; } }\n\nbody {\n  background: #BDD0EE; }\n", "", {"version":3,"sources":["/Users/Jack/Documents/Coding/Projects/Letsdoit/src/scss/src/scss/partials/_mixins.scss","/Users/Jack/Documents/Coding/Projects/Letsdoit/src/scss/src/scss/MainWindow.scss","/Users/Jack/Documents/Coding/Projects/Letsdoit/src/scss/src/scss/partials/_variables.scss"],"names":[],"mappings":"AA8CA;EACE;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA,EAAA;;AChDjB;EACE,oBCFgC,EDGjC","file":"MainWindow.scss","sourcesContent":["// Text formating\n@mixin format_text($size: 1rem, $color: $primary_text_color, $font: Helvetica) {\n  font-family: $font;\n  color: $color;\n  font-size: $size;\n}\n\n// Layout\n@mixin center {\n  width: 95%;\n  margin: 0 auto;\n}\n\n@mixin flex-container($dir: row, $just: center, $wrap: wrap, $ali: stretch) {\n  display: flex;\n  justify-content: $just;\n  flex-direction: $dir;\n  flex-wrap: $wrap;\n  align-items: $ali;\n}\n\n// Borders\n@mixin apply_border ($color: $border_color, $style: solid) {\n  border: 1px $style $color;\n  border-radius: 5px;\n}\n\n// Elements\n@mixin button($cursor: pointer) {\n  @include apply_border($color: $button_color);\n  background-color: $button_color;\n  outline: none;\n  font-weight: 600;\n  &:hover {\n    cursor: $cursor;\n    background-color: lighten($button_color, 10%);\n    border-color: lighten($button_color, 10%);\n  }\n}\n\n// Animations\n@mixin animate-active {\n  transition-duration: 0.3s;\n  transition-property: background-color, border-color, color;\n}\n\n@keyframes shake {\n  10% {right: 4px};\n  30% {right: -8px};\n  50% {right: 6px};\n  70% {right: -4px};\n  90% {right: 2px};\n}\n\n@mixin animate-button {\n  position: relative;\n  animation-name: shake;\n  animation-duration: 0.5s;\n  animation-timing-function: ease-in;\n}\n","@import \"partials/variables\";\n@import \"partials/mixins\";\n\nbody {\n  background: $primary_background_color;\n}\n","@import url(https://fonts.googleapis.com/css?family=Alex+Brush);\n\n$primary_background_color: #BDD0EE;\n$todo_background_color: white;\n$list_background_color: #F2F5F8;\n$primary_text_color: black;\n$border_color: #AAB3C2;\n$button_color: #8F7EE5;\n$input_highlight: #59B7FF;\n\n$inprog_color: #FFBC3C;\n$completed_color: #4DD87A;\n$error_color: #FF5A5A;\n\n$select_color: #bfd9bf;\n\n$font: Helvetica;\n$title_font: 'Alex Brush';\n"],"sourceRoot":""}]);
+exports.push([module.i, "@keyframes shake {\n  10% {\n    right: 4px; }\n  30% {\n    right: -8px; }\n  50% {\n    right: 6px; }\n  70% {\n    right: -4px; }\n  90% {\n    right: 2px; } }\n\nbody {\n  background: #BDD0EE; }\n", "", {"version":3,"sources":["/Users/n.svetlov/Projects/letsdoit/src/scss/src/scss/partials/_mixins.scss","/Users/n.svetlov/Projects/letsdoit/src/scss/src/scss/MainWindow.scss","/Users/n.svetlov/Projects/letsdoit/src/scss/src/scss/partials/_variables.scss"],"names":[],"mappings":"AA8CA;EACE;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA,EAAA;;AChDjB;EACE,oBCFgC,EDGjC","file":"MainWindow.scss","sourcesContent":["// Text formating\n@mixin format_text($size: 1rem, $color: $primary_text_color, $font: Helvetica) {\n  font-family: $font;\n  color: $color;\n  font-size: $size;\n}\n\n// Layout\n@mixin center {\n  width: 95%;\n  margin: 0 auto;\n}\n\n@mixin flex-container($dir: row, $just: center, $wrap: wrap, $ali: stretch) {\n  display: flex;\n  justify-content: $just;\n  flex-direction: $dir;\n  flex-wrap: $wrap;\n  align-items: $ali;\n}\n\n// Borders\n@mixin apply_border ($color: $border_color, $style: solid) {\n  border: 1px $style $color;\n  border-radius: 5px;\n}\n\n// Elements\n@mixin button($cursor: pointer) {\n  @include apply_border($color: $button_color);\n  background-color: $button_color;\n  outline: none;\n  font-weight: 600;\n  &:hover {\n    cursor: $cursor;\n    background-color: lighten($button_color, 10%);\n    border-color: lighten($button_color, 10%);\n  }\n}\n\n// Animations\n@mixin animate-active {\n  transition-duration: 0.3s;\n  transition-property: background-color, border-color, color;\n}\n\n@keyframes shake {\n  10% {right: 4px};\n  30% {right: -8px};\n  50% {right: 6px};\n  70% {right: -4px};\n  90% {right: 2px};\n}\n\n@mixin animate-button {\n  position: relative;\n  animation-name: shake;\n  animation-duration: 0.5s;\n  animation-timing-function: ease-in;\n}\n","@import \"partials/variables\";\n@import \"partials/mixins\";\n\nbody {\n  background: $primary_background_color;\n}\n","@import url(https://fonts.googleapis.com/css?family=Alex+Brush);\n\n$primary_background_color: #BDD0EE;\n$todo_background_color: white;\n$list_background_color: #F2F5F8;\n$primary_text_color: black;\n$border_color: #AAB3C2;\n$button_color: #8F7EE5;\n$input_highlight: #59B7FF;\n\n$upcoming_color: #AE40B7;\n$inprog_color: #FFBC3C;\n$completed_color: #4DD87A;\n$error_color: #FF5A5A;\n\n$select_color: #bfd9bf;\n\n$font: Helvetica;\n$title_font: 'Alex Brush';\n"],"sourceRoot":""}]);
 
 // exports
 
 
 /***/ }),
-/* 418 */
+/* 419 */
 /***/ (function(module, exports) {
 
 
@@ -40294,7 +40329,7 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 419 */
+/* 420 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40314,7 +40349,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _propTypes = __webpack_require__(18);
 
-__webpack_require__(420);
+__webpack_require__(421);
 
 var _container = __webpack_require__(63);
 
@@ -40445,13 +40480,13 @@ LoginWindow.defaultProps = {
 exports.default = (0, _container2.default)(LoginWindow);
 
 /***/ }),
-/* 420 */
+/* 421 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(421);
+var content = __webpack_require__(422);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -40476,7 +40511,7 @@ if(false) {
 }
 
 /***/ }),
-/* 421 */
+/* 422 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(49)(true);
@@ -40484,19 +40519,19 @@ exports = module.exports = __webpack_require__(49)(true);
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Alex+Brush);", ""]);
 
 // module
-exports.push([module.i, "@keyframes shake {\n  10% {\n    right: 4px; }\n  30% {\n    right: -8px; }\n  50% {\n    right: 6px; }\n  70% {\n    right: -4px; }\n  90% {\n    right: 2px; } }\n\n.login_form {\n  width: 95%;\n  margin: 0 auto; }\n  .login_form input, .login_form button {\n    font-family: Helvetica;\n    color: black;\n    font-size: 1.5rem;\n    border: 1px solid #AAB3C2;\n    border-radius: 5px;\n    display: block;\n    width: 30%;\n    height: 3rem;\n    margin: 1rem auto;\n    box-sizing: border-box; }\n  .login_form input {\n    text-align: center;\n    outline: none; }\n    .login_form input:focus {\n      border-color: #8F7EE5; }\n  .login_form button {\n    transition-duration: 0.3s;\n    transition-property: background-color, border-color, color;\n    background-color: #8F7EE5;\n    outline: none;\n    font-weight: 600;\n    color: white;\n    background-color: #d9d3f6;\n    border: none; }\n    .login_form button.active {\n      background-color: #8F7EE5; }\n    .login_form button.active:hover {\n      background-color: #b4a8ee;\n      cursor: pointer; }\n    .login_form button.error {\n      position: relative;\n      animation-name: shake;\n      animation-duration: 0.5s;\n      animation-timing-function: ease-in;\n      background-color: #FF5A5A;\n      border-color: #FF5A5A; }\n", "", {"version":3,"sources":["/Users/Jack/Documents/Coding/Projects/Letsdoit/src/scss/src/scss/partials/_mixins.scss","/Users/Jack/Documents/Coding/Projects/Letsdoit/src/scss/src/scss/LoginWindow.scss","/Users/Jack/Documents/Coding/Projects/Letsdoit/src/scss/src/scss/partials/_variables.scss"],"names":[],"mappings":"AA8CA;EACE;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA,EAAA;;AChDjB;EDME,WAAU;EACV,eAAc,ECkCf;EAzCD;IDDE,uBAD2E;IAE3E,aEEwB;IFDxB,kBCEoC;IDiBpC,0BEjBoB;IFkBpB,mBAAkB;IChBhB,eAAc;IACd,WAAU;IACV,aAAY;IACZ,kBAAiB;IACjB,uBAAsB,EACvB;EAVH;IAaI,mBAAkB;IAClB,cAAa,EAId;IAlBH;MAgBM,sBCZgB,EDajB;EAjBL;IDuCE,0BAAyB;IACzB,2DAA0D;IClBxD,0BClBkB;IDmBlB,cAAa;IACb,iBAAgB;IAChB,aAAY;IACZ,0BAA6C;IAC7C,aAAY,EAab;IAxCH;MA6BM,0BCzBgB,ED0BjB;IA9BL;MAgCM,0BAA6C;MAC7C,gBAAe,EAChB;IAlCL;MDoDE,mBAAkB;MAClB,sBAAqB;MACrB,yBAAwB;MACxB,mCAAkC;MClB9B,0BC5Be;MD6Bf,sBC7Be,ED8BhB","file":"LoginWindow.scss","sourcesContent":["// Text formating\n@mixin format_text($size: 1rem, $color: $primary_text_color, $font: Helvetica) {\n  font-family: $font;\n  color: $color;\n  font-size: $size;\n}\n\n// Layout\n@mixin center {\n  width: 95%;\n  margin: 0 auto;\n}\n\n@mixin flex-container($dir: row, $just: center, $wrap: wrap, $ali: stretch) {\n  display: flex;\n  justify-content: $just;\n  flex-direction: $dir;\n  flex-wrap: $wrap;\n  align-items: $ali;\n}\n\n// Borders\n@mixin apply_border ($color: $border_color, $style: solid) {\n  border: 1px $style $color;\n  border-radius: 5px;\n}\n\n// Elements\n@mixin button($cursor: pointer) {\n  @include apply_border($color: $button_color);\n  background-color: $button_color;\n  outline: none;\n  font-weight: 600;\n  &:hover {\n    cursor: $cursor;\n    background-color: lighten($button_color, 10%);\n    border-color: lighten($button_color, 10%);\n  }\n}\n\n// Animations\n@mixin animate-active {\n  transition-duration: 0.3s;\n  transition-property: background-color, border-color, color;\n}\n\n@keyframes shake {\n  10% {right: 4px};\n  30% {right: -8px};\n  50% {right: 6px};\n  70% {right: -4px};\n  90% {right: 2px};\n}\n\n@mixin animate-button {\n  position: relative;\n  animation-name: shake;\n  animation-duration: 0.5s;\n  animation-timing-function: ease-in;\n}\n","@import \"partials/variables\";\n@import \"partials/mixins\";\n\n.login_form {\n  @include center;\n  %form {\n    @include format_text($size: 1.5rem);\n    @include apply_border;\n    display: block;\n    width: 30%;\n    height: 3rem;\n    margin: 1rem auto;\n    box-sizing: border-box;\n  }\n  input {\n    @extend %form;\n    text-align: center;\n    outline: none;\n    &:focus {\n      border-color: $button_color;\n    }\n  }\n  button {\n    @extend %form;\n    @include animate-active;\n    background-color: $button_color;\n    outline: none;\n    font-weight: 600;\n    color: white;\n    background-color: lighten($button_color, 20%);\n    border: none;\n    &.active {\n      background-color: $button_color;\n    }\n    &.active:hover {\n      background-color: lighten($button_color, 10%);\n      cursor: pointer;\n    }\n    &.error {\n      @include animate-button;\n      background-color: $error_color;\n      border-color: $error_color;\n    }\n  }\n}\n","@import url(https://fonts.googleapis.com/css?family=Alex+Brush);\n\n$primary_background_color: #BDD0EE;\n$todo_background_color: white;\n$list_background_color: #F2F5F8;\n$primary_text_color: black;\n$border_color: #AAB3C2;\n$button_color: #8F7EE5;\n$input_highlight: #59B7FF;\n\n$inprog_color: #FFBC3C;\n$completed_color: #4DD87A;\n$error_color: #FF5A5A;\n\n$select_color: #bfd9bf;\n\n$font: Helvetica;\n$title_font: 'Alex Brush';\n"],"sourceRoot":""}]);
+exports.push([module.i, "@keyframes shake {\n  10% {\n    right: 4px; }\n  30% {\n    right: -8px; }\n  50% {\n    right: 6px; }\n  70% {\n    right: -4px; }\n  90% {\n    right: 2px; } }\n\n.login_form {\n  width: 95%;\n  margin: 0 auto; }\n  .login_form input, .login_form button {\n    font-family: Helvetica;\n    color: black;\n    font-size: 1.5rem;\n    border: 1px solid #AAB3C2;\n    border-radius: 5px;\n    display: block;\n    width: 20%;\n    height: 3rem;\n    margin: 1rem auto;\n    box-sizing: border-box; }\n  .login_form input {\n    text-align: center;\n    outline: none; }\n    .login_form input:focus {\n      border-color: #8F7EE5; }\n  .login_form button {\n    transition-duration: 0.3s;\n    transition-property: background-color, border-color, color;\n    background-color: #8F7EE5;\n    outline: none;\n    font-weight: 600;\n    color: white;\n    background-color: #d9d3f6;\n    border: none; }\n    .login_form button.active {\n      background-color: #8F7EE5; }\n    .login_form button.active:hover {\n      background-color: #b4a8ee;\n      cursor: pointer; }\n    .login_form button.error {\n      position: relative;\n      animation-name: shake;\n      animation-duration: 0.5s;\n      animation-timing-function: ease-in;\n      background-color: #FF5A5A;\n      border-color: #FF5A5A; }\n", "", {"version":3,"sources":["/Users/n.svetlov/Projects/letsdoit/src/scss/src/scss/partials/_mixins.scss","/Users/n.svetlov/Projects/letsdoit/src/scss/src/scss/LoginWindow.scss","/Users/n.svetlov/Projects/letsdoit/src/scss/src/scss/partials/_variables.scss"],"names":[],"mappings":"AA8CA;EACE;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA,EAAA;;AChDjB;EDME,WAAU;EACV,eAAc,ECkCf;EAzCD;IDDE,uBAD2E;IAE3E,aEEwB;IFDxB,kBCEoC;IDiBpC,0BEjBoB;IFkBpB,mBAAkB;IChBhB,eAAc;IACd,WAAU;IACV,aAAY;IACZ,kBAAiB;IACjB,uBAAsB,EACvB;EAVH;IAaI,mBAAkB;IAClB,cAAa,EAId;IAlBH;MAgBM,sBCZgB,EDajB;EAjBL;IDuCE,0BAAyB;IACzB,2DAA0D;IClBxD,0BClBkB;IDmBlB,cAAa;IACb,iBAAgB;IAChB,aAAY;IACZ,0BAA6C;IAC7C,aAAY,EAab;IAxCH;MA6BM,0BCzBgB,ED0BjB;IA9BL;MAgCM,0BAA6C;MAC7C,gBAAe,EAChB;IAlCL;MDoDE,mBAAkB;MAClB,sBAAqB;MACrB,yBAAwB;MACxB,mCAAkC;MClB9B,0BC3Be;MD4Bf,sBC5Be,ED6BhB","file":"LoginWindow.scss","sourcesContent":["// Text formating\n@mixin format_text($size: 1rem, $color: $primary_text_color, $font: Helvetica) {\n  font-family: $font;\n  color: $color;\n  font-size: $size;\n}\n\n// Layout\n@mixin center {\n  width: 95%;\n  margin: 0 auto;\n}\n\n@mixin flex-container($dir: row, $just: center, $wrap: wrap, $ali: stretch) {\n  display: flex;\n  justify-content: $just;\n  flex-direction: $dir;\n  flex-wrap: $wrap;\n  align-items: $ali;\n}\n\n// Borders\n@mixin apply_border ($color: $border_color, $style: solid) {\n  border: 1px $style $color;\n  border-radius: 5px;\n}\n\n// Elements\n@mixin button($cursor: pointer) {\n  @include apply_border($color: $button_color);\n  background-color: $button_color;\n  outline: none;\n  font-weight: 600;\n  &:hover {\n    cursor: $cursor;\n    background-color: lighten($button_color, 10%);\n    border-color: lighten($button_color, 10%);\n  }\n}\n\n// Animations\n@mixin animate-active {\n  transition-duration: 0.3s;\n  transition-property: background-color, border-color, color;\n}\n\n@keyframes shake {\n  10% {right: 4px};\n  30% {right: -8px};\n  50% {right: 6px};\n  70% {right: -4px};\n  90% {right: 2px};\n}\n\n@mixin animate-button {\n  position: relative;\n  animation-name: shake;\n  animation-duration: 0.5s;\n  animation-timing-function: ease-in;\n}\n","@import \"partials/variables\";\n@import \"partials/mixins\";\n\n.login_form {\n  @include center;\n  %form {\n    @include format_text($size: 1.5rem);\n    @include apply_border;\n    display: block;\n    width: 20%;\n    height: 3rem;\n    margin: 1rem auto;\n    box-sizing: border-box;\n  }\n  input {\n    @extend %form;\n    text-align: center;\n    outline: none;\n    &:focus {\n      border-color: $button_color;\n    }\n  }\n  button {\n    @extend %form;\n    @include animate-active;\n    background-color: $button_color;\n    outline: none;\n    font-weight: 600;\n    color: white;\n    background-color: lighten($button_color, 20%);\n    border: none;\n    &.active {\n      background-color: $button_color;\n    }\n    &.active:hover {\n      background-color: lighten($button_color, 10%);\n      cursor: pointer;\n    }\n    &.error {\n      @include animate-button;\n      background-color: $error_color;\n      border-color: $error_color;\n    }\n  }\n}\n","@import url(https://fonts.googleapis.com/css?family=Alex+Brush);\n\n$primary_background_color: #BDD0EE;\n$todo_background_color: white;\n$list_background_color: #F2F5F8;\n$primary_text_color: black;\n$border_color: #AAB3C2;\n$button_color: #8F7EE5;\n$input_highlight: #59B7FF;\n\n$upcoming_color: #AE40B7;\n$inprog_color: #FFBC3C;\n$completed_color: #4DD87A;\n$error_color: #FF5A5A;\n\n$select_color: #bfd9bf;\n\n$font: Helvetica;\n$title_font: 'Alex Brush';\n"],"sourceRoot":""}]);
 
 // exports
 
 
 /***/ }),
-/* 422 */
+/* 423 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(423);
+var content = __webpack_require__(424);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -40521,7 +40556,7 @@ if(false) {
 }
 
 /***/ }),
-/* 423 */
+/* 424 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(49)(true);
@@ -40529,13 +40564,13 @@ exports = module.exports = __webpack_require__(49)(true);
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Alex+Brush);", ""]);
 
 // module
-exports.push([module.i, "@keyframes shake {\n  10% {\n    right: 4px; }\n  30% {\n    right: -8px; }\n  50% {\n    right: 6px; }\n  70% {\n    right: -4px; }\n  90% {\n    right: 2px; } }\n\n.app_title {\n  width: 95%;\n  margin: 0 auto;\n  text-align: center;\n  position: relative; }\n  .app_title h1 {\n    font-family: \"Alex Brush\";\n    color: white;\n    font-size: 5rem;\n    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;\n    margin: 1rem; }\n", "", {"version":3,"sources":["/Users/Jack/Documents/Coding/Projects/Letsdoit/src/scss/src/scss/partials/_mixins.scss","/Users/Jack/Documents/Coding/Projects/Letsdoit/src/scss/src/scss/Title.scss","/Users/Jack/Documents/Coding/Projects/Letsdoit/src/scss/src/scss/partials/_variables.scss"],"names":[],"mappings":"AA8CA;EACE;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA,EAAA;;AChDjB;EDME,WAAU;EACV,eAAc;ECLd,mBAAkB;EAClB,mBAAkB,EAMnB;EATD;IDDE,0BEeuB;IFdvB,aCKkC;IDJlC,gBCI2B;IACzB,kEAAiE;IACjE,aAAY,EACb","file":"Title.scss","sourcesContent":["// Text formating\n@mixin format_text($size: 1rem, $color: $primary_text_color, $font: Helvetica) {\n  font-family: $font;\n  color: $color;\n  font-size: $size;\n}\n\n// Layout\n@mixin center {\n  width: 95%;\n  margin: 0 auto;\n}\n\n@mixin flex-container($dir: row, $just: center, $wrap: wrap, $ali: stretch) {\n  display: flex;\n  justify-content: $just;\n  flex-direction: $dir;\n  flex-wrap: $wrap;\n  align-items: $ali;\n}\n\n// Borders\n@mixin apply_border ($color: $border_color, $style: solid) {\n  border: 1px $style $color;\n  border-radius: 5px;\n}\n\n// Elements\n@mixin button($cursor: pointer) {\n  @include apply_border($color: $button_color);\n  background-color: $button_color;\n  outline: none;\n  font-weight: 600;\n  &:hover {\n    cursor: $cursor;\n    background-color: lighten($button_color, 10%);\n    border-color: lighten($button_color, 10%);\n  }\n}\n\n// Animations\n@mixin animate-active {\n  transition-duration: 0.3s;\n  transition-property: background-color, border-color, color;\n}\n\n@keyframes shake {\n  10% {right: 4px};\n  30% {right: -8px};\n  50% {right: 6px};\n  70% {right: -4px};\n  90% {right: 2px};\n}\n\n@mixin animate-button {\n  position: relative;\n  animation-name: shake;\n  animation-duration: 0.5s;\n  animation-timing-function: ease-in;\n}\n","@import \"partials/variables\";\n@import \"partials/mixins\";\n\n.app_title {\n  @include center;\n  text-align: center;\n  position: relative;\n  h1 {\n    @include format_text(5rem, white, $title_font);\n    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;\n    margin: 1rem;\n  }\n}\n","@import url(https://fonts.googleapis.com/css?family=Alex+Brush);\n\n$primary_background_color: #BDD0EE;\n$todo_background_color: white;\n$list_background_color: #F2F5F8;\n$primary_text_color: black;\n$border_color: #AAB3C2;\n$button_color: #8F7EE5;\n$input_highlight: #59B7FF;\n\n$inprog_color: #FFBC3C;\n$completed_color: #4DD87A;\n$error_color: #FF5A5A;\n\n$select_color: #bfd9bf;\n\n$font: Helvetica;\n$title_font: 'Alex Brush';\n"],"sourceRoot":""}]);
+exports.push([module.i, "@keyframes shake {\n  10% {\n    right: 4px; }\n  30% {\n    right: -8px; }\n  50% {\n    right: 6px; }\n  70% {\n    right: -4px; }\n  90% {\n    right: 2px; } }\n\n.app_title {\n  width: 95%;\n  margin: 0 auto;\n  text-align: center;\n  position: relative; }\n  .app_title h1 {\n    font-family: \"Alex Brush\";\n    color: white;\n    font-size: 5rem;\n    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;\n    margin: 1rem; }\n", "", {"version":3,"sources":["/Users/n.svetlov/Projects/letsdoit/src/scss/src/scss/partials/_mixins.scss","/Users/n.svetlov/Projects/letsdoit/src/scss/src/scss/Title.scss","/Users/n.svetlov/Projects/letsdoit/src/scss/src/scss/partials/_variables.scss"],"names":[],"mappings":"AA8CA;EACE;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA,EAAA;;AChDjB;EDME,WAAU;EACV,eAAc;ECLd,mBAAkB;EAClB,mBAAkB,EAMnB;EATD;IDDE,0BEgBuB;IFfvB,aCKkC;IDJlC,gBCI2B;IACzB,kEAAiE;IACjE,aAAY,EACb","file":"Title.scss","sourcesContent":["// Text formating\n@mixin format_text($size: 1rem, $color: $primary_text_color, $font: Helvetica) {\n  font-family: $font;\n  color: $color;\n  font-size: $size;\n}\n\n// Layout\n@mixin center {\n  width: 95%;\n  margin: 0 auto;\n}\n\n@mixin flex-container($dir: row, $just: center, $wrap: wrap, $ali: stretch) {\n  display: flex;\n  justify-content: $just;\n  flex-direction: $dir;\n  flex-wrap: $wrap;\n  align-items: $ali;\n}\n\n// Borders\n@mixin apply_border ($color: $border_color, $style: solid) {\n  border: 1px $style $color;\n  border-radius: 5px;\n}\n\n// Elements\n@mixin button($cursor: pointer) {\n  @include apply_border($color: $button_color);\n  background-color: $button_color;\n  outline: none;\n  font-weight: 600;\n  &:hover {\n    cursor: $cursor;\n    background-color: lighten($button_color, 10%);\n    border-color: lighten($button_color, 10%);\n  }\n}\n\n// Animations\n@mixin animate-active {\n  transition-duration: 0.3s;\n  transition-property: background-color, border-color, color;\n}\n\n@keyframes shake {\n  10% {right: 4px};\n  30% {right: -8px};\n  50% {right: 6px};\n  70% {right: -4px};\n  90% {right: 2px};\n}\n\n@mixin animate-button {\n  position: relative;\n  animation-name: shake;\n  animation-duration: 0.5s;\n  animation-timing-function: ease-in;\n}\n","@import \"partials/variables\";\n@import \"partials/mixins\";\n\n.app_title {\n  @include center;\n  text-align: center;\n  position: relative;\n  h1 {\n    @include format_text(5rem, white, $title_font);\n    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;\n    margin: 1rem;\n  }\n}\n","@import url(https://fonts.googleapis.com/css?family=Alex+Brush);\n\n$primary_background_color: #BDD0EE;\n$todo_background_color: white;\n$list_background_color: #F2F5F8;\n$primary_text_color: black;\n$border_color: #AAB3C2;\n$button_color: #8F7EE5;\n$input_highlight: #59B7FF;\n\n$upcoming_color: #AE40B7;\n$inprog_color: #FFBC3C;\n$completed_color: #4DD87A;\n$error_color: #FF5A5A;\n\n$select_color: #bfd9bf;\n\n$font: Helvetica;\n$title_font: 'Alex Brush';\n"],"sourceRoot":""}]);
 
 // exports
 
 
 /***/ }),
-/* 424 */
+/* 425 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40551,17 +40586,17 @@ var _react = __webpack_require__(11);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(425);
+__webpack_require__(426);
 
 var _Title = __webpack_require__(165);
 
 var _Title2 = _interopRequireDefault(_Title);
 
-var _LogoutButton = __webpack_require__(427);
+var _LogoutButton = __webpack_require__(428);
 
 var _LogoutButton2 = _interopRequireDefault(_LogoutButton);
 
-var _ListOfToDos = __webpack_require__(430);
+var _ListOfToDos = __webpack_require__(431);
 
 var _ListOfToDos2 = _interopRequireDefault(_ListOfToDos);
 
@@ -40591,13 +40626,13 @@ var Dashboard = function Dashboard() {
 exports.default = Dashboard;
 
 /***/ }),
-/* 425 */
+/* 426 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(426);
+var content = __webpack_require__(427);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -40622,7 +40657,7 @@ if(false) {
 }
 
 /***/ }),
-/* 426 */
+/* 427 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(49)(true);
@@ -40630,13 +40665,13 @@ exports = module.exports = __webpack_require__(49)(true);
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Alex+Brush);", ""]);
 
 // module
-exports.push([module.i, "@keyframes shake {\n  10% {\n    right: 4px; }\n  30% {\n    right: -8px; }\n  50% {\n    right: 6px; }\n  70% {\n    right: -4px; }\n  90% {\n    right: 2px; } }\n\n.list_window {\n  display: flex;\n  justify-content: center;\n  flex-direction: row;\n  flex-wrap: wrap;\n  align-items: stretch;\n  width: 95%;\n  margin: 0 auto;\n  margin-top: 1.5rem; }\n", "", {"version":3,"sources":["/Users/Jack/Documents/Coding/Projects/Letsdoit/src/scss/src/scss/partials/_mixins.scss","/Users/Jack/Documents/Coding/Projects/Letsdoit/src/scss/src/scss/Dashboard.scss"],"names":[],"mappings":"AA8CA;EACE;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA,EAAA;;AChDjB;EDWE,cAAa;EACb,wBAF4C;EAG5C,oBAH6B;EAI7B,gBAJyD;EAKzD,qBALwE;EAJxE,WAAU;EACV,eAAc;ECJd,mBAAkB,EACnB","file":"Dashboard.scss","sourcesContent":["// Text formating\n@mixin format_text($size: 1rem, $color: $primary_text_color, $font: Helvetica) {\n  font-family: $font;\n  color: $color;\n  font-size: $size;\n}\n\n// Layout\n@mixin center {\n  width: 95%;\n  margin: 0 auto;\n}\n\n@mixin flex-container($dir: row, $just: center, $wrap: wrap, $ali: stretch) {\n  display: flex;\n  justify-content: $just;\n  flex-direction: $dir;\n  flex-wrap: $wrap;\n  align-items: $ali;\n}\n\n// Borders\n@mixin apply_border ($color: $border_color, $style: solid) {\n  border: 1px $style $color;\n  border-radius: 5px;\n}\n\n// Elements\n@mixin button($cursor: pointer) {\n  @include apply_border($color: $button_color);\n  background-color: $button_color;\n  outline: none;\n  font-weight: 600;\n  &:hover {\n    cursor: $cursor;\n    background-color: lighten($button_color, 10%);\n    border-color: lighten($button_color, 10%);\n  }\n}\n\n// Animations\n@mixin animate-active {\n  transition-duration: 0.3s;\n  transition-property: background-color, border-color, color;\n}\n\n@keyframes shake {\n  10% {right: 4px};\n  30% {right: -8px};\n  50% {right: 6px};\n  70% {right: -4px};\n  90% {right: 2px};\n}\n\n@mixin animate-button {\n  position: relative;\n  animation-name: shake;\n  animation-duration: 0.5s;\n  animation-timing-function: ease-in;\n}\n","@import \"partials/variables\";\n@import \"partials/mixins\";\n\n.list_window {\n  @include flex-container;\n  @include center;\n  margin-top: 1.5rem;\n}\n"],"sourceRoot":""}]);
+exports.push([module.i, "@keyframes shake {\n  10% {\n    right: 4px; }\n  30% {\n    right: -8px; }\n  50% {\n    right: 6px; }\n  70% {\n    right: -4px; }\n  90% {\n    right: 2px; } }\n\n.list_window {\n  display: flex;\n  justify-content: space-between;\n  flex-direction: row;\n  flex-wrap: wrap;\n  align-items: stretch;\n  width: 95%;\n  margin: 0 auto;\n  margin-top: 1.5rem; }\n", "", {"version":3,"sources":["/Users/n.svetlov/Projects/letsdoit/src/scss/src/scss/partials/_mixins.scss","/Users/n.svetlov/Projects/letsdoit/src/scss/src/scss/Dashboard.scss"],"names":[],"mappings":"AA8CA;EACE;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA,EAAA;;AChDjB;EDWE,cAAa;EACb,+BCX4C;EDY5C,oBAH6B;EAI7B,gBAJyD;EAKzD,qBALwE;EAJxE,WAAU;EACV,eAAc;ECJd,mBAAkB,EACnB","file":"Dashboard.scss","sourcesContent":["// Text formating\n@mixin format_text($size: 1rem, $color: $primary_text_color, $font: Helvetica) {\n  font-family: $font;\n  color: $color;\n  font-size: $size;\n}\n\n// Layout\n@mixin center {\n  width: 95%;\n  margin: 0 auto;\n}\n\n@mixin flex-container($dir: row, $just: center, $wrap: wrap, $ali: stretch) {\n  display: flex;\n  justify-content: $just;\n  flex-direction: $dir;\n  flex-wrap: $wrap;\n  align-items: $ali;\n}\n\n// Borders\n@mixin apply_border ($color: $border_color, $style: solid) {\n  border: 1px $style $color;\n  border-radius: 5px;\n}\n\n// Elements\n@mixin button($cursor: pointer) {\n  @include apply_border($color: $button_color);\n  background-color: $button_color;\n  outline: none;\n  font-weight: 600;\n  &:hover {\n    cursor: $cursor;\n    background-color: lighten($button_color, 10%);\n    border-color: lighten($button_color, 10%);\n  }\n}\n\n// Animations\n@mixin animate-active {\n  transition-duration: 0.3s;\n  transition-property: background-color, border-color, color;\n}\n\n@keyframes shake {\n  10% {right: 4px};\n  30% {right: -8px};\n  50% {right: 6px};\n  70% {right: -4px};\n  90% {right: 2px};\n}\n\n@mixin animate-button {\n  position: relative;\n  animation-name: shake;\n  animation-duration: 0.5s;\n  animation-timing-function: ease-in;\n}\n","@import \"partials/variables\";\n@import \"partials/mixins\";\n\n.list_window {\n  @include flex-container($just: space-between);\n  @include center;\n  margin-top: 1.5rem;\n}\n"],"sourceRoot":""}]);
 
 // exports
 
 
 /***/ }),
-/* 427 */
+/* 428 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40658,7 +40693,7 @@ var _container = __webpack_require__(63);
 
 var _container2 = _interopRequireDefault(_container);
 
-__webpack_require__(428);
+__webpack_require__(429);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -40696,13 +40731,13 @@ LogoutButton.propTypes = {
 exports.default = (0, _container2.default)(LogoutButton);
 
 /***/ }),
-/* 428 */
+/* 429 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(429);
+var content = __webpack_require__(430);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -40727,7 +40762,7 @@ if(false) {
 }
 
 /***/ }),
-/* 429 */
+/* 430 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(49)(true);
@@ -40735,13 +40770,13 @@ exports = module.exports = __webpack_require__(49)(true);
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Alex+Brush);", ""]);
 
 // module
-exports.push([module.i, "@keyframes shake {\n  10% {\n    right: 4px; }\n  30% {\n    right: -8px; }\n  50% {\n    right: 6px; }\n  70% {\n    right: -4px; }\n  90% {\n    right: 2px; } }\n\n@media (min-width: 700px) {\n  .button_wrap {\n    position: absolute;\n    top: 0;\n    right: 0; } }\n\n.button_wrap button {\n  border: 1px solid #8F7EE5;\n  border-radius: 5px;\n  background-color: #8F7EE5;\n  outline: none;\n  font-weight: 600;\n  font-family: Helvetica;\n  color: white;\n  font-size: 1rem;\n  width: 100px;\n  height: 2rem; }\n  .button_wrap button:hover {\n    cursor: pointer;\n    background-color: #b4a8ee;\n    border-color: #b4a8ee; }\n", "", {"version":3,"sources":["/Users/Jack/Documents/Coding/Projects/Letsdoit/src/scss/src/scss/partials/_mixins.scss","/Users/Jack/Documents/Coding/Projects/Letsdoit/src/scss/src/scss/LogoutButton.scss","/Users/Jack/Documents/Coding/Projects/Letsdoit/src/scss/src/scss/partials/_variables.scss"],"names":[],"mappings":"AA8CA;EACE;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA,EAAA;;AC/Cf;EADF;IAEI,mBAAkB;IAClB,OAAM;IACN,SAAQ,EAQX,EAAA;;AAZD;EDoBE,0BEhBoB;EFiBpB,mBAAkB;EAMlB,0BEvBoB;EFwBpB,cAAa;EACb,iBAAgB;EA9BhB,uBAD2E;EAE3E,aCQiD;EDPjD,gBCOkC;EAChC,aAAY;EACZ,aAAY,EACb;EAXH;ID+BI,gBAN0B;IAO1B,0BAA6C;IAC7C,sBAAyC,EAC1C","file":"LogoutButton.scss","sourcesContent":["// Text formating\n@mixin format_text($size: 1rem, $color: $primary_text_color, $font: Helvetica) {\n  font-family: $font;\n  color: $color;\n  font-size: $size;\n}\n\n// Layout\n@mixin center {\n  width: 95%;\n  margin: 0 auto;\n}\n\n@mixin flex-container($dir: row, $just: center, $wrap: wrap, $ali: stretch) {\n  display: flex;\n  justify-content: $just;\n  flex-direction: $dir;\n  flex-wrap: $wrap;\n  align-items: $ali;\n}\n\n// Borders\n@mixin apply_border ($color: $border_color, $style: solid) {\n  border: 1px $style $color;\n  border-radius: 5px;\n}\n\n// Elements\n@mixin button($cursor: pointer) {\n  @include apply_border($color: $button_color);\n  background-color: $button_color;\n  outline: none;\n  font-weight: 600;\n  &:hover {\n    cursor: $cursor;\n    background-color: lighten($button_color, 10%);\n    border-color: lighten($button_color, 10%);\n  }\n}\n\n// Animations\n@mixin animate-active {\n  transition-duration: 0.3s;\n  transition-property: background-color, border-color, color;\n}\n\n@keyframes shake {\n  10% {right: 4px};\n  30% {right: -8px};\n  50% {right: 6px};\n  70% {right: -4px};\n  90% {right: 2px};\n}\n\n@mixin animate-button {\n  position: relative;\n  animation-name: shake;\n  animation-duration: 0.5s;\n  animation-timing-function: ease-in;\n}\n","@import \"partials/variables\";\n@import \"partials/mixins\";\n\n.button_wrap {\n  @media (min-width: 700px) {\n    position: absolute;\n    top: 0;\n    right: 0;\n  }\n  button {\n    @include button;\n    @include format_text($size: 1rem, $color: white);\n    width: 100px;\n    height: 2rem;\n  }\n}\n","@import url(https://fonts.googleapis.com/css?family=Alex+Brush);\n\n$primary_background_color: #BDD0EE;\n$todo_background_color: white;\n$list_background_color: #F2F5F8;\n$primary_text_color: black;\n$border_color: #AAB3C2;\n$button_color: #8F7EE5;\n$input_highlight: #59B7FF;\n\n$inprog_color: #FFBC3C;\n$completed_color: #4DD87A;\n$error_color: #FF5A5A;\n\n$select_color: #bfd9bf;\n\n$font: Helvetica;\n$title_font: 'Alex Brush';\n"],"sourceRoot":""}]);
+exports.push([module.i, "@keyframes shake {\n  10% {\n    right: 4px; }\n  30% {\n    right: -8px; }\n  50% {\n    right: 6px; }\n  70% {\n    right: -4px; }\n  90% {\n    right: 2px; } }\n\n@media (min-width: 700px) {\n  .button_wrap {\n    position: absolute;\n    top: 0;\n    right: 0; } }\n\n.button_wrap button {\n  border: 1px solid #8F7EE5;\n  border-radius: 5px;\n  background-color: #8F7EE5;\n  outline: none;\n  font-weight: 600;\n  font-family: Helvetica;\n  color: white;\n  font-size: 1rem;\n  width: 100px;\n  height: 2rem; }\n  .button_wrap button:hover {\n    cursor: pointer;\n    background-color: #b4a8ee;\n    border-color: #b4a8ee; }\n", "", {"version":3,"sources":["/Users/n.svetlov/Projects/letsdoit/src/scss/src/scss/partials/_mixins.scss","/Users/n.svetlov/Projects/letsdoit/src/scss/src/scss/LogoutButton.scss","/Users/n.svetlov/Projects/letsdoit/src/scss/src/scss/partials/_variables.scss"],"names":[],"mappings":"AA8CA;EACE;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA,EAAA;;AC/Cf;EADF;IAEI,mBAAkB;IAClB,OAAM;IACN,SAAQ,EAQX,EAAA;;AAZD;EDoBE,0BEhBoB;EFiBpB,mBAAkB;EAMlB,0BEvBoB;EFwBpB,cAAa;EACb,iBAAgB;EA9BhB,uBAD2E;EAE3E,aCQiD;EDPjD,gBCOkC;EAChC,aAAY;EACZ,aAAY,EACb;EAXH;ID+BI,gBAN0B;IAO1B,0BAA6C;IAC7C,sBAAyC,EAC1C","file":"LogoutButton.scss","sourcesContent":["// Text formating\n@mixin format_text($size: 1rem, $color: $primary_text_color, $font: Helvetica) {\n  font-family: $font;\n  color: $color;\n  font-size: $size;\n}\n\n// Layout\n@mixin center {\n  width: 95%;\n  margin: 0 auto;\n}\n\n@mixin flex-container($dir: row, $just: center, $wrap: wrap, $ali: stretch) {\n  display: flex;\n  justify-content: $just;\n  flex-direction: $dir;\n  flex-wrap: $wrap;\n  align-items: $ali;\n}\n\n// Borders\n@mixin apply_border ($color: $border_color, $style: solid) {\n  border: 1px $style $color;\n  border-radius: 5px;\n}\n\n// Elements\n@mixin button($cursor: pointer) {\n  @include apply_border($color: $button_color);\n  background-color: $button_color;\n  outline: none;\n  font-weight: 600;\n  &:hover {\n    cursor: $cursor;\n    background-color: lighten($button_color, 10%);\n    border-color: lighten($button_color, 10%);\n  }\n}\n\n// Animations\n@mixin animate-active {\n  transition-duration: 0.3s;\n  transition-property: background-color, border-color, color;\n}\n\n@keyframes shake {\n  10% {right: 4px};\n  30% {right: -8px};\n  50% {right: 6px};\n  70% {right: -4px};\n  90% {right: 2px};\n}\n\n@mixin animate-button {\n  position: relative;\n  animation-name: shake;\n  animation-duration: 0.5s;\n  animation-timing-function: ease-in;\n}\n","@import \"partials/variables\";\n@import \"partials/mixins\";\n\n.button_wrap {\n  @media (min-width: 700px) {\n    position: absolute;\n    top: 0;\n    right: 0;\n  }\n  button {\n    @include button;\n    @include format_text($size: 1rem, $color: white);\n    width: 100px;\n    height: 2rem;\n  }\n}\n","@import url(https://fonts.googleapis.com/css?family=Alex+Brush);\n\n$primary_background_color: #BDD0EE;\n$todo_background_color: white;\n$list_background_color: #F2F5F8;\n$primary_text_color: black;\n$border_color: #AAB3C2;\n$button_color: #8F7EE5;\n$input_highlight: #59B7FF;\n\n$upcoming_color: #AE40B7;\n$inprog_color: #FFBC3C;\n$completed_color: #4DD87A;\n$error_color: #FF5A5A;\n\n$select_color: #bfd9bf;\n\n$font: Helvetica;\n$title_font: 'Alex Brush';\n"],"sourceRoot":""}]);
 
 // exports
 
 
 /***/ }),
-/* 430 */
+/* 431 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40770,15 +40805,15 @@ var _react2 = _interopRequireDefault(_react);
 
 var _propTypes = __webpack_require__(18);
 
-var _reactTransitionGroup = __webpack_require__(431);
+var _reactTransitionGroup = __webpack_require__(432);
 
-__webpack_require__(442);
+__webpack_require__(443);
 
 var _container = __webpack_require__(63);
 
 var _container2 = _interopRequireDefault(_container);
 
-var _ToDo = __webpack_require__(444);
+var _ToDo = __webpack_require__(445);
 
 var _ToDo2 = _interopRequireDefault(_ToDo);
 
@@ -40797,14 +40832,14 @@ var ListOfToDos = function ListOfToDos(props) {
   var handleDrop = function handleDrop(event) {
     event.currentTarget.classList.remove('drag_over');
     var updatedToDo = JSON.parse(event.dataTransfer.getData('todo'));
-    updatedToDo.status = title === 'In Progress' ? 'upcomig' : 'completed';
+    updatedToDo.status = status;
     modifyTodo(updatedToDo, user.sessionID);
   };
 
   // Adding some event listeners to display dragging
   return _react2.default.createElement(
     'div',
-    { className: title === 'In Progress' ? 'inProgress todos_list' : 'todos_list completed',
+    { className: 'todos_list ' + status,
       onDragOver: function onDragOver(event) {
         event.preventDefault();
         event.currentTarget.classList.add('drag_over');
@@ -40831,7 +40866,7 @@ var ListOfToDos = function ListOfToDos(props) {
         }, { todo: todo, user: user }));
       })
     ),
-    title === 'In Progress' ? _react2.default.createElement(_ToDo2.default, { todo: { title: '', description: '' }, mission: 'addNew' }) : null
+    status === 'upcoming' ? _react2.default.createElement(_ToDo2.default, { todo: { title: '', description: '' }, mission: 'addNew' }) : null
   );
 };
 
@@ -40846,13 +40881,13 @@ ListOfToDos.propTypes = {
 exports.default = (0, _container2.default)(ListOfToDos);
 
 /***/ }),
-/* 431 */
+/* 432 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _CSSTransitionGroup = __webpack_require__(432);
+var _CSSTransitionGroup = __webpack_require__(433);
 
 var _CSSTransitionGroup2 = _interopRequireDefault(_CSSTransitionGroup);
 
@@ -40868,7 +40903,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 432 */
+/* 433 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40890,7 +40925,7 @@ var _TransitionGroup = __webpack_require__(166);
 
 var _TransitionGroup2 = _interopRequireDefault(_TransitionGroup);
 
-var _CSSTransitionGroupChild = __webpack_require__(436);
+var _CSSTransitionGroupChild = __webpack_require__(437);
 
 var _CSSTransitionGroupChild2 = _interopRequireDefault(_CSSTransitionGroupChild);
 
@@ -40969,7 +41004,7 @@ module.exports = exports['default'];
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
 
 /***/ }),
-/* 433 */
+/* 434 */
 /***/ (function(module, exports) {
 
 
@@ -40995,7 +41030,7 @@ module.exports = function chain(){
 
 
 /***/ }),
-/* 434 */
+/* 435 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41063,7 +41098,7 @@ module.exports = warning;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
 
 /***/ }),
-/* 435 */
+/* 436 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41160,7 +41195,7 @@ function mergeChildMappings(prev, next) {
 }
 
 /***/ }),
-/* 436 */
+/* 437 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41170,19 +41205,19 @@ exports.__esModule = true;
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _addClass = __webpack_require__(437);
+var _addClass = __webpack_require__(438);
 
 var _addClass2 = _interopRequireDefault(_addClass);
 
-var _removeClass = __webpack_require__(439);
+var _removeClass = __webpack_require__(440);
 
 var _removeClass2 = _interopRequireDefault(_removeClass);
 
-var _requestAnimationFrame = __webpack_require__(440);
+var _requestAnimationFrame = __webpack_require__(441);
 
 var _requestAnimationFrame2 = _interopRequireDefault(_requestAnimationFrame);
 
-var _properties = __webpack_require__(441);
+var _properties = __webpack_require__(442);
 
 var _react = __webpack_require__(11);
 
@@ -41396,7 +41431,7 @@ module.exports = exports['default'];
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
 
 /***/ }),
-/* 437 */
+/* 438 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41407,7 +41442,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = addClass;
 
-var _hasClass = __webpack_require__(438);
+var _hasClass = __webpack_require__(439);
 
 var _hasClass2 = _interopRequireDefault(_hasClass);
 
@@ -41419,7 +41454,7 @@ function addClass(element, className) {
 module.exports = exports['default'];
 
 /***/ }),
-/* 438 */
+/* 439 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41435,7 +41470,7 @@ function hasClass(element, className) {
 module.exports = exports["default"];
 
 /***/ }),
-/* 439 */
+/* 440 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41450,7 +41485,7 @@ module.exports = function removeClass(element, className) {
 };
 
 /***/ }),
-/* 440 */
+/* 441 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41509,7 +41544,7 @@ exports.default = compatRaf;
 module.exports = exports['default'];
 
 /***/ }),
-/* 441 */
+/* 442 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41625,13 +41660,13 @@ function getTransitionProperties() {
 }
 
 /***/ }),
-/* 442 */
+/* 443 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(443);
+var content = __webpack_require__(444);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -41656,7 +41691,7 @@ if(false) {
 }
 
 /***/ }),
-/* 443 */
+/* 444 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(49)(true);
@@ -41664,13 +41699,13 @@ exports = module.exports = __webpack_require__(49)(true);
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Alex+Brush);", ""]);
 
 // module
-exports.push([module.i, "@keyframes shake {\n  10% {\n    right: 4px; }\n  30% {\n    right: -8px; }\n  50% {\n    right: 6px; }\n  70% {\n    right: -4px; }\n  90% {\n    right: 2px; } }\n\n.todos_list {\n  border: 1px solid #AAB3C2;\n  border-radius: 5px;\n  width: 32%;\n  min-height: 100px;\n  box-sizing: border-box;\n  background-color: #F2F5F8;\n  transition: all 0.2s ease-in-out; }\n  .todos_list:first-child {\n    margin-right: 2%; }\n  .todos_list.drag_over {\n    background-color: #bfd9bf; }\n\n.inProgress .headline, .completed .headline {\n  font-family: Helvetica;\n  color: white;\n  font-size: 2rem;\n  text-align: center;\n  height: 4rem;\n  padding-top: 1rem;\n  border-bottom: 1px solid #AAB3C2;\n  border-radius: 4px 4px 0 0; }\n\n.inProgress .headline {\n  background-color: #FFBC3C; }\n\n.completed .headline {\n  background-color: #4DD87A; }\n\n.appear-enter {\n  opacity: 0.01; }\n\n.appear-enter.appear-enter-active {\n  opacity: 1;\n  transition: opacity 500ms ease-in; }\n\n.appear-leave {\n  opacity: 1; }\n\n.appear-leave.appear-leave-active {\n  opacity: 0.01;\n  transition: opacity 100ms ease-in; }\n", "", {"version":3,"sources":["/Users/Jack/Documents/Coding/Projects/Letsdoit/src/scss/src/scss/partials/_mixins.scss","/Users/Jack/Documents/Coding/Projects/Letsdoit/src/scss/src/scss/ListOfToDos.scss","/Users/Jack/Documents/Coding/Projects/Letsdoit/src/scss/src/scss/partials/_variables.scss"],"names":[],"mappings":"AA8CA;EACE;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA,EAAA;;AChDjB;EDoBE,0BEjBoB;EFkBpB,mBAAkB;ECnBlB,WAAU;EACV,kBAAiB;EACjB,uBAAsB;EACtB,0BCJ6B;EDK7B,iCAAgC,EAOjC;EAbD;IAQI,iBAAgB,EACjB;EATH;IAWI,0BCAkB,EDCnB;;AAGH;EDhBE,uBAD2E;EAE3E,aCgB+C;EDf/C,gBCegC;EAChC,mBAAkB;EAClB,aAAY;EACZ,kBAAiB;EACjB,iCCjBoB;EDkBpB,2BAA0B,EAC3B;;AAED;EAEE,0BCnBoB,EDoBrB;;AAED;EAEE,0BCvBuB,EDwBxB;;AAED;EACE,cAAa,EACd;;AAED;EACE,WAAU;EACV,kCAAiC,EAClC;;AAED;EACE,WAAU,EACX;;AAED;EACE,cAAa;EACb,kCAAiC,EAClC","file":"ListOfToDos.scss","sourcesContent":["// Text formating\n@mixin format_text($size: 1rem, $color: $primary_text_color, $font: Helvetica) {\n  font-family: $font;\n  color: $color;\n  font-size: $size;\n}\n\n// Layout\n@mixin center {\n  width: 95%;\n  margin: 0 auto;\n}\n\n@mixin flex-container($dir: row, $just: center, $wrap: wrap, $ali: stretch) {\n  display: flex;\n  justify-content: $just;\n  flex-direction: $dir;\n  flex-wrap: $wrap;\n  align-items: $ali;\n}\n\n// Borders\n@mixin apply_border ($color: $border_color, $style: solid) {\n  border: 1px $style $color;\n  border-radius: 5px;\n}\n\n// Elements\n@mixin button($cursor: pointer) {\n  @include apply_border($color: $button_color);\n  background-color: $button_color;\n  outline: none;\n  font-weight: 600;\n  &:hover {\n    cursor: $cursor;\n    background-color: lighten($button_color, 10%);\n    border-color: lighten($button_color, 10%);\n  }\n}\n\n// Animations\n@mixin animate-active {\n  transition-duration: 0.3s;\n  transition-property: background-color, border-color, color;\n}\n\n@keyframes shake {\n  10% {right: 4px};\n  30% {right: -8px};\n  50% {right: 6px};\n  70% {right: -4px};\n  90% {right: 2px};\n}\n\n@mixin animate-button {\n  position: relative;\n  animation-name: shake;\n  animation-duration: 0.5s;\n  animation-timing-function: ease-in;\n}\n","@import \"partials/variables\";\n@import \"partials/mixins\";\n\n.todos_list {\n  @include apply_border;\n  width: 32%;\n  min-height: 100px;\n  box-sizing: border-box;\n  background-color: $list_background_color;\n  transition: all 0.2s ease-in-out;\n  &:first-child {\n    margin-right: 2%;\n  }\n  &.drag_over {\n    background-color: $select_color;\n  }\n}\n\n%todos_title {\n  @include format_text($size: 2rem, $color: white);\n  text-align: center;\n  height: 4rem;\n  padding-top: 1rem;\n  border-bottom: 1px solid $border_color;\n  border-radius: 4px 4px 0 0;\n}\n\n.inProgress .headline {\n  @extend %todos_title;\n  background-color: $inprog_color;\n}\n\n.completed .headline {\n  @extend %todos_title;\n  background-color: $completed_color;\n}\n\n.appear-enter {\n  opacity: 0.01;\n}\n\n.appear-enter.appear-enter-active {\n  opacity: 1;\n  transition: opacity 500ms ease-in;\n}\n\n.appear-leave {\n  opacity: 1;\n}\n\n.appear-leave.appear-leave-active {\n  opacity: 0.01;\n  transition: opacity 100ms ease-in;\n}\n","@import url(https://fonts.googleapis.com/css?family=Alex+Brush);\n\n$primary_background_color: #BDD0EE;\n$todo_background_color: white;\n$list_background_color: #F2F5F8;\n$primary_text_color: black;\n$border_color: #AAB3C2;\n$button_color: #8F7EE5;\n$input_highlight: #59B7FF;\n\n$inprog_color: #FFBC3C;\n$completed_color: #4DD87A;\n$error_color: #FF5A5A;\n\n$select_color: #bfd9bf;\n\n$font: Helvetica;\n$title_font: 'Alex Brush';\n"],"sourceRoot":""}]);
+exports.push([module.i, "@keyframes shake {\n  10% {\n    right: 4px; }\n  30% {\n    right: -8px; }\n  50% {\n    right: 6px; }\n  70% {\n    right: -4px; }\n  90% {\n    right: 2px; } }\n\n.todos_list {\n  border: 1px solid #AAB3C2;\n  border-radius: 5px;\n  width: 32%;\n  min-height: 100px;\n  box-sizing: border-box;\n  background-color: #F2F5F8;\n  transition: all 0.2s ease-in-out; }\n  .todos_list.drag_over {\n    background-color: #bfd9bf; }\n\n.upcoming .headline, .inprogress .headline, .completed .headline {\n  font-family: Helvetica;\n  color: white;\n  font-size: 2rem;\n  text-align: center;\n  height: 4rem;\n  padding-top: 1rem;\n  border-bottom: 1px solid #AAB3C2;\n  border-radius: 4px 4px 0 0; }\n\n.upcoming .headline {\n  background-color: #AE40B7; }\n\n.inprogress .headline {\n  background-color: #FFBC3C; }\n\n.completed .headline {\n  background-color: #4DD87A; }\n\n.appear-enter {\n  opacity: 0.01; }\n\n.appear-enter.appear-enter-active {\n  opacity: 1;\n  transition: opacity 500ms ease-in; }\n\n.appear-leave {\n  opacity: 1; }\n\n.appear-leave.appear-leave-active {\n  opacity: 0.01;\n  transition: opacity 100ms ease-in; }\n", "", {"version":3,"sources":["/Users/n.svetlov/Projects/letsdoit/src/scss/src/scss/partials/_mixins.scss","/Users/n.svetlov/Projects/letsdoit/src/scss/src/scss/ListOfToDos.scss","/Users/n.svetlov/Projects/letsdoit/src/scss/src/scss/partials/_variables.scss"],"names":[],"mappings":"AA8CA;EACE;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA,EAAA;;AChDjB;EDoBE,0BEjBoB;EFkBpB,mBAAkB;ECnBlB,WAAU;EACV,kBAAiB;EACjB,uBAAsB;EACtB,0BCJ6B;EDK7B,iCAAgC,EAKjC;EAXD;IASI,0BCGkB,EDFnB;;AAGH;EDdE,uBAD2E;EAE3E,aCc+C;EDb/C,gBCagC;EAChC,mBAAkB;EAClB,aAAY;EACZ,kBAAiB;EACjB,iCCfoB;EDgBpB,2BAA0B,EAC3B;;AAED;EAEE,0BCjBsB,EDkBvB;;AAED;EAEE,0BCrBoB,EDsBrB;;AAED;EAEE,0BCzBuB,ED0BxB;;AAED;EACE,cAAa,EACd;;AAED;EACE,WAAU;EACV,kCAAiC,EAClC;;AAED;EACE,WAAU,EACX;;AAED;EACE,cAAa;EACb,kCAAiC,EAClC","file":"ListOfToDos.scss","sourcesContent":["// Text formating\n@mixin format_text($size: 1rem, $color: $primary_text_color, $font: Helvetica) {\n  font-family: $font;\n  color: $color;\n  font-size: $size;\n}\n\n// Layout\n@mixin center {\n  width: 95%;\n  margin: 0 auto;\n}\n\n@mixin flex-container($dir: row, $just: center, $wrap: wrap, $ali: stretch) {\n  display: flex;\n  justify-content: $just;\n  flex-direction: $dir;\n  flex-wrap: $wrap;\n  align-items: $ali;\n}\n\n// Borders\n@mixin apply_border ($color: $border_color, $style: solid) {\n  border: 1px $style $color;\n  border-radius: 5px;\n}\n\n// Elements\n@mixin button($cursor: pointer) {\n  @include apply_border($color: $button_color);\n  background-color: $button_color;\n  outline: none;\n  font-weight: 600;\n  &:hover {\n    cursor: $cursor;\n    background-color: lighten($button_color, 10%);\n    border-color: lighten($button_color, 10%);\n  }\n}\n\n// Animations\n@mixin animate-active {\n  transition-duration: 0.3s;\n  transition-property: background-color, border-color, color;\n}\n\n@keyframes shake {\n  10% {right: 4px};\n  30% {right: -8px};\n  50% {right: 6px};\n  70% {right: -4px};\n  90% {right: 2px};\n}\n\n@mixin animate-button {\n  position: relative;\n  animation-name: shake;\n  animation-duration: 0.5s;\n  animation-timing-function: ease-in;\n}\n","@import \"partials/variables\";\n@import \"partials/mixins\";\n\n.todos_list {\n  @include apply_border;\n  width: 32%;\n  min-height: 100px;\n  box-sizing: border-box;\n  background-color: $list_background_color;\n  transition: all 0.2s ease-in-out;\n\n  &.drag_over {\n    background-color: $select_color;\n  }\n}\n\n%todos_title {\n  @include format_text($size: 2rem, $color: white);\n  text-align: center;\n  height: 4rem;\n  padding-top: 1rem;\n  border-bottom: 1px solid $border_color;\n  border-radius: 4px 4px 0 0;\n}\n\n.upcoming .headline {\n  @extend %todos_title;\n  background-color: $upcoming_color;\n}\n\n.inprogress .headline {\n  @extend %todos_title;\n  background-color: $inprog_color;\n}\n\n.completed .headline {\n  @extend %todos_title;\n  background-color: $completed_color;\n}\n\n.appear-enter {\n  opacity: 0.01;\n}\n\n.appear-enter.appear-enter-active {\n  opacity: 1;\n  transition: opacity 500ms ease-in;\n}\n\n.appear-leave {\n  opacity: 1;\n}\n\n.appear-leave.appear-leave-active {\n  opacity: 0.01;\n  transition: opacity 100ms ease-in;\n}\n","@import url(https://fonts.googleapis.com/css?family=Alex+Brush);\n\n$primary_background_color: #BDD0EE;\n$todo_background_color: white;\n$list_background_color: #F2F5F8;\n$primary_text_color: black;\n$border_color: #AAB3C2;\n$button_color: #8F7EE5;\n$input_highlight: #59B7FF;\n\n$upcoming_color: #AE40B7;\n$inprog_color: #FFBC3C;\n$completed_color: #4DD87A;\n$error_color: #FF5A5A;\n\n$select_color: #bfd9bf;\n\n$font: Helvetica;\n$title_font: 'Alex Brush';\n"],"sourceRoot":""}]);
 
 // exports
 
 
 /***/ }),
-/* 444 */
+/* 445 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41692,11 +41727,11 @@ var _react2 = _interopRequireDefault(_react);
 
 var _propTypes = __webpack_require__(18);
 
-var _ToDoShow = __webpack_require__(445);
+var _ToDoShow = __webpack_require__(446);
 
 var _ToDoShow2 = _interopRequireDefault(_ToDoShow);
 
-var _ToDoEdit = __webpack_require__(447);
+var _ToDoEdit = __webpack_require__(448);
 
 var _ToDoEdit2 = _interopRequireDefault(_ToDoEdit);
 
@@ -41767,7 +41802,7 @@ ToDo.propTypes = {
 exports.default = ToDo;
 
 /***/ }),
-/* 445 */
+/* 446 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41804,7 +41839,7 @@ var ToDoShow = function ToDoShow(props) {
       flushTodo = props.flushTodo;
 
   var remove = function remove() {
-    return flushTodo(todo.id, user.sessionID);
+    return flushTodo(todo, user.sessionID);
   };
 
   // If logged in user is not an author of the todo, control buttons are hidden
@@ -41864,7 +41899,7 @@ ToDoShow.propTypes = {
 exports.default = (0, _container2.default)(ToDoShow);
 
 /***/ }),
-/* 446 */
+/* 447 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(49)(true);
@@ -41872,13 +41907,13 @@ exports = module.exports = __webpack_require__(49)(true);
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Alex+Brush);", ""]);
 
 // module
-exports.push([module.i, "@keyframes shake {\n  10% {\n    right: 4px; }\n  30% {\n    right: -8px; }\n  50% {\n    right: 6px; }\n  70% {\n    right: -4px; }\n  90% {\n    right: 2px; } }\n\n.todo {\n  width: 95%;\n  margin: 1rem auto;\n  background-color: white;\n  border-radius: 5px;\n  box-shadow: 2px 2px 2px #AAB3C2;\n  padding: 1px; }\n  .todo h4,\n  .todo p {\n    font-family: Helvetica;\n    color: black;\n    font-size: 1rem;\n    margin: 0;\n    padding: 1rem 1rem 0 1rem; }\n  .todo strong {\n    font-family: Helvetica;\n    color: black;\n    font-size: 1rem;\n    display: block;\n    padding: 1rem 5rem;\n    text-align: right; }\n\n.controls {\n  display: flex;\n  justify-content: space-between;\n  flex-direction: row;\n  flex-wrap: wrap;\n  align-items: stretch;\n  width: 3rem;\n  float: right;\n  padding: 0.5rem; }\n  .controls i {\n    font-size: 1rem; }\n    .controls i:hover {\n      cursor: pointer; }\n    .controls i:last-child:hover {\n      color: #FF5A5A; }\n    .controls i:first-child:hover {\n      color: #4DD87A; }\n    .controls i.fa-plus {\n      margin-top: 1rem;\n      font-size: 3rem; }\n\n.todo input,\n.todo textarea {\n  font-family: Helvetica;\n  color: black;\n  font-size: 1rem;\n  display: block;\n  width: 80%;\n  margin: 1rem;\n  padding: 0.5rem;\n  border-radius: 5px;\n  border: none;\n  outline: none;\n  resize: none;\n  background-color: #F2F5F8;\n  box-sizing: border-box; }\n  .todo input:focus,\n  .todo textarea:focus {\n    box-shadow: -1px 0 2px #59B7FF, 0 1px 2px #59B7FF, 1px 0 2px #59B7FF, 0 -1px 2px #59B7FF; }\n", "", {"version":3,"sources":["/Users/Jack/Documents/Coding/Projects/Letsdoit/src/scss/src/scss/partials/_mixins.scss","/Users/Jack/Documents/Coding/Projects/Letsdoit/src/scss/src/scss/ToDo.scss","/Users/Jack/Documents/Coding/Projects/Letsdoit/src/scss/src/scss/partials/_variables.scss"],"names":[],"mappings":"AA8CA;EACE;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA,EAAA;;AChDjB;EACE,WAAU;EACV,kBAAiB;EACjB,wBCH2B;EDI3B,mBAAkB;EAClB,gCCFoB;EDGpB,aAAY,EAab;EAnBD;;IDDE,uBAD2E;IAE3E,aEEwB;IFDxB,gBCQ2B;IACzB,UAAS;IACT,0BAAyB,EAC1B;EAZH;IDDE,uBAD2E;IAE3E,aEEwB;IFDxB,gBCakC;IAChC,eAAc;IACd,mBAAkB;IAClB,kBAAiB,EAClB;;AAGH;EDVE,cAAa;EACb,+BCU4C;EDT5C,oBAH6B;EAI7B,gBAJyD;EAKzD,qBALwE;ECaxE,YAAW;EACX,aAAY;EACZ,gBAAe,EAiBhB;EArBD;IAMI,gBAAe,EAchB;IApBH;MAQM,gBAAe,EAChB;IATL;MAWM,eCvBe,EDwBhB;IAZL;MAcM,eC3BmB,ED4BpB;IAfL;MAiBM,iBAAgB;MAChB,gBAAe,EAChB;;AAIL;;ED7CE,uBAD2E;EAE3E,aEEwB;EFDxB,gBC8CkC;EAChC,eAAc;EACd,WAAU;EACV,aAAY;EACZ,gBAAe;EACf,mBAAkB;EAClB,aAAY;EACZ,cAAa;EACb,aAAY;EACZ,0BCvD2B;EDwD3B,uBAAsB,EAKvB;EAlBH;;IAgBM,yFCvDmB,EDwDpB","file":"ToDo.scss","sourcesContent":["// Text formating\n@mixin format_text($size: 1rem, $color: $primary_text_color, $font: Helvetica) {\n  font-family: $font;\n  color: $color;\n  font-size: $size;\n}\n\n// Layout\n@mixin center {\n  width: 95%;\n  margin: 0 auto;\n}\n\n@mixin flex-container($dir: row, $just: center, $wrap: wrap, $ali: stretch) {\n  display: flex;\n  justify-content: $just;\n  flex-direction: $dir;\n  flex-wrap: $wrap;\n  align-items: $ali;\n}\n\n// Borders\n@mixin apply_border ($color: $border_color, $style: solid) {\n  border: 1px $style $color;\n  border-radius: 5px;\n}\n\n// Elements\n@mixin button($cursor: pointer) {\n  @include apply_border($color: $button_color);\n  background-color: $button_color;\n  outline: none;\n  font-weight: 600;\n  &:hover {\n    cursor: $cursor;\n    background-color: lighten($button_color, 10%);\n    border-color: lighten($button_color, 10%);\n  }\n}\n\n// Animations\n@mixin animate-active {\n  transition-duration: 0.3s;\n  transition-property: background-color, border-color, color;\n}\n\n@keyframes shake {\n  10% {right: 4px};\n  30% {right: -8px};\n  50% {right: 6px};\n  70% {right: -4px};\n  90% {right: 2px};\n}\n\n@mixin animate-button {\n  position: relative;\n  animation-name: shake;\n  animation-duration: 0.5s;\n  animation-timing-function: ease-in;\n}\n","@import \"partials/variables\";\n@import \"partials/mixins\";\n\n.todo {\n  width: 95%;\n  margin: 1rem auto;\n  background-color: $todo_background_color;\n  border-radius: 5px;\n  box-shadow: 2px 2px 2px $border_color;\n  padding: 1px;\n  h4,\n  p {\n    @include format_text(1rem);\n    margin: 0;\n    padding: 1rem 1rem 0 1rem;\n  }\n  strong {\n    @include format_text($size: 1rem);\n    display: block;\n    padding: 1rem 5rem;\n    text-align: right;\n  }\n}\n\n.controls {\n  @include flex-container($just: space-between);\n  width: 3rem;\n  float: right;\n  padding: 0.5rem;\n  i {\n    font-size: 1rem;\n    &:hover {\n      cursor: pointer;\n    }\n    &:last-child:hover {\n      color: $error_color;\n    }\n    &:first-child:hover {\n      color: $completed_color;\n    }\n    &.fa-plus {\n      margin-top: 1rem;\n      font-size: 3rem;\n    }\n  }\n}\n\n.todo {\n  input,\n  textarea {\n    @include format_text($size: 1rem);\n    display: block;\n    width: 80%;\n    margin: 1rem;\n    padding: 0.5rem;\n    border-radius: 5px;\n    border: none;\n    outline: none;\n    resize: none;\n    background-color: $list_background_color;\n    box-sizing: border-box;\n\n    &:focus {\n      box-shadow: -1px 0 2px $input_highlight, 0 1px 2px $input_highlight, 1px 0 2px $input_highlight, 0 -1px 2px $input_highlight;\n    }\n  }\n  \n}\n","@import url(https://fonts.googleapis.com/css?family=Alex+Brush);\n\n$primary_background_color: #BDD0EE;\n$todo_background_color: white;\n$list_background_color: #F2F5F8;\n$primary_text_color: black;\n$border_color: #AAB3C2;\n$button_color: #8F7EE5;\n$input_highlight: #59B7FF;\n\n$inprog_color: #FFBC3C;\n$completed_color: #4DD87A;\n$error_color: #FF5A5A;\n\n$select_color: #bfd9bf;\n\n$font: Helvetica;\n$title_font: 'Alex Brush';\n"],"sourceRoot":""}]);
+exports.push([module.i, "@keyframes shake {\n  10% {\n    right: 4px; }\n  30% {\n    right: -8px; }\n  50% {\n    right: 6px; }\n  70% {\n    right: -4px; }\n  90% {\n    right: 2px; } }\n\n.todo {\n  width: 95%;\n  margin: 1rem auto;\n  background-color: white;\n  border-radius: 5px;\n  box-shadow: 2px 2px 2px #AAB3C2;\n  padding: 1px; }\n  .todo h4,\n  .todo p {\n    font-family: Helvetica;\n    color: black;\n    font-size: 1rem;\n    margin: 0;\n    padding: 1rem 1rem 0 1rem; }\n  .todo strong {\n    font-family: Helvetica;\n    color: black;\n    font-size: 1rem;\n    display: block;\n    padding: 1rem 5rem;\n    text-align: right; }\n\n.controls {\n  display: flex;\n  justify-content: space-between;\n  flex-direction: row;\n  flex-wrap: wrap;\n  align-items: stretch;\n  width: 3rem;\n  float: right;\n  padding: 0.5rem; }\n  .controls i {\n    font-size: 1rem; }\n    .controls i:hover {\n      cursor: pointer; }\n    .controls i:last-child:hover {\n      color: #FF5A5A; }\n    .controls i:first-child:hover {\n      color: #4DD87A; }\n    .controls i.fa-plus {\n      margin-top: 1rem;\n      font-size: 3rem; }\n\n.todo input,\n.todo textarea {\n  font-family: Helvetica;\n  color: black;\n  font-size: 1rem;\n  display: block;\n  width: 80%;\n  margin: 1rem;\n  padding: 0.5rem;\n  border-radius: 5px;\n  border: none;\n  outline: none;\n  resize: none;\n  background-color: #F2F5F8;\n  box-sizing: border-box; }\n  .todo input:focus,\n  .todo textarea:focus {\n    box-shadow: -1px 0 2px #59B7FF, 0 1px 2px #59B7FF, 1px 0 2px #59B7FF, 0 -1px 2px #59B7FF; }\n", "", {"version":3,"sources":["/Users/n.svetlov/Projects/letsdoit/src/scss/src/scss/partials/_mixins.scss","/Users/n.svetlov/Projects/letsdoit/src/scss/src/scss/ToDo.scss","/Users/n.svetlov/Projects/letsdoit/src/scss/src/scss/partials/_variables.scss"],"names":[],"mappings":"AA8CA;EACE;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA;EACf;IAAK,YAAW,EAAA;EAChB;IAAK,WAAU,EAAA,EAAA;;AChDjB;EACE,WAAU;EACV,kBAAiB;EACjB,wBCH2B;EDI3B,mBAAkB;EAClB,gCCFoB;EDGpB,aAAY,EAab;EAnBD;;IDDE,uBAD2E;IAE3E,aEEwB;IFDxB,gBCQ2B;IACzB,UAAS;IACT,0BAAyB,EAC1B;EAZH;IDDE,uBAD2E;IAE3E,aEEwB;IFDxB,gBCakC;IAChC,eAAc;IACd,mBAAkB;IAClB,kBAAiB,EAClB;;AAGH;EDVE,cAAa;EACb,+BCU4C;EDT5C,oBAH6B;EAI7B,gBAJyD;EAKzD,qBALwE;ECaxE,YAAW;EACX,aAAY;EACZ,gBAAe,EAiBhB;EArBD;IAMI,gBAAe,EAchB;IApBH;MAQM,gBAAe,EAChB;IATL;MAWM,eCtBe,EDuBhB;IAZL;MAcM,eC1BmB,ED2BpB;IAfL;MAiBM,iBAAgB;MAChB,gBAAe,EAChB;;AAIL;;ED7CE,uBAD2E;EAE3E,aEEwB;EFDxB,gBC8CkC;EAChC,eAAc;EACd,WAAU;EACV,aAAY;EACZ,gBAAe;EACf,mBAAkB;EAClB,aAAY;EACZ,cAAa;EACb,aAAY;EACZ,0BCvD2B;EDwD3B,uBAAsB,EAKvB;EAlBH;;IAgBM,yFCvDmB,EDwDpB","file":"ToDo.scss","sourcesContent":["// Text formating\n@mixin format_text($size: 1rem, $color: $primary_text_color, $font: Helvetica) {\n  font-family: $font;\n  color: $color;\n  font-size: $size;\n}\n\n// Layout\n@mixin center {\n  width: 95%;\n  margin: 0 auto;\n}\n\n@mixin flex-container($dir: row, $just: center, $wrap: wrap, $ali: stretch) {\n  display: flex;\n  justify-content: $just;\n  flex-direction: $dir;\n  flex-wrap: $wrap;\n  align-items: $ali;\n}\n\n// Borders\n@mixin apply_border ($color: $border_color, $style: solid) {\n  border: 1px $style $color;\n  border-radius: 5px;\n}\n\n// Elements\n@mixin button($cursor: pointer) {\n  @include apply_border($color: $button_color);\n  background-color: $button_color;\n  outline: none;\n  font-weight: 600;\n  &:hover {\n    cursor: $cursor;\n    background-color: lighten($button_color, 10%);\n    border-color: lighten($button_color, 10%);\n  }\n}\n\n// Animations\n@mixin animate-active {\n  transition-duration: 0.3s;\n  transition-property: background-color, border-color, color;\n}\n\n@keyframes shake {\n  10% {right: 4px};\n  30% {right: -8px};\n  50% {right: 6px};\n  70% {right: -4px};\n  90% {right: 2px};\n}\n\n@mixin animate-button {\n  position: relative;\n  animation-name: shake;\n  animation-duration: 0.5s;\n  animation-timing-function: ease-in;\n}\n","@import \"partials/variables\";\n@import \"partials/mixins\";\n\n.todo {\n  width: 95%;\n  margin: 1rem auto;\n  background-color: $todo_background_color;\n  border-radius: 5px;\n  box-shadow: 2px 2px 2px $border_color;\n  padding: 1px;\n  h4,\n  p {\n    @include format_text(1rem);\n    margin: 0;\n    padding: 1rem 1rem 0 1rem;\n  }\n  strong {\n    @include format_text($size: 1rem);\n    display: block;\n    padding: 1rem 5rem;\n    text-align: right;\n  }\n}\n\n.controls {\n  @include flex-container($just: space-between);\n  width: 3rem;\n  float: right;\n  padding: 0.5rem;\n  i {\n    font-size: 1rem;\n    &:hover {\n      cursor: pointer;\n    }\n    &:last-child:hover {\n      color: $error_color;\n    }\n    &:first-child:hover {\n      color: $completed_color;\n    }\n    &.fa-plus {\n      margin-top: 1rem;\n      font-size: 3rem;\n    }\n  }\n}\n\n.todo {\n  input,\n  textarea {\n    @include format_text($size: 1rem);\n    display: block;\n    width: 80%;\n    margin: 1rem;\n    padding: 0.5rem;\n    border-radius: 5px;\n    border: none;\n    outline: none;\n    resize: none;\n    background-color: $list_background_color;\n    box-sizing: border-box;\n\n    &:focus {\n      box-shadow: -1px 0 2px $input_highlight, 0 1px 2px $input_highlight, 1px 0 2px $input_highlight, 0 -1px 2px $input_highlight;\n    }\n  }\n  \n}\n","@import url(https://fonts.googleapis.com/css?family=Alex+Brush);\n\n$primary_background_color: #BDD0EE;\n$todo_background_color: white;\n$list_background_color: #F2F5F8;\n$primary_text_color: black;\n$border_color: #AAB3C2;\n$button_color: #8F7EE5;\n$input_highlight: #59B7FF;\n\n$upcoming_color: #AE40B7;\n$inprog_color: #FFBC3C;\n$completed_color: #4DD87A;\n$error_color: #FF5A5A;\n\n$select_color: #bfd9bf;\n\n$font: Helvetica;\n$title_font: 'Alex Brush';\n"],"sourceRoot":""}]);
 
 // exports
 
 
 /***/ }),
-/* 447 */
+/* 448 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41906,7 +41941,7 @@ var _container = __webpack_require__(63);
 
 var _container2 = _interopRequireDefault(_container);
 
-var _utils = __webpack_require__(448);
+var _utils = __webpack_require__(170);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -42002,7 +42037,7 @@ var ToDoEdit = function (_React$Component) {
 
 
       showMode();
-      (0, _utils.testCall)(this.props.remove) || flushTodo(this.state.todo.id, sessionID);
+      (0, _utils.testCall)(this.props.remove) || flushTodo(this.state.todo, sessionID);
     }
   }, {
     key: 'render',
@@ -42063,26 +42098,6 @@ ToDoEdit.propTypes = {
 exports.default = (0, _container2.default)(ToDoEdit);
 
 /***/ }),
-/* 448 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-// Function to test methods with Karma
-var testCall = exports.testCall = function testCall(func) {
-    if (!func) {
-        return false;
-    }
-    func();
-
-    return true;
-};
-
-/***/ }),
 /* 449 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -42093,7 +42108,15 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
+
 var _types = __webpack_require__(114);
+
+var _utils = __webpack_require__(170);
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } } // Action types
 
@@ -42101,51 +42124,77 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 var rootReducer = function rootReducer() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   var action = arguments[1];
+  var type = action.type,
+      payload = action.payload;
 
-  switch (action.type) {
+
+  switch (type) {
     case _types.ADD_TODO:
-      var todos = [].concat(_toConsumableArray(state.todos), [action.payload]);
+      var todosToExtend = [].concat(_toConsumableArray(state.todos[payload.status]));
+      todosToExtend.push(action.payload);
 
-      return { user: state.user, todos: todos };
+      return {
+        user: state.user,
+        todos: Object.assign({}, state.todos, _defineProperty({}, payload.status, todosToExtend))
+      };
 
     case _types.UPDATE_TODO:
-      // Finding index of edited todo
-      var index = void 0;
-      state.todos.forEach(function (todo, i) {
-        if (todo.id === action.todo.id) {
-          index = i;
-        }
-      });
-      var newTodos = [].concat(_toConsumableArray(state.todos));
-      // If status (upcomig/inprogress/completed) changed we not replacing todo but delete it and add to the end of the array
-      if (state.todos[index].status !== action.todo.status) {
-        newTodos.splice(index, 1);
-        newTodos.push(action.todo);
-      } else {
-        newTodos[index] = action.todo;
+      var todosToUpdate = [].concat(_toConsumableArray(state.todos[payload.status]));
+
+      var _findNestedTodo = (0, _utils.findNestedTodo)(payload, state.todos),
+          _findNestedTodo2 = _slicedToArray(_findNestedTodo, 2),
+          currentStatus = _findNestedTodo2[0],
+          index = _findNestedTodo2[1];
+
+      if (currentStatus === null) {
+        return state;
       }
 
-      return { user: state.user, todos: newTodos };
+      // If status changed we delete it in one list and add to another
+      if (currentStatus !== payload.status) {
+        var _Object$assign2;
+
+        var todosToClear = [].concat(_toConsumableArray(state.todos[currentStatus]));
+        todosToClear.splice(index, 1);
+        todosToUpdate.push(payload);
+
+        return {
+          user: state.user,
+          todos: Object.assign({}, state.todos, (_Object$assign2 = {}, _defineProperty(_Object$assign2, currentStatus, todosToClear), _defineProperty(_Object$assign2, payload.status, todosToUpdate), _Object$assign2))
+        };
+      }
+      // If status didn't change, we update it
+      else {
+          todosToUpdate[index] = payload;
+
+          return {
+            user: state.user,
+            todos: Object.assign({}, state.todos, _defineProperty({}, payload.status, todosToUpdate))
+          };
+        }
 
     case _types.DELETE_TODO:
-      return { user: state.user, todos: state.todos.filter(function (todo) {
-          return todo.id !== action.id;
-        }) };
+      return {
+        user: state.user,
+        todos: Object.assign({}, state.todos, _defineProperty({}, payload.status, state.todos[payload.status].filter(function (todo) {
+          return todo.id !== payload.id;
+        })))
+      };
 
     case _types.LOG_IN:
-      return { todos: state.todos, user: action.user };
+      return { todos: state.todos, user: payload };
 
     case _types.LOG_OUT:
       return {};
 
     case _types.LOAD_TODOS:
       var newState = Object.assign({}, state);
-      newState.todos = action.todos;
+      newState.todos = payload;
 
       return newState;
 
     case _types.ERROR:
-      return { todos: state.todos, user: state.user, error: true };
+      return _extends({}, state, { error: true });
 
     case _types.RESET_ERROR:
       return { todos: state.todos, user: state.user };
@@ -42323,19 +42372,19 @@ function uploadTodoHandler(_ref3) {
 
 function flushTodoHandler(_ref4) {
     var payload = _ref4.payload;
-    var id, sessionID;
+    var todo, sessionID;
     return regeneratorRuntime.wrap(function flushTodoHandler$(_context4) {
         while (1) {
             switch (_context4.prev = _context4.next) {
                 case 0:
-                    id = payload.id, sessionID = payload.sessionID;
+                    todo = payload.todo, sessionID = payload.sessionID;
                     _context4.prev = 1;
                     _context4.next = 4;
-                    return (0, _effects.call)(_utils.fetchData, 'todo?sessionID=' + sessionID, (0, _utils.generateFetchOptions)('DELETE', JSON.stringify({ id: id })));
+                    return (0, _effects.call)(_utils.fetchData, 'todo?sessionID=' + sessionID, (0, _utils.generateFetchOptions)('DELETE', JSON.stringify({ id: todo.id })));
 
                 case 4:
                     _context4.next = 6;
-                    return (0, _effects.put)((0, _actions.deleteTodo)(id));
+                    return (0, _effects.put)((0, _actions.deleteTodo)(todo));
 
                 case 6:
                     _context4.next = 16;
@@ -42428,7 +42477,7 @@ function rootSaga() {
 ;(function (root, factory, undef) {
 	if (true) {
 		// CommonJS
-		module.exports = exports = factory(__webpack_require__(3), __webpack_require__(81), __webpack_require__(452), __webpack_require__(453), __webpack_require__(57), __webpack_require__(58), __webpack_require__(115), __webpack_require__(170), __webpack_require__(454), __webpack_require__(171), __webpack_require__(455), __webpack_require__(456), __webpack_require__(457), __webpack_require__(116), __webpack_require__(458), __webpack_require__(51), __webpack_require__(13), __webpack_require__(459), __webpack_require__(460), __webpack_require__(461), __webpack_require__(462), __webpack_require__(463), __webpack_require__(464), __webpack_require__(465), __webpack_require__(466), __webpack_require__(467), __webpack_require__(468), __webpack_require__(469), __webpack_require__(470), __webpack_require__(471), __webpack_require__(472), __webpack_require__(473), __webpack_require__(474));
+		module.exports = exports = factory(__webpack_require__(3), __webpack_require__(81), __webpack_require__(452), __webpack_require__(453), __webpack_require__(57), __webpack_require__(58), __webpack_require__(115), __webpack_require__(171), __webpack_require__(454), __webpack_require__(172), __webpack_require__(455), __webpack_require__(456), __webpack_require__(457), __webpack_require__(116), __webpack_require__(458), __webpack_require__(51), __webpack_require__(13), __webpack_require__(459), __webpack_require__(460), __webpack_require__(461), __webpack_require__(462), __webpack_require__(463), __webpack_require__(464), __webpack_require__(465), __webpack_require__(466), __webpack_require__(467), __webpack_require__(468), __webpack_require__(469), __webpack_require__(470), __webpack_require__(471), __webpack_require__(472), __webpack_require__(473), __webpack_require__(474));
 	}
 	else if (typeof define === "function" && define.amd) {
 		// AMD
@@ -42686,7 +42735,7 @@ function rootSaga() {
 ;(function (root, factory, undef) {
 	if (true) {
 		// CommonJS
-		module.exports = exports = factory(__webpack_require__(3), __webpack_require__(170));
+		module.exports = exports = factory(__webpack_require__(3), __webpack_require__(171));
 	}
 	else if (typeof define === "function" && define.amd) {
 		// AMD
@@ -42771,7 +42820,7 @@ function rootSaga() {
 ;(function (root, factory, undef) {
 	if (true) {
 		// CommonJS
-		module.exports = exports = factory(__webpack_require__(3), __webpack_require__(81), __webpack_require__(171));
+		module.exports = exports = factory(__webpack_require__(3), __webpack_require__(81), __webpack_require__(172));
 	}
 	else if (typeof define === "function" && define.amd) {
 		// AMD

@@ -54,12 +54,12 @@ function* uploadTodoHandler({ payload }) {
 }
 
 function* flushTodoHandler({ payload }) {
-    const { id, sessionID } = payload;
+    const { todo, sessionID } = payload;
 
     try {
-        yield call(fetchData, `todo?sessionID=${sessionID}`, generateFetchOptions('DELETE', JSON.stringify({ id })));
+        yield call(fetchData, `todo?sessionID=${sessionID}`, generateFetchOptions('DELETE', JSON.stringify({ id: todo.id })));
 
-        yield put(deleteTodo(id));
+        yield put(deleteTodo(todo));
     } catch (err) {
         yield put(error());
 

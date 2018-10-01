@@ -8,9 +8,7 @@
   box-sizing: border-box;
   background-color: $list_background_color;
   transition: all 0.2s ease-in-out;
-  &:first-child {
-    margin-right: 2%;
-  }
+
   &.drag_over {
     background-color: $select_color;
   }
@@ -25,7 +23,12 @@
   border-radius: 4px 4px 0 0;
 }
 
-.inProgress .headline {
+.upcoming .headline {
+  @extend %todos_title;
+  background-color: $upcoming_color;
+}
+
+.inprogress .headline {
   @extend %todos_title;
   background-color: $inprog_color;
 }

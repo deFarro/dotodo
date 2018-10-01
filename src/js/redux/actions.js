@@ -37,7 +37,7 @@ const dropSession = sessionID => {
 const loadTodos = todos => {
   return {
     type: LOAD_TODOS,
-    todos,
+    payload: todos,
   }
 }
 
@@ -51,11 +51,11 @@ const uploadTodo = (todo, sessionID) => {
   }
 }
 
-const flushTodo = (id, sessionID) => {
+const flushTodo = (todo, sessionID) => {
   return {
     type: FLUSH_TODO,
     payload: {
-      id,
+      todo,
       sessionID,
     },
   }
@@ -78,24 +78,24 @@ const addTodo = todo => {
   }
 }
 
-const deleteTodo = (id) => {
+const deleteTodo = todo => {
   return {
     type: DELETE_TODO,
-    id
+    payload: todo,
   }
 }
 
-const updateTodo = (todo) => {
+const updateTodo = todo => {
   return {
     type: UPDATE_TODO,
-    todo
+    payload: todo,
   }
 }
 
-const logIn = (user) => {
+const logIn = user => {
   return {
     type: LOG_IN ,
-    user
+    payload: user,
   }
 }
 
