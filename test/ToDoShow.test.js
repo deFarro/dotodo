@@ -19,14 +19,30 @@ describe('ToDoShow Component', () => {
     return { user: todo.author, todos: fakeStorage.todos }
   }
 
-  it('should hide controls if logged user is not todos author', () => {
+  it('should hide edit control if logged user is not todos author', () => {
     const wrapper = mount(<ToDoShow store={fakeStorage} todo={todo} editMode={editMode}  />);
-    expect(wrapper.find('.controls').exists()).toEqual(false);
+    expect(wrapper.find('.fa-pencil').exists()).toEqual(false);
+  });
+
+  it('should hide delete control if logged user is not todos author', () => {
+    const wrapper = mount(<ToDoShow store={fakeStorage} todo={todo} editMode={editMode}  />);
+    expect(wrapper.find('.fa-times').exists()).toEqual(false);
+  });
+
+  it('should show promote control even if logged user is not todos author', () => {
+    const wrapper = mount(<ToDoShow store={fakeStorage} todo={todo} editMode={editMode} />);
+    expect(wrapper.find('.fa-arrow-right').exists()).toEqual(true);
+  });
+
+  it('should hide promote control if todos status is completed', () => {
+    const completedTodo = fakeStorage.todos[4];
+    const wrapper = mount(<ToDoShow store={fakeStorage} todo={completedTodo} editMode={editMode} />);
+    expect(wrapper.find('.fa-times').exists()).toEqual(false);
   });
 
   it('should show controls if logged user is todos author', () => {
     const wrapper = mount(<ToDoShow store={storageWithAuthor} todo={todo} editMode={editMode}  />);
-    expect(wrapper.find('.controls').exists()).toEqual(true);
+    expect(wrapper.find('.controls').children().length).toEqual(3);
   });
 
   it('should pass click events on edit button', () => {
@@ -47,6 +63,16 @@ describe('ToDoShow Component', () => {
     const wrapper = mount(<ToDoShow store={storageWithAuthor} todo={todo} editMode={editMode} edit={mockHandle.edit} />);
     wrapper.find('.todo').simulate('dblclick');
     expect(mockHandle.edit).toHaveBeenCalled();
+  });
+
+  it('should pass click events on promote button', () => {
+    const mockHandle = {
+      promote() { }
+    };
+    spyOn(mockHandle, 'promote');
+    const wrapper = mount(<ToDoShow store={storageWithAuthor} todo={todo} editMode={editMode} promote={mockHandle.promote} />);
+    wrapper.find('.fa-arrow-right').simulate('click');
+    expect(mockHandle.promote).toHaveBeenCalled();
   });
 
   it('should pass click events on delete button', () => {

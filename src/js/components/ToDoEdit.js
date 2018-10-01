@@ -91,7 +91,7 @@ class ToDoEdit extends React.Component {
 
     return (
       <div className="todo edit">
-        <div className="controls">
+        <div className="controls edit">
           { /* Changing icon for add button for a new todo element */ }
           <i
             className={this.props.mission === 'addNew' ? "fa fa-plus" : "fa fa-check"}

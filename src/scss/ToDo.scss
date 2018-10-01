@@ -24,24 +24,42 @@
 
 .controls {
   @include flex-container($just: space-between);
-  width: 3rem;
+  width: 4rem;
   float: right;
   padding: 0.5rem;
+
   i {
     font-size: 1rem;
+
+    &.readonly {
+      margin-left: auto;
+    }
+
     &:hover {
       cursor: pointer;
-    }
-    &:last-child:hover {
-      color: $error_color;
-    }
-    &:first-child:hover {
       color: $completed_color;
     }
+
+    &.fa-times:hover {
+      color: $error_color;
+    }
+
     &.fa-plus {
       margin-top: 1rem;
       font-size: 3rem;
+
+      &:hover {
+        color: $completed_color;
+      }
     }
+  }
+
+  &.completed {
+    width: 2.5rem;
+  }
+
+  &.edit {
+    width: 2.5rem;
   }
 }
 
