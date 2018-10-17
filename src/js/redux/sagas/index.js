@@ -16,7 +16,12 @@ function* startSessionHandler({ payload }) {
     try {
         const user = yield call(fetchData, 'user/login', generateFetchOptions('POST', loginData));
         if (user.error) {
-            throw new Error(error);
+            yield put(error(user));
+
+            yield delay(1500);
+            yield put(resetError());
+
+            return;
         }
         const todos = yield call(fetchData, `todos?sessionID=${user.sessionID}`, generateFetchOptions('GET'));
 

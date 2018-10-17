@@ -85,7 +85,7 @@ const rootReducer = (state = {}, action) => {
       return newState;
 
     case ERROR:
-      return { ...state, error: true };
+      return { ...state, errorObj: payload };
 
     case RESET_ERROR:
       return { todos: state.todos, user: state.user };

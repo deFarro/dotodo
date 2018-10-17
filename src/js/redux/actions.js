@@ -105,9 +105,10 @@ const logOut = () => {
   }
 }
 
-const error = () => {
+const error = err => {
   return {
-    type: ERROR
+    type: ERROR,
+    payload: err,
   }
 }
 

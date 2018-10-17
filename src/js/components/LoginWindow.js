@@ -1,7 +1,7 @@
 'use strict';
 
 // Libs
-import React from 'react';
+import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
 
 // Style
@@ -13,14 +13,16 @@ import { default as container } from '../redux/container';
 //Components
 import Title from './Title';
 
-class LoginWindow extends React.Component {
+class LoginWindow extends Component {
   static propTypes = {
     startSession: PropTypes.func.isRequired,
-    error: PropTypes.bool,
+    errorObj: PropTypes.objectOf(PropTypes.any),
   }
 
   static defaultProps = {
-    error: false,
+    errorObj: {
+      error : false,
+    },
   }
 
   constructor() {
@@ -49,7 +51,27 @@ class LoginWindow extends React.Component {
   }
 
   render() {
-    const { error } = this.props;
+    const {
+      errorObj: {
+        error ,
+        message,
+      }
+    } = this.props;
+
+    const buttonText = () => {
+      if (!error) {
+        return 'LOG IN'
+      }
+
+      switch (message) {
+        case 'wrong password':
+          return 'WRONG PASSWORD'
+        case 'pg: no rows in result set':
+          return 'USER NOT FOUND'
+        default:
+          return 'ERROR'
+      }
+    }
 
     return (
       <div>
@@ -77,10 +99,15 @@ class LoginWindow extends React.Component {
 
             <button
               type="submit"
-              className={error ? 'error' : this.state.username && this.state.password ? 'active' : 'not_active'}
+              className={error
+                ? 'error'
+                : this.state.username && this.state.password
+                  ? 'active'
+                  : 'not_active'
+              }
               disabled={error}
             >
-              {error ? 'USER NOT FOUND' : 'LOG IN'}
+              {buttonText()}
             </button>
           </form>
         </div>

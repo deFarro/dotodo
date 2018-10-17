@@ -25,7 +25,7 @@ describe('LoginWindow Component', () => {
     // Constructing storage with error
     const errorStorage = Object.assign({}, fakeStorage);
     errorStorage.getState = () => {
-      return {user: fakeStorage.user, todos: fakeStorage.todos, error: true}
+      return {user: fakeStorage.user, todos: fakeStorage.todos, errorObj: { error: true }}
     }
     const wrapper = mount(<LoginWindow store={errorStorage} />);
     expect(wrapper.find('button').prop('disabled')).toEqual(true);

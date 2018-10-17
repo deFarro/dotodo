@@ -12,7 +12,7 @@ import {
 const mapStateToProps = state => ({
   user: state.user,
   todos: state.todos,
-  error: state.error,
+  errorObj: state.errorObj,
 });
 
 const mapDispatchToProps = dispatch => bindActionCreators({
