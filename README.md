@@ -9,6 +9,11 @@ Modular CSS (SASS) approach used for styling with Webpack.
 
 Hosted currently on:
 
+Preregistered users (login/password):
+* test/test
+* jack/password
+* tom/password
+
 ---
 
 ### Tech stack:
