@@ -1,13 +1,13 @@
 # Let's do it
 ### Project management application
 
-Several users can register and use this application to track and sync their activities.
+Several users can use this application to track and sync their activities.
 
-Back-end is in a separate repository:
+Back-end is in a separate repository: https://github.com/deFarro/letsdoit_backend
 
 Modular CSS (SASS) approach used for styling with Webpack.
 
-Hosted currently on:
+Hosted currently on: https://defarro.github.io/
 
 Preregistered users (login/password):
 * test/test
